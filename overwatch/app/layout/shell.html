@@ -1,0 +1,24 @@
+<!-- Wrapper-->
+<div id="site" class="fixed single-column">
+    <div id="site-main" style="margin-bottom: -292px !important">
+
+        <!-- ng-class with current state name give you the ability to extended customization your view -->
+        <div class="{{$state.current.name}}">
+
+            <!-- Page wrapper -->
+            <div ng-include="'app/layout/top-nav.html'" class="fadeInUp"></div>
+
+            <!-- Main view  -->
+            <div ui-view></div>
+
+            <!-- Footer -->
+            <div ng-include="'app/layout/footer.html'"></div>
+
+        </div>
+        <!-- End page wrapper-->
+        <div id="fb-root"></div>
+        <div class="site-overlay"></div>
+    </div>
+</div>
+
+<!-- End wrapper-->

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html ng-app="crntApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+    <!-- Page Title -->
+    <title ac-page-title></title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="content/images/favicon.ico?v=2" />
+    <!-- CDN CSS -->
+    <!--<link rel="stylesheet" href="/cdn/dist/1.0.0/css/styles.min.css" />-->
+
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/overpwn.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+    <style>
+        .select2 > .select2-choice.ui-select-match {
+            /* Because of the inclusion of Bootstrap */
+            height: 29px;
+        }
+        
+        .selectize-control > .selectize-dropdown {
+            top: 36px;
+        }
+        /* Helper class to show styles when focus */
+        
+        .selectize-input.selectize-focus {
+            border-color: #007FBB !important;
+        }
+        /* Fix input width for Selectize theme */
+        
+        .selectize-control > .selectize-input > input {
+            width: 100%;
+        }
+        /* Fix dropdown width for Selectize theme */
+        
+        .selectize-control > .selectize-dropdown {
+            width: 100%;
+        }
+        
+        .ui-select-offscreen {
+            clip: rect(0 0 0 0) !important;
+            width: 1px !important;
+            height: 1px !important;
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            outline: 0 !important;
+            left: 0px !important;
+            top: 0px !important;
+        }
+    </style>
+
+</head>
+
+<body class="{{$state.current.data.specialClass}} site section-home-folder site-overpwn site-overpwn body-home body-home-index show-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled"
+    ng-cloak>
+
+    <!-- Main view -->
+    <div ui-view></div>
+
+    <!-- CDN JS -->
+    <script src="/cdn/dist/1.0.0/js/libs.min.js"></script>
+    <script src="/cdn/dist/1.0.0/js/common.min.js"></script>
+
+    <!-- Acsys - Widgets -->
+    <script src="/cdn/widgets/widgets.module.js"></script>
+    <script src="/cdn/widgets/ibox-tools/1.0.0/ibox-tools.js"></script>
+    <script src="/cdn/widgets/minimize-sidebar-navigation/1.0.0/minimize-sidebar-nav.js"></script>
+    <script src="/cdn/widgets/page-title/1.0.0/page-title.js"></script>
+    <script src="/cdn/widgets/sidebar-navigation/1.0.0/sidebar-nav.js"></script>
+    <script src="/cdn/widgets/app-status/1.0.0/app-status.js"></script>
+    <script src="/cdn/widgets/file-uploader/1.0.0/files.js"></script>
+    <script src="/cdn/widgets/file-uploader/1.0.0/upload.js"></script>
+    <script src="/cdn/widgets/file-uploader/1.0.0/file-uploader.js"></script>
+    <script src="/cdn/widgets/footable-table/1.0.0/footable-table.js"></script>
+    <script src="/cdn/widgets/form-input/1.0.0/form-input.directive.js"></script>
+    <script src="/cdn/widgets/file-drop-zone/1.0.0/file-drop-zone.directive.js"></script>
+    <script src="/cdn/widgets/ng-if-permission/1.0.0/ng-if-permission.directive.js"></script>
+    <script src="/cdn/widgets/spinner/1.0.0/app-spinner.service.js"></script>
+    <script src="/cdn/widgets/spinner/1.0.0/spinner.directive.js"></script>
+    <script src="/cdn/widgets/get-by-property/1.0.0/get-by-property.filter.js"></script>
+
+    <!-- Acsys - Features -->
+    <script src="/cdn/dist/1.0.0/js/features.min.js"></script>
+
+    <!-- ============================================================================================================== -->
+
+    <!-- inject:js -->
+    <!-- Bootstrapping -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.constant.js"></script>
+
+    <!-- App - Layout -->
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/shell.controller.js"></script>
+
+    <!-- Config -->
+    <script src="app/config/config.module.js"></script>
+    <script src="app/config/1.0.0/crnt-config.js"></script>
+
+    <!-- User Authentication -->
+    <!--<script src="app/authentication/userService.module.js"></script>
+    <script src="app/authentication/userService.js"></script>
+    <script src="app/authentication/local-storage.service.js"></script>-->
+
+
+    <!-- News Tab -->
+    <script src="app/news/news.controller.js"></script>
+    <script src="app/news/news.service.js"></script>
+    
+    <!-- Heroes Tab -->
+    <script src="app/heroes/heroes.controller.js"></script>
+    <script src="app/heroes/heroes.service.js"></script>
+
+    <!-- libs -->
+    <script src="app/libs/d3/3.3.9/d3.min.js"></script>
+    <script src="app/libs/nv.d3/1.8.1/nv.d3.min.js"></script>
+    <script src="app/libs/angular-nvd3/1.0.6/angular-nvd3.js"></script>
+    <link rel="stylesheet" href="app/libs/nv.d3/1.8.1/nv.d3.min.css" />
+    
+
+    <script type="text/javascript">
+        Dropzone.autoDiscover = false;
+    </script>
+</body>
+
+</html>

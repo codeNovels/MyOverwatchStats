@@ -1,0 +1,102 @@
+<div class="container">
+    <div id="content" class="main content-container">
+        <section class="primary-content" role="main">
+
+            <div class="module page post-collection">
+                <div class="listing-container listing-container-ul">
+                    <div class="listing-body">
+                        <ul class="listing listing-post post-listing" data-ajax-set-window-state="true" id="posts" data-row-selector=">li">
+
+                            <li ng-repeat="note in vm.patchnotes">
+                                <article class="p-article p-article-a post post-new post-published post-list-item" itemscope="" itemtype="http://schema.org/Article">
+
+                                    <meta itemprop="url" content="http://www.overpwn.com/news/184-more-than-7-million-overwatch-players-worldwide">
+
+                                    <!-- HEADER -->
+                                    <header class="p-article-header">
+                                        <!-- USER ACTION - Need user action placed in <span class="b-userAction b-userAction-a"></span>-->
+                                        <!-- Title -->
+                                        <h2 class="p-article-title">
+				                                        <a href="http://us.battle.net/forums/en/overwatch/21446648/">
+                                                        <span ng-bind-html="note.title"></span>
+                                                        </a>
+			                                        </h2>
+                                    </header>
+
+
+                                    <!-- CONTENT -->
+                                    <section class="p-article-content u-typography-format" itemprop="articleBody">
+                                        <blockquote class="blizzard">
+                                            <div class="quote-content">
+                                                <div class="quote-body">
+                                                    <div class="quote-source">Quote from <a class="quote-author" href="http://us.battle.net/forums/en/overwatch/21446648/"
+                                                            rel="nofollow">Blizzard</a></div>
+                                                    <p ng-bind-html="note.text"></p>
+
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                        <p></p>
+                                    </section>
+
+
+
+                                    <!-- FOOTER -->
+                                    <footer class="p-article-footer">
+
+                                        <!-- POST META -->
+                                        <section class="p-article-meta">
+
+                                            <!-- TAGS -->
+                                            <div class="p-article-tags article-tags"></div>
+
+                                        </section>
+                                        <!-- POST INTERACT -->
+
+                                        <section class="p-article-interact">
+                                            <!-- SOCIAL SHARING -->
+                                            <div class="p-article-social">
+                                                <div class="b-social b-social-a social-sharing">
+                                                    <div class="social-share facebook">
+                                                        <div class="fb-like" data-href="https://www.facebook.com/Myoverwatchstats-273701686317419/" data-layout="button_count" data-action="like"
+                                                            data-show-faces="true" data-share="true"></div>
+
+                                                        <!--<div class="social-share twitter">
+                                                                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
+                                                                        title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.c5094533286f08172435cb9c1efe2915.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.overpwn.com%2F&amp;size=m&amp;text=More%20than%207%20Million%20Overwatch%20Players%20Worldwide!&amp;time=1465173521716&amp;type=share&amp;url=http%3A%2F%2Fwww.overpwn.com%2Fnews%2F184-more-than-7-million-overwatch-players-worldwide"
+                                                                        style="position: static; visibility: visible; width: 60px; height: 20px;"
+                                                                        data-url="http://www.overpwn.com/news/184-more-than-7-million-overwatch-players-worldwide"></iframe>
+                                                                </div>-->
+
+                                                    </div>
+
+                                                </div>
+
+                                        </section>
+
+                                    </footer>
+
+                                </article>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+        </section>
+        </div>
+    </div>
+
+    <!-- Above Footer -->
+    <div id="footer-push" style="height: 292px !important"></div>
+    <script>
+        (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+    </script>
+</div>

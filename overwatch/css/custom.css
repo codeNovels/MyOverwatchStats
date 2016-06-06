@@ -1,0 +1,816 @@
+.ad-main-med-rect {
+    float: right
+}
+
+ol.cool-hero-promo-blocks {
+    list-style-type: none;
+    padding: 0;
+    text-align: center
+}
+
+ol.cool-hero-promo-blocks li.hero-promo-block {
+    display: inline-block;
+    text-align: left
+}
+
+ol.cool-hero-promo-blocks ul {
+    list-style-type: none;
+    border: 1px solid #BEBDBD;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #F6F6F6;
+    min-height: 100px;
+    min-width: 850px;
+    max-width: 850px;
+    position: relative
+}
+
+@media screen and (max-width: 1020px) {
+    ol.cool-hero-promo-blocks ul {
+        min-width:0;
+        width: 100%
+    }
+}
+
+ol.cool-hero-promo-blocks ul>li {
+    display: block;
+    margin: 0 auto
+}
+
+ol.cool-hero-promo-blocks .cool-hero-icon img {
+    width: 60px;
+    float: left;
+    margin-right: 15px;
+    transform: skew(-10deg);
+    border: 4px solid #2b2117;
+    border-left: none;
+    border-right: 0;
+    border-radius: 10px;
+    display: block
+}
+
+ol.cool-hero-promo-blocks .cool-hero-name {
+    font-family: "BigNoodleTitling",sans-serif;
+    transform: skew(-10deg);
+    font-size: 36px;
+    margin-left: 6px;
+    display: inline-block
+}
+
+ol.cool-hero-promo-blocks .cool-hero-role {
+    right: 10px;
+    position: absolute;
+    display: inline-block;
+    font-family: "BigNoodleTitling",sans-serif;
+    font-size: 22px
+}
+
+ol.cool-hero-promo-blocks .cool-hero-guide {
+    display: inline-block;
+    transform: skew(-10deg)
+}
+
+ol.cool-hero-promo-blocks .cool-hero-guide a {
+    background: rgb(255,199,14);
+    color: black;
+    font-family: "BigNoodleTitling",sans-serif;
+    font-size: 20px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: 4px solid rgb(255,229,14);
+    border-left: none;
+    border-right: none;
+    vertical-align: super;
+    margin-left: 20px
+}
+
+ol.cool-hero-promo-blocks .cool-hero-guide a:hover {
+    background: rgb(255,229,14);
+    border-color: rgb(255,199,14)
+}
+
+ol.cool-hero-promo-blocks .cool-hero-desc {
+    margin-left: 80px
+}
+
+ol.cool-hero-promo-blocks .cool-hero-name:after,ol.cool-hero-promo-blocks .cool-hero-role:after {
+    display: table;
+    clear: both;
+    content: ""
+}
+
+#overpwn-fp-timer {
+    font-family: "BigNoodleTitling",sans-serif;
+    text-align: center;
+    background: url(http://media-overpwn.cursecdn.com/attachments/3/743/owtimerbg.png) top center;
+    clear: both;
+    height: 150px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    border: 1px solid rgba(0,0,0,0.2)
+}
+
+#overpwn-fp-timer .timer-title {
+    font-size: 40px;
+    transform: skew(-10deg);
+    color: rgb(255,199,14);
+    padding-top: 8px
+}
+
+#overpwn-fp-timer .group,#overpwn-fp-timer .counter {
+    font-size: 60px;
+    transform: skew(-10deg)
+}
+
+#overpwn-fp-timer .counter {
+    color: rgb(255,199,14);
+    margin-right: 4px
+}
+
+#overpwn-fp-timer .desc {
+    margin-right: 4px
+}
+
+@media screen and (max-width: 680px) {
+    #overpwn-fp-timer .timer-title {
+        font-size:30px
+    }
+
+    #overpwn-fp-timer .counter,#overpwn-fp-timer .group {
+        font-size: 30px
+    }
+
+    #overpwn-fp-timer {
+        height: 100px
+    }
+}
+
+.news-card-reveal {
+    display: inline-block;
+    text-align: center
+}
+
+.overpwn-brawl {
+    display: inline-block;
+    position: relative;
+    width: 276px;
+    border: 3px solid white;
+    box-shadow: 0 0 2px #000;
+    margin: 5px
+}
+
+.overpwn-brawl .info-box {
+    position: absolute;
+    top: 330px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white
+}
+
+.overpwn-brawl .info-box .brawl-title {
+    color: white;
+    font-family: 'BigNoodleTitling',sans-serif;
+    transform: skew(-15deg);
+    font-size: 27px
+}
+
+.overpwn-brawl .info-box .brawl-description {
+    font-size: 13px;
+    padding: 0 10px;
+    word-wrap: break-word
+}
+
+.blizzard strong,.blizzard b,.blizzard i {
+    color: white
+}
+
+span.hero-thread-prefix {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    border: 1px solid #6E6E6E;
+    background: url(http://media-overpwn.cursecdn.com/attachments/0/13/overwatch-hero-sprite-24px.png)
+}
+
+img.gallery-thumbnail-img {
+    width: 200px;
+    border: 2px solid black;
+    display: inline-block !important
+}
+
+.body-guide-details img.gallery-thumbnail-img {
+    width: 175px
+}
+
+.hero-thread-prefix.tracer {
+    background-position: 0 24px
+}
+
+.hero-thread-prefix.reaper {
+    background-position: -24px 24px
+}
+
+.hero-thread-prefix.widowmaker {
+    background-position: -48px 24px
+}
+
+.hero-thread-prefix.winston {
+    background-position: -72px 24px
+}
+
+.hero-thread-prefix.pharah {
+    background-position: -96px 24px
+}
+
+.hero-thread-prefix.reinhardt {
+    background-position: -120px 24px
+}
+
+.hero-thread-prefix.symmetra {
+    background-position: -144px 24px
+}
+
+.hero-thread-prefix.torbjorn {
+    background-position: -168px 24px
+}
+
+.hero-thread-prefix.hanzo {
+    background-position: -192px 24px
+}
+
+.hero-thread-prefix.zenyatta {
+    background-position: -216px 24px
+}
+
+.hero-thread-prefix.mercy {
+    background-position: -240px 24px
+}
+
+.hero-thread-prefix.bastion {
+    background-position: -264px 24px
+}
+
+.hero-thread-prefix.zarya {
+    background-position: -264px 24px
+}
+
+.hero-thread-prefix.mccree {
+    background-position: -264px 24px
+}
+
+.thread-prefix {
+    display: inline-block !important;
+    margin: 0 0 1px 0 !important
+}
+
+.thread-prefix span.thread-prefix {
+    background-color: #C98D0E;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 4px
+}
+
+.thread-prefix span.red {
+    background-color: #e51c23
+}
+
+.thread-prefix span.pink {
+    background-color: #e91e63
+}
+
+.thread-prefix span.purple {
+    background-color: #9c27b0
+}
+
+.thread-prefix span.deep-purple {
+    background-color: #673ab7
+}
+
+.thread-prefix span.indigo {
+    background-color: #3f51b5
+}
+
+.thread-prefix span.blue {
+    background-color: #5677fc
+}
+
+.thread-prefix span.light-blue {
+    background-color: #03a9f4
+}
+
+.thread-prefix span.cyan {
+    background-color: #00bcd4
+}
+
+.thread-prefix span.teal {
+    background-color: #009688
+}
+
+.thread-prefix span.green {
+    background-color: #259b24
+}
+
+.thread-prefix span.light-green {
+    background-color: #8bc34a
+}
+
+.thread-prefix span.lime {
+    background-color: #cddc39
+}
+
+.thread-prefix span.yellow {
+    background-color: #ffeb3b
+}
+
+.thread-prefix span.amber {
+    background-color: #ffc107
+}
+
+.thread-prefix span.orange {
+    background-color: #ff9800
+}
+
+.thread-prefix span.deep-orange {
+    background-color: #ff5722
+}
+
+.thread-prefix span.brown {
+    background-color: #795548
+}
+
+.thread-prefix span.grey {
+    background-color: #9e9e9e
+}
+
+.thread-prefix span.blue-grey {
+    background-color: #607d8b
+}
+
+span.user-role-senior-moderator {
+    color: #CB60B3 !important;
+    min-height: 16px;
+    display: inline-block
+}
+
+.p-comments-b .p-comment-user .p-comment-username .user-role-senior-moderator {
+    color: #CB60B3
+}
+
+span.rank-number {
+    border-radius: 5px;
+    background: #8ae1ff;
+    border: 2px solid #9faed5;
+    color: #465a82;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 9px;
+    display: inline-block;
+    min-width: 50px
+}
+
+.wikilink a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11.6px;
+    font-family: 'Noto Sans';
+    text-align: center;
+    color: #2f69c0 !important;
+    text-decoration: none;
+    width: 310px
+}
+
+.wikilink a:visited {
+    color: #2f69c0 !important;
+    text-decoration: none
+}
+
+.wikilink {
+    display: block;
+    width: 310px;
+    text-align: center
+}
+
+ul.guides-container li a p {
+    color: #342a22
+}
+
+.p-article-a .p-article-content blockquote.blizzard h2,.p-article-a .p-article-content blockquote.blizzard h3,.p-article-a .p-article-content blockquote.blizzard h4,.p-article-a .p-article-content blockquote.blizzard em {
+    color: #FFF
+}
+
+.content-container a,.content-container a:visited,.content-container a:active,.content-container a:hover {
+    color: #00a2ff
+}
+
+.content-container a:hover,.p-comments-b .p-comment-content a:hover,.p-comments-b .p-comment-notes a:hover {
+    color: #0071b3
+}
+
+.p-comments-b .p-comment-content a:visited,.p-comments-b .p-comment-notes a:visited {
+    color: #00a2ff
+}
+
+.p-article-a .p-article-header {
+    overflow: initial
+}
+
+.p-article-a .p-article-header .p-article-title {
+    float: initial;
+    display: inline-block
+}
+
+.p-test {
+    display: inline-block;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    border: 4px solid black;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    transform: skew(-15deg)
+}
+
+.p-test2 {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,.3);
+    -webkit-transform: skew(0.25rad);
+    -ms-transform: skew(0.15rad);
+    transform: skew(0.25rad);
+    position: relative;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 110%
+}
+
+.hero-title {
+    margin-left: 20px;
+    display: inline-block
+}
+
+.hero-holder {
+    display: inline-block;
+    position: relative;
+    left: 15px
+}
+
+.hero-name {
+    font-size: 70px;
+    -webkit-transform: skew(-.30rad);
+    -ms-transform: skew(-.30rad);
+    transform: skew(-.30rad);
+    font-family: 'BigNoodleTitling';
+    display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase
+}
+
+.hero-role {
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Noto Sans';
+    position: relative;
+    left: -7px
+}
+
+.role-offense {
+    color: #00c3ff;
+    padding-left: 22px;
+    background-image: url('http://media-overpwn.cursecdn.com/overwatch/hero-r/role-offense.png');
+    background-repeat: no-repeat;
+    background-size: 18px 22px
+}
+
+.role-tank {
+    color: #00c3ff;
+    padding-left: 22px;
+    background-image: url('http://media-overpwn.cursecdn.com/overwatch/hero-r/role-tank.png');
+    background-repeat: no-repeat;
+    background-size: 18px 22px
+}
+
+.role-support {
+    color: #00c3ff;
+    padding-left: 22px;
+    background-image: url('http://media-overpwn.cursecdn.com/overwatch/hero-r/role-support.png');
+    background-repeat: no-repeat;
+    background-size: 18px 22px
+}
+
+.role-defense {
+    color: #00c3ff;
+    padding-left: 22px;
+    background-image: url('http://media-overpwn.cursecdn.com/overwatch/hero-r/role-defense.png');
+    background-repeat: no-repeat;
+    background-size: 18px 22px
+}
+
+.icon-circle {
+    float: left;
+    background-image: url('http://www.curseapps.com/overwatch/icon-circle.png');
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.icon-circle-ult {
+    float: left;
+    background-image: url('http://www.curseapps.com/overwatch/icon-circle-ult.png');
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.icon-ability {
+    width: 100px;
+    height: 100px;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.ability-title {
+    display: block;
+    font-family: 'Noto Sans';
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+    text-transform: uppercase
+}
+
+.ability-text {
+    display: block;
+    font-family: 'Noto Sans';
+    margin-bottom: 10px;
+    font-size: 13px
+}
+
+.ability-view-preview {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Noto Sans';
+    color: #21cafe;
+    margin-top: 3px;
+    padding-right: 5px
+}
+
+.preview-link {
+    font-weight: bold !important;
+    font-family: 'Noto Sans' !important;
+    color: #21cafe !important
+}
+
+.ability-info {
+    width: 580px;
+    position: relative;
+    background-color: #f5f5f5;
+    border-top: 5px solid #ffc70e;
+    border-bottom: 5px solid #ffc70e;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 125px
+}
+
+.ability-holder {
+    padding-top: 20px;
+    padding-left: 10px
+}
+
+.story-holder {
+    padding: 10px;
+    margin-top: 50px;
+    font-family: 'Noto Sans';
+    font-size: 16px
+}
+
+.story-title {
+    color: #00c3ff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px
+}
+
+.hero-bio {
+    background-color: #f5f5f5;
+    background-color: rgba(245,245,245,0.6);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    width: 310px;
+    float: right;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 11.6px;
+    font-family: 'Noto Sans';
+    text-transform: uppercase
+}
+
+.ability-icon-e {
+    background-image: url('http://www.curseapps.com/overwatch/ability-i/e.png');
+    background-position: center;
+    padding-right: 20px;
+    background-repeat: no-repeat
+}
+
+.ability-icon-q {
+    background-image: url('http://www.curseapps.com/overwatch/ability-i/q.png');
+    background-position: center;
+    padding-right: 20px;
+    background-repeat: no-repeat
+}
+
+.ability-icon-shift {
+    background-image: url('http://www.curseapps.com/overwatch/ability-i/shift.png');
+    background-position: center;
+    padding-right: 40px;
+    background-repeat: no-repeat
+}
+
+.ability-icon-lmb {
+    background-image: url('http://www.curseapps.com/overwatch/ability-i/lmb.png');
+    background-position: center;
+    padding-right: 20px;
+    background-repeat: no-repeat
+}
+
+.ability-icon-rmb {
+    background-image: url('http://www.curseapps.com/overwatch/ability-i/rmb.png');
+    background-position: center;
+    padding-right: 20px;
+    background-repeat: no-repeat
+}
+
+.hero-reaper {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/reaper.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-tracer {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/tracer.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-widowmaker {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/widowmaker.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-winston {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/winston.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-pharah {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/pharah.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-reinhardt {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/reinhardt.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-torbjorn {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/6/torbjorn.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-bastion {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/bastion.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-hanzo {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/hanzo.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-zenyatta {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/zenyatta.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-symmetra {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/symmetra.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-mercy {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/overwatch/hero-f/mercy.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-zarya {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/94/635612536535850548.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-mccree {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/96/635612547655103019.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-soldier-76 {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/169/overlay-portrait-1zkmf.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-lucio {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/215/635743759547417332.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-junkrat {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/297/overlay-portrait-3qawc.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 10px
+}
+
+.hero-roadhog {
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('http://media-overpwn.cursecdn.com/attachments/0/298/overlay-portrait-4b2du.png') -80px -55px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 10px
+}
