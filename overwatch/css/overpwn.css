@@ -6430,7 +6430,8 @@ body:not(.ad-skin) #site>div.ad-placement {
 }
 
 .content-container h1,.content-container h2,.content-container h3,.content-container h4,.content-container h5,.content-container h6 {
-    color: #342a22
+    /*color: #342a22*/
+    color: #f0edf2
 }
 
 .content-container h1 a,.content-container h1 a:active,.content-container h1 a:visited,.content-container h2 a,.content-container h2 a:active,.content-container h2 a:visited,.content-container h3 a,.content-container h3 a:active,.content-container h3 a:visited,.content-container h4 a,.content-container h4 a:active,.content-container h4 a:visited,.content-container h5 a,.content-container h5 a:active,.content-container h5 a:visited,.content-container h6 a,.content-container h6 a:active,.content-container h6 a:visited {
@@ -17099,7 +17100,8 @@ body.responsive-enabled #site #site-main .container,body.responsive-enabled #sit
 }
 
 body.responsive-enabled #site #site-main .container #content,body.responsive-enabled #site #site-main.fixed .container #content {
-    width: auto;
+    width: 120%;
+    margin-left: -10%;
     box-shadow: none
 }
 
@@ -28161,7 +28163,7 @@ div#site-main div#content div.newest-heroes-container ul {
 
 div#site-main div#content div.newest-heroes-container ul li {
     padding-bottom: 25px;
-    margin-right: 18px;
+    /*margin-right: 18px;*/
     display: inline-block
 }
 

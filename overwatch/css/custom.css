@@ -1,3 +1,7 @@
+.colorIsWhite {
+  color: #f0edf2;
+}  
+
 .ad-main-med-rect {
     float: right
 }
@@ -400,7 +404,7 @@ ul.guides-container li a p {
 }
 
 .p-article-a .p-article-content blockquote.blizzard h2,.p-article-a .p-article-content blockquote.blizzard h3,.p-article-a .p-article-content blockquote.blizzard h4,.p-article-a .p-article-content blockquote.blizzard em {
-    color: #FFF
+    color: #00b4ff
 }
 
 .content-container a,.content-container a:visited,.content-container a:active,.content-container a:hover {

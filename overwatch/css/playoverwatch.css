@@ -2776,7 +2776,9 @@ blockquote {
 
 blockquote,blockquote p {
     line-height: 1.6;
-    color: #8a8a8a
+    /*color: #8a8a8a*/
+    /*color: #0091ff;*/
+    color: #00b4ff
 }
 
 cite {
@@ -4272,7 +4274,7 @@ body.ko-kr .btn,body.ko-kr .button,body.ko-kr button {
 }
 
 .data-table>tbody td {
-    padding: 2rem;
+    padding: 1rem;
     padding-top: 0;
     color: #727272
 }
@@ -7957,7 +7959,8 @@ body.ko-kr .u-bigNoodleToo {
 .card {
     background-color: #3c4860;
     padding: 24px;
-    height: 144px
+    height: 144px;
+    width: 120%
 }
 
 .card:before {
@@ -7967,7 +7970,7 @@ body.ko-kr .u-bigNoodleToo {
 }
 
 .card-content,.card:before {
-    display: inline-block
+    /*display: inline-block*/
 }
 
 .card-heading {
