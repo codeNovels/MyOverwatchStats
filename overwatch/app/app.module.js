@@ -57,19 +57,25 @@
             .state('home',          { url: "/home",     templateUrl: "app/layout/shell.html", controller: "ShellController", controllerAs: "vm", abstract: true })
 
             .state('home.renew-access',    {url: "/renew-access",      templateUrl: LOCAL_CDN + "/features/refresh-token/1.0.0/non-admin/renew-access.html", controller: 'RenewAccessController', controllerAs: "vm", data: { pageTitle: 'Renew Access' } })
-
+            .state('home.news',  {url: "/news",   templateUrl: "app/news/news.html" , controller: 'NewsController', controllerAs: "vm",data: { pageTitle: 'News' }
+                                                                        ,resolve: {
+                                                                           initialData: ['newsService', function(newsService) {
+                                                                               return newsService.getList();
+                                                                       }]}
+                                                                    }) 
+            .state('home.mystats',  {url: "/mystats",   templateUrl: "app/mystats/mystats.html" , controller: 'MyStatsController', controllerAs: "vm",data: { pageTitle: 'My Stats' }
+                                                                    //     ,resolve: {
+                                                                    //        initialData: ['editPvmListService', function(editPvmListService) {
+                                                                    //            return editPvmListService.getSetting();
+                                                                    //    }]}
+                                                                    }) 
             .state('home.heroes',  {url: "/heroes",   templateUrl: "app/heroes/heroes.html" , controller: 'HeroesController', controllerAs: "vm",data: { pageTitle: 'Heroes' }
                                                                     //     ,resolve: {
                                                                     //        initialData: ['editPvmListService', function(editPvmListService) {
                                                                     //            return editPvmListService.getSetting();
                                                                     //    }]}
                                                                     })                                                        
-            .state('home.news',  {url: "/news",   templateUrl: "app/news/news.html" , controller: 'NewsController', controllerAs: "vm",data: { pageTitle: 'News' }
-                                                                        ,resolve: {
-                                                                           initialData: ['newsService', function(newsService) {
-                                                                               return newsService.getList();
-                                                                       }]}
-                                                                    })                                                                                                                        
+                                                                                                                                   
         }
     ]);
 
