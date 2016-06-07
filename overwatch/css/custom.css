@@ -1,6 +1,127 @@
-.colorIsWhite {
-  color: #f0edf2;
+.Mercy {
+    box-shadow: rgb(255, 234, 149) 0px 0.2rem 0px 0px inset;
+    background-color: rgb(255, 225, 108)
+}
+
+.McCree {
+    box-shadow: rgb(170, 69, 69) 0px 0.2rem 0px 0px inset;
+    right: 0px;
+    background-color: rgb(141, 57, 57);
+}
+
+.Reaper {
+    box-shadow: rgb(60, 60, 57) 0px 0.2rem 0px 0px inset;
+    right: 58.3333%;
+    background-color: rgb(39, 39, 37);
+}
+
+.Roadhog {
+    box-shadow: rgb(206, 170, 147) 0px 0.2rem 0px 0px inset;
+    right: 58.3333%;
+    background-color: rgb(193, 148, 119);
+}   
+
+.Soldier76 {
+    box-shadow: rgb(117, 136, 195) 0px 0.2rem 0px 0px inset;
+    right: 75%;
+    background-color: rgb(88, 112, 182);
+}   
+
+.Reinhardt {
+    box-shadow: rgb(187, 171, 165) 0px 0.2rem 0px 0px inset;
+    right: 83.3333%;
+    background-color: rgb(170, 149, 142)
+}   
+
+.Mei {
+    box-shadow: rgb(191, 232, 248) 0px 0.2rem 0px 0px inset;
+    right: 91.6667%;
+    background-color: rgb(154, 219, 244)
+}
+
+.Genji {
+    box-shadow: rgb(152, 254, 42) 0px 0.2rem 0px 0px inset;
+    right: 91.6667%;
+    background-color: rgb(132, 254, 1)
+}   
+
+.Lucio {
+    box-shadow: rgb(158, 240, 72) 0px 0.2rem 0px 0px inset;
+    right: 91.8056%;
+    background-color: rgb(139, 236, 34);
+}   
+
+.Widowmaker {
+    box-shadow: rgb(138, 138, 189) 0px 0.2rem 0px 0px inset;
+    right: 92.3611%;
+    background-color: rgb(111, 111, 174);
 }  
+
+.Winston {
+    box-shadow: rgb(95, 100, 114) 0px 0.2rem 0px 0px inset;
+    right: 95.9722%;
+    background-color: rgb(76, 80, 92);
+}   
+
+.Bastion {
+    box-shadow: rgb(130, 175, 95) 0px 0.2rem 0px 0px inset;
+    right: 96.5278%;
+    background-color: rgb(110, 153, 77);
+}   
+
+.Torbjorn {
+    box-shadow: rgb(255, 123, 40) 0px 0.2rem 0px 0px inset;
+    right: 96.9444%;
+    background-color: rgb(255, 98, 0);
+}   
+.Junkrat {
+    box-shadow: rgb(245, 172, 15) 0px 0.2rem 0px 0px inset;
+    right: 97.3611%;
+    background-color: rgb(211, 147, 8);
+}   
+.Pharah {
+    box-shadow: rgb(39, 120, 226) 0px 0.2rem 0px 0px inset;
+    right: 97.6389%;
+    background-color: rgb(27, 101, 198);
+}   
+.Bastion {
+    box-shadow: rgb(130, 175, 95) 0px 0.2rem 0px 0px inset;
+    right: 96.5278%;
+    background-color: rgb(110, 153, 77);
+}   
+.Hanzo {
+    box-shadow: rgb(173, 160, 87) 0px 0.2rem 0px 0px inset;
+    right: 99.5833%;
+    background-color: rgb(147, 136, 72);
+}   
+.Dva {
+    box-shadow: rgb(255, 168, 224) 0px 0.2rem 0px 0px inset;
+    right: 99.9398%;
+    background-color: rgb(255, 127, 209);
+}   
+.Tracer {
+    box-shadow: rgb(250, 164, 67) 0px 0.2rem 0px 0px inset;
+    right: 100%;
+    background-color: rgb(248, 145, 27);
+}   
+.Symmetra {
+    box-shadow: rgb(133, 241, 255) 0px 0.2rem 0px 0px inset;
+    right: 100%;
+    background-color: rgb(92, 236, 255);
+}   
+.Zenyatta {
+    box-shadow: rgb(240, 188, 0) 0px 0.2rem 0px 0px inset;
+    right: 100%;
+    background-color: rgb(199, 156, 0);
+}   
+.Zarya {
+    box-shadow: rgb(248, 151, 191) 0px 0.2rem 0px 0px inset;
+    right: 100%;
+    background-color: rgb(245, 113, 168);
+}   
+    
+
+
 
 .ad-main-med-rect {
     float: right

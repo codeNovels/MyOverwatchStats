@@ -5819,8 +5819,8 @@ body.ko-kr .navigation-selector .navigation-link {
     bottom: 0;
     margin: .3rem;
     border-radius: .5rem;
-    background-color: #9daac8;
-    box-shadow: inset 0 .2rem 0 0 #c6cbde
+    /*background-color: #9daac8;
+    box-shadow: inset 0 .2rem 0 0 #c6cbde*/
 }
 
 .progress-2>.bar-container>.bar-text {
@@ -11003,7 +11003,6 @@ body.career-detail .masthead-hero-image {
     background-size: 1100px;
     background-clip: content-box;
     background-position: -200px -50px;
-    background-image: url(https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/overlay-portrait.png)
 }
 
 @media only screen and (min-width: 992px) {

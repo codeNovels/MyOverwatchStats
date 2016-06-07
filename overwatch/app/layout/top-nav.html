@@ -13,9 +13,9 @@
         </a>
     </div>
 
-    <form class="primary-search b-search b-search-a" action="/search" method="get" novalidate="novalidate">
-        <span class="primary-search-field"><input type="search" name="search" placeholder="SEARCH BATTLE#TAG" data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" class="b-search-input ac_input" autocomplete="off"></span>
-        <span class="primary-search-submit"><input type="submit" value="Search"></span>
+    <form class="primary-search b-search b-search-a"  method="get" novalidate="novalidate">
+        <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="SEARCH BATTLE#TAG" data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" class="b-search-input ac_input" autocomplete="off"></span>
+        <span class="primary-search-submit"><input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)"></span>
     </form>
 
     <i class="menu-button"></i><i class="search-button"></i>
@@ -26,7 +26,7 @@
     <nav class="main p-nav p-nav-a j-sticky" role="navigation">
         <ul class="b-list b-list-a">
             <li id="nav-news" class=" b-list-item p-nav-item">
-                <a ui-sref="home.news" class=""><span class="b-list-label">News
+                <a ui-sref="home.patchnotes" class=""><span class="b-list-label">News
                             </span></a>
             </li>
             <li id="nav-view-guides" class=" b-list-item p-nav-item">
