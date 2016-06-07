@@ -14588,8 +14588,8 @@ footer#footer div.footer-links a.curse {
     display: block;
     width: 182px;
     height: 139px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/footer/logo-light.png");
-    background-image: linear-gradient(transparent,transparent),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/footer/logo-light.svg");
+    background: url("content/images/overwatch-logo.png");
+    background-image: linear-gradient(transparent,transparent),url("content/images/overwatch-logo.png");
     text-indent: -500px;
     white-space: nowrap;
     overflow: hidden;
