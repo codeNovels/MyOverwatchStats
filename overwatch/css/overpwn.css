@@ -17090,7 +17090,7 @@ body.responsive-enabled #site #site-main {
 
 body.responsive-enabled #site #site-main .atf {
     width: auto;
-    max-width: 1000px
+    max-width: 1200px
 }
 
 body.responsive-enabled #site #site-main .container,body.responsive-enabled #site #site-main.fixed .container {
@@ -26080,7 +26080,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .b-search-a .primary-search-field input[type='search'] {
-    width: 180px;
+    width: 25em;
     height: 37px;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
@@ -30330,7 +30330,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 }
 
 div#site-main header.main {
-    width: 100%
+    width: 110%
 }
 
 @media screen and (max-width: 1023px) {
@@ -30356,7 +30356,7 @@ div#site-main header.main h1 a.logo {
     text-indent: -500px;
     white-space: nowrap;
     overflow: hidden;
-    margin-left: -500px;
+    margin-left: -720px;
     margin-top: 15px
 }
 
@@ -30372,7 +30372,7 @@ div#site-main header.main h1 a.logo {
 
 div#site-main header.main .social-links {
     position: relative;
-    right: 50%;
+    right: 58%;
     margin-right: -247px;
     float: right
 }
