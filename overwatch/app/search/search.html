@@ -25,12 +25,20 @@
                                             <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 15%">
                                                 <span class="primary-search-field" style="padding: 3%;width: 85%;">
                                                     <input type="search" name="search" ng-model="battleTag" placeholder="SEARCH BATTLETAG" data-autocomplete-search-url="/find" 
-                                                    style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off">
+                                                        style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off" autofocus>
                                                     </span>
 
                                                 <span class="primary-search-submit" style="padding: 3%;">
                                                     <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)">
                                                 </span>
+
+                                                <div style="  background-color: #ffc70e;opacity: 0.8;
+                                                                width: 52%;border-radius: 5px;"><b>
+                                                <p class="masthead-detail" style="color: black;">
+                                                    &nbsp; Tip: seach by typing the battletag e.g. "overwatch#1234" &nbsp;
+                                                </p>
+                                                <b>
+                                                </div>
                                             </form>
                                         </p>
 

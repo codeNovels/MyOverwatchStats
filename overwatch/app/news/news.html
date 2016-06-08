@@ -49,18 +49,57 @@
 
 
 
-                            <li ng-repeat="note in vm.patchnotes">
+                            <li ng-if="vm.patchnotes.length === 0">
                                 <article class="p-article p-article-a post post-new post-published post-list-item" itemscope="" itemtype="http://schema.org/Article">
-
                                     <meta itemprop="url" content="http://www.overpwn.com/news/184-more-than-7-million-overwatch-players-worldwide">
                                     <header class="p-article-header">
                                         <h2 class="p-article-title">
-				                            <a href="http://us.battle.net/forums/en/overwatch/21446648/">
-                                               <span ng-bind-html="note.title"></span>
+                                            <a href="http://us.battle.net/forums/en/overwatch/21446648/">
+                                                <span>
+                                               </span>
                                             </a>
-			                            </h2>
+                                        </h2>
                                     </header>
+                                    <section class="p-article-content u-typography-format" itemprop="articleBody">
+                                        <p style="text-align: center">
+                                            <img ng-src="content/images/spinner.gif"></img>
+                                            </br>
+                                            <p class="masthead-detail h4" style="text-align: center">
+                                            LOADING...
+                                            </p>
+                                        </p>
+                                    </section>
+                                    <footer class="p-article-footer">
+                                        <section class="p-article-meta">
+                                            <div class="p-article-tags article-tags"></div>
+                                        </section>
+                                        <section class="p-article-interact">
+                                            <div class="p-article-social">
+                                                <div class="b-social b-social-a social-sharing">
+                                                    <div class="social-share facebook">
+                                                    </div>
+                                                </div>
+                                        </section>
+                                    </footer>
+                                </article>
+                            </li>
 
+
+
+
+
+
+
+                            <li ng-repeat="note in vm.patchnotes" ng-if="vm.patchnotes.length > 1">
+                                <article class="p-article p-article-a post post-new post-published post-list-item" itemscope="" itemtype="http://schema.org/Article">
+                                    <meta itemprop="url" content="http://www.overpwn.com/news/184-more-than-7-million-overwatch-players-worldwide">
+                                    <header class="p-article-header">
+                                        <h2 class="p-article-title">
+                                            <a href="http://us.battle.net/forums/en/overwatch/21446648/">
+                                                <span ng-bind-html="note.title"></span>
+                                            </a>
+                                        </h2>
+                                    </header>
                                     <section class="p-article-content u-typography-format" itemprop="articleBody">
                                         <blockquote class="blizzard">
                                             <div class="quote-content">
@@ -74,10 +113,6 @@
                                         </blockquote>
                                         <p></p>
                                     </section>
-
-
-
-
                                     <footer class="p-article-footer">
                                         <section class="p-article-meta">
                                             <div class="p-article-tags article-tags"></div>
@@ -96,14 +131,14 @@
 
                         </ul>
                         </div>
+                        </div>
                     </div>
-                </div>
 
 
         </section>
         </div>
-    </div>
+        </div>
 
-    <!-- Above Footer -->
-    <div id="footer-push"></div>
-</div>
+        <!-- Above Footer -->
+        <div id="footer-push"></div>
+    </div>

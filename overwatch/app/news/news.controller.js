@@ -9,16 +9,16 @@
         .module('app.layout')
         .controller('NewsController', NewsController);
 
-    NewsController.$inject = ['$scope', '$state', 'common', 'newsService', 'initialData'];
+    NewsController.$inject = ['$scope', '$state', 'common', 'newsService'];
 
     /* @ngInject */
-    function NewsController($scope, $state, common, newsService, initialData) {
+    function NewsController($scope, $state, common, newsService) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
 
         // Initial Data Load
-        vm.patchnotes = initialData.patchnotes;
+        vm.patchnotes = [];
 
         // For show or hide "Edit/Save" button
         
@@ -34,7 +34,7 @@
         ////////////////
 
         function activate() {
-            //getList();
+            getList();
         }
 
 
