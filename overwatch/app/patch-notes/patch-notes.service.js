@@ -7,12 +7,12 @@
 
     angular
         .module('app.layout')
-        .factory('newsService', newsService);
+        .factory('patchNotesService', patchNotesService);
 
-    newsService.$inject = ['common', 'SHOW_TOAST'];
+    patchNotesService.$inject = ['common', 'SHOW_TOAST'];
 
     /* @ngInject */
-    function newsService(common, SHOW_TOAST) {
+    function patchNotesService(common, SHOW_TOAST) {
         var $http = common.$http;
         var logger = common.logger;
 

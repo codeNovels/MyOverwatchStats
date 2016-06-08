@@ -7,12 +7,12 @@
 
     angular
         .module('app.layout')
-        .controller('NewsController', NewsController);
+        .controller('PatchNotesController', PatchNotesController);
 
-    NewsController.$inject = ['$scope', '$state', 'common', 'newsService'];
+    PatchNotesController.$inject = ['$scope', '$state', 'common', 'patchNotesService'];
 
     /* @ngInject */
-    function NewsController($scope, $state, common, newsService) {
+    function PatchNotesController($scope, $state, common, patchNotesService) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
@@ -40,7 +40,7 @@
 
         /* Calling Data Service */
         function getList() {
-            newsService.getList()
+            patchNotesService.getList()
                 .then(function(data) {
                     vm.patchnotes = data.patchnotes;                  
                 });

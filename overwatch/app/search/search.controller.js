@@ -46,7 +46,7 @@
 
         /* Calling Data Service */
         function getList() {
-            newsService.getList()
+            patchNotesService.getList()
                 .then(function(data) {
                     vm.patchnotes = data.patchnotes;                  
                 });

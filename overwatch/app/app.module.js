@@ -46,7 +46,7 @@
             .state('home',          { url: "/home",     templateUrl: "app/layout/shell.html", controller: "ShellController", controllerAs: "vm", abstract: true })
 
             .state('home.renew-access',    {url: "/renew-access",      templateUrl: LOCAL_CDN + "/features/refresh-token/1.0.0/non-admin/renew-access.html", controller: 'RenewAccessController', controllerAs: "vm", data: { pageTitle: 'Renew Access' } })
-            .state('home.patchnotes',  {url: "/patch-notes",   templateUrl: "app/news/news.html" , controller: 'NewsController', controllerAs: "vm",data: { pageTitle: 'News' }
+            .state('home.patchnotes',  {url: "/patch-notes",   templateUrl: "app/patch-notes/patch-notes.html" , controller: 'PatchNotesController', controllerAs: "vm",data: { pageTitle: 'Patch Notes' }
                                                                     }) 
             .state('home.mystats',  {url: "/mystats/:userId",   templateUrl: "app/mystats/mystats.html" , controller: 'MyStatsController', controllerAs: "vm",data: { pageTitle: 'My Stats' }
                                                                     }) 
