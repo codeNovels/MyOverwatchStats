@@ -18,7 +18,7 @@
         var logger = common.logger;
         vm.profile = [];
         vm.spinner = false;
-        vm.cannotFindPlayer = false;
+        vm.showMessage = false;
 
         // Initial Data Load
         //vm.patchnotes = initialData.patchnotes;
@@ -41,23 +41,44 @@
         }
 
         function searchBattleTag(name) {
-            vm.spinner = true;
-            getList();
+            if (!name) {
+                return
+            }
+            else {
+                vm.spinner = true;
+                var userId = escapeHtml(name)
+                getList(userId);
+            }
+
+        }
+
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                '#': '%23'
+            };
+
+            return text.replace(/[&<>"'#]/g, function (m) { return map[m]; });
         }
 
 
         /* Calling Data Service */
-        function getList(name) {
-            searchService.getList()
+        function getList(userId) {
+            searchService.getList(userId)
                 .then(function (data) {
                     if (!data) {
-                        vm.cannotFindPlayer = true;
+                        vm.showMessage = true;
+                        vm.spinner = false;
                     }
                     else {
                         vm.profile = data.profile;
                         vm.spinner = false;
-                        vm.cannotFindPlayer = false;
-                        $state.go('home.mystats', { userId: name });
+                        vm.showMessage = false;
+                        $state.go('home.mystats', { userId: userId });
                     }
 
                 });

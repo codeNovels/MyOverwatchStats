@@ -24,8 +24,8 @@
 
         ////////////////
 
-        function getList(ticketId) {
-            var url = 'https://api.watcher.gg/players/pc/us/php%231783' ;
+        function getList(userId) {
+            var url = 'https://api.watcher.gg/players/pc/us/' + userId ;
             return $http.get(url)
                 .then(getListComplete)
                 .catch(getListFailed);

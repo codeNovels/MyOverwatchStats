@@ -26121,7 +26121,7 @@ body .ui-dialog .poll-form-container .form-actions {
 
 .b-search-a .primary-search-submit input[type='spinner'] {
     background-image: url('content/images/spinner3.gif');
-    background-size: 40px 40px;
+    background-size: 40px 31px;
     background-color: transparent;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);

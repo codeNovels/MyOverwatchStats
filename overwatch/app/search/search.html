@@ -38,7 +38,7 @@
 
 
 
-                                                <span ng-show="!vm.spinner" class="primary-search-submit" style="padding: 3%;" >
+                                                <span ng-show="!vm.spinner" class="primary-search-submit" style="padding: 3%;">
                                                     <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)">
                                                 </span>
 
@@ -52,13 +52,19 @@
                                                 </span>
 
 
-                                                <div style="  background-color: #ffc70e;opacity: 0.8;
-                                                                width: 52%;border-radius: 5px;"><b>
-                                                <p class="masthead-detail" style="color: black;">
-                                                    &nbsp; Tip: seach by typing the battletag e.g. "overwatch#1234" &nbsp;
-                                                </p>
-                                                <b>
+                                                <div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;width: 52%;border-radius: 5px;">
+                                                    <b><p class="masthead-detail" style="color: white;">
+                                                        &nbsp; Info: cannot find player by that ID, try again &nbsp;
+                                                    </p><b>
                                                 </div>
+
+                                                <div ng-show="!vm.showMessage" style="background-color: #ffc70e;opacity: 0.8;width: 52%;border-radius: 5px;">
+                                                    <b><p class="masthead-detail" style="color: black;">
+                                                        &nbsp; Tip: seach by typing the battletag e.g. "overwatch#1234" &nbsp;
+                                                    </p><b>
+                                                </div>
+
+
                                             </form>
                                         </p>
 
