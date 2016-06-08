@@ -30345,7 +30345,7 @@ div#site-main header.main {
 
 div#site-main header.main h1 a.logo {
     /*background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/responsive-menu-logo.svg");*/
-    background-image: url("logo.png");
+    background-image: url(content/images/logo.png);
     background-repeat: no-repeat;
     width: 236px;
     height: 100%;

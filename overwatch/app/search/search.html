@@ -21,10 +21,16 @@
                                     </header>
                                     <section class="p-article-content u-typography-format" itemprop="articleBody" style="background: url(content/images/searchbackground.png); background-size: cover; height: 38em">
 
-                                        <p style="margin-bottom: 18%">
-                                            <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 30%">
-                                                <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="SEARCH BATTLETAG" data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" class="b-search-input ac_input" autocomplete="off"></span>
-                                                <span class="primary-search-submit"><input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)"></span>
+                                        <p style="margin-bottom: 13%">
+                                            <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 15%">
+                                                <span class="primary-search-field" style="padding: 3%;width: 85%;">
+                                                    <input type="search" name="search" ng-model="battleTag" placeholder="SEARCH BATTLETAG" data-autocomplete-search-url="/find" 
+                                                    data-autocomplete-width="337" data-min-chars="3" data-max-results="15" class="b-search-input ac_input" autocomplete="off">
+                                                    </span>
+
+                                                <span class="primary-search-submit" style="padding: 3%;">
+                                                    <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)">
+                                                </span>
                                             </form>
                                         </p>
 
