@@ -7,56 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
     <!-- Page Title -->
-    <title ac-page-title></title>
+    <title>MyOverwatchStats</title>
+    
     <!-- icon -->
     <link rel="icon" type="image/x-icon" href="https://d281jof1t1i5a5.cloudfront.net/img/favicon-bb6200267bbdea6fdc9eb498a88722007dad6eb3b3c6437440025c66cb055fefdd1fbedf3886bd069fc3547c79fa8afee4795a278a644f6cfe10a7b1144f48bb.ico">
-    <!-- CDN CSS -->
-    <!--<link rel="stylesheet" href="/cdn/dist/1.0.0/css/styles.min.css" />-->
-
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/overpwn.css" />
     <link rel="stylesheet" href="css/playoverwatch.css" />
-
-    <style>
-        .select2 > .select2-choice.ui-select-match {
-            /* Because of the inclusion of Bootstrap */
-            height: 29px;
-        }
-        
-        .selectize-control > .selectize-dropdown {
-            top: 36px;
-        }
-        /* Helper class to show styles when focus */
-        
-        .selectize-input.selectize-focus {
-            border-color: #007FBB !important;
-        }
-        /* Fix input width for Selectize theme */
-        
-        .selectize-control > .selectize-input > input {
-            width: 100%;
-        }
-        /* Fix dropdown width for Selectize theme */
-        
-        .selectize-control > .selectize-dropdown {
-            width: 100%;
-        }
-        
-        .ui-select-offscreen {
-            clip: rect(0 0 0 0) !important;
-            width: 1px !important;
-            height: 1px !important;
-            border: 0 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            overflow: hidden !important;
-            position: absolute !important;
-            outline: 0 !important;
-            left: 0px !important;
-            top: 0px !important;
-        }
-    </style>
-
 </head>
 
 <body class="{{$state.current.data.specialClass}} career-detail en-us site section-home-folder site-overpwn site-overpwn body-home body-home-index show-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled"
@@ -68,27 +25,6 @@
     <!-- CDN JS -->
     <script src="/cdn/dist/1.0.0/js/libs.min.js"></script>
     <script src="/cdn/dist/1.0.0/js/common.min.js"></script>
-
-    <!-- Acsys - Widgets -->
-    <script src="/cdn/widgets/widgets.module.js"></script>
-    <script src="/cdn/widgets/ibox-tools/1.0.0/ibox-tools.js"></script>
-    <script src="/cdn/widgets/minimize-sidebar-navigation/1.0.0/minimize-sidebar-nav.js"></script>
-    <script src="/cdn/widgets/page-title/1.0.0/page-title.js"></script>
-    <script src="/cdn/widgets/sidebar-navigation/1.0.0/sidebar-nav.js"></script>
-    <script src="/cdn/widgets/app-status/1.0.0/app-status.js"></script>
-    <script src="/cdn/widgets/file-uploader/1.0.0/files.js"></script>
-    <script src="/cdn/widgets/file-uploader/1.0.0/upload.js"></script>
-    <script src="/cdn/widgets/file-uploader/1.0.0/file-uploader.js"></script>
-    <script src="/cdn/widgets/footable-table/1.0.0/footable-table.js"></script>
-    <script src="/cdn/widgets/form-input/1.0.0/form-input.directive.js"></script>
-    <script src="/cdn/widgets/file-drop-zone/1.0.0/file-drop-zone.directive.js"></script>
-    <script src="/cdn/widgets/ng-if-permission/1.0.0/ng-if-permission.directive.js"></script>
-    <script src="/cdn/widgets/spinner/1.0.0/app-spinner.service.js"></script>
-    <script src="/cdn/widgets/spinner/1.0.0/spinner.directive.js"></script>
-    <script src="/cdn/widgets/get-by-property/1.0.0/get-by-property.filter.js"></script>
-
-    <!-- Acsys - Features -->
-    <script src="/cdn/dist/1.0.0/js/features.min.js"></script>
 
     <!-- ============================================================================================================== -->
 
@@ -117,11 +53,11 @@
     <!-- News Tab -->
     <script src="app/news/news.controller.js"></script>
     <script src="app/news/news.service.js"></script>
-    
+
     <!-- My Stats Tab -->
     <script src="app/mystats/mystats.controller.js"></script>
     <script src="app/mystats/mystats.service.js"></script>
-    
+
     <!-- Heroes Tab -->
     <script src="app/heroes/heroes.controller.js"></script>
     <script src="app/heroes/heroes.service.js"></script>
@@ -130,7 +66,7 @@
     <script src="app/libs/d3/3.3.9/d3.min.js"></script>
     <script src="app/libs/nv.d3/1.8.1/nv.d3.min.js"></script>
     <script src="app/libs/angular-nvd3/1.0.6/angular-nvd3.js"></script>
-    
+
 
     <script type="text/javascript">
         Dropzone.autoDiscover = false;

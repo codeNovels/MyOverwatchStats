@@ -17,17 +17,6 @@
               * but this is easier to maintain.
               */
             'acsys.core'
-            ,'acsys.widgets'                   // needs core
-            ,'acsys.user'
-            ,'acsys.role'
-            ,'acsys.company'
-            ,'acsys.refresh-token'
-            ,'acsys.faq'
-            ,'acsys.report'
-            ,'acsys.errorLog'
-            ,'acsys.work-list'
-            ,'acsys.ticket'
-            ,'acsys.metrics'
             /*
              * Specific Feature areas
              */
