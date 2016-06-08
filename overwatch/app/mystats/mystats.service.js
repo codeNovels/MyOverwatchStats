@@ -37,7 +37,7 @@
             }
 
             function getProfileFailed(error) {
-                logger.logError('Could not get Catalogs Initial Setting.' + common.jsonMessage(error), SHOW_TOAST);
+                logger.logError('Could not get Profile Information' + common.jsonMessage(error), SHOW_TOAST);
                 return false;
             }
         }

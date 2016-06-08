@@ -21,16 +21,36 @@
                                     </header>
                                     <section class="p-article-content u-typography-format" itemprop="articleBody" style="background: url(content/images/searchbackground.png); background-size: cover; height: 38em">
 
+                                        <!--<img ng-src="content/images/spinner2.gif" style="   margin-bottom: -40%;
+                                                                                            margin-left: 37%;"></img>
+                                        <p class="masthead-detail h4" style="text-align: center; margin-top: 4em; color:#FFC70E; background-color: black; opacity: 0.9 ">
+                                                            Searching...
+                                        </p>-->
+
+
                                         <p style="margin-bottom: 13%">
                                             <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 15%">
-                                                <span class="primary-search-field" style="padding: 3%;width: 85%;">
+                                                <span class="primary-search-field" style="padding: 3%;width: 85%;">                                                   
                                                     <input type="search" name="search" ng-model="battleTag" placeholder="LOOK UP PLAYER" data-autocomplete-search-url="/find" 
-                                                        style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off" autofocus>
-                                                    </span>
+                                                        style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off" autofocus>                                                   
+                                                    </input>                                                         
+                                                </span>
 
-                                                <span class="primary-search-submit" style="padding: 3%;">
+
+
+                                                <span ng-show="!vm.spinner" class="primary-search-submit" style="padding: 3%;" >
                                                     <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)">
                                                 </span>
+
+
+                                                <span ng-show="vm.spinner" class="primary-search-submit" style=" padding: 2%;
+                                                                                            padding: bottom;
+                                                                                            padding-bottom: 24px;
+                                                                                            position: absolute;
+                                                                                            margin-left: 5px">
+                                                    <input type="spinner">
+                                                </span>
+
 
                                                 <div style="  background-color: #ffc70e;opacity: 0.8;
                                                                 width: 52%;border-radius: 5px;"><b>

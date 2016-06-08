@@ -25,14 +25,14 @@
         ////////////////
 
         function getList(ticketId) {
-            var url = 'https://api.lootbox.eu/patch_notes';
+            var url = 'https://api.watcher.gg/players/pc/us/php%231783' ;
             return $http.get(url)
                 .then(getListComplete)
                 .catch(getListFailed);
 
             function getListComplete(response) {
                 return {
-                    patchnotes : response.data
+                    profile : response.data.data
                 };
             }
 

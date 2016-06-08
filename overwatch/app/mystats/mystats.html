@@ -7,8 +7,15 @@
                         <div class="u-relative">
                             <div class="masthead-hero-image" ng-style="{'background-image':'url(https://d1u1mce87gyfbn.cloudfront.net/hero/'+vm.profileAvatar+'/overlay-portrait.png)'}"></div>
                             <div class="page-wrapper row content-box">
+
+
+                                <p class="masthead-detail h4" style="text-align: center" ng-if="vm.profile.length < 1">
+                                    LOADING...
+                                </p>
+
+
                                 <div class="column lg-8">
-                                    <div class="masthead">
+                                    <!--<div class="masthead">
                                         <div style="background-image:url(https://d1u1mce87gyfbn.cloudfront.net/game/playerlevelrewards/0x025000000000091C_Border.png)"
                                             class="player-level">
                                             <div class="u-vertical-center colorIsWhite">{{vm.profile.level}}</div>
@@ -22,18 +29,22 @@
                                                 </button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
+
+
                                 </div>
                             </div>
                         </div>
                     </section>
                     <div class="bg-crystal-dark profile-background">
 
-<section id="stats-section" class="content-box page-wrapper">
+                        <section id="stats-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Career Stats</h1>
                                 <div class="dropdown js-career-select" style="width:163px"><span class="dropdown_styled">ALL HEROES</span><select data-group-id="stats" class="js-career-select dropdown_original"><option value="0x02E00000FFFFFFFF">ALL HEROES</option><option value="0x02E0000000000002">Reaper</option><option value="0x02E0000000000004">Mercy</option><option value="0x02E0000000000005">Hanzo</option><option value="0x02E0000000000006">Torbjörn</option><option value="0x02E0000000000007">Reinhardt</option><option value="0x02E0000000000008">Pharah</option><option value="0x02E0000000000009">Winston</option><option value="0x02E000000000000A">Widowmaker</option><option value="0x02E0000000000015">Bastion</option><option value="0x02E0000000000029">Genji</option><option value="0x02E0000000000040">Roadhog</option><option value="0x02E0000000000042">McCree</option><option value="0x02E0000000000065">Junkrat</option><option value="0x02E000000000006E">Soldier: 76</option><option value="0x02E0000000000079">Lúcio</option><option value="0x02E000000000007A">D.Va</option><option value="0x02E00000000000DD">Mei</option></select></div>
                                 <hr>
+
+
                                 <div class="row">
                                     <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
                                         <div class="column xs-12 md-6 xl-6">
@@ -45,7 +56,12 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        <tr ng-if="vm.profile.length < 1">
+                                                            <td>
+                                                                <img ng-src="content/images/spinner2.gif" style="margin-right: 45%"></img>
+                                                            </td>
+                                                        </tr>
+                                                        <!--<tr>
                                                             <td>Win Rate</td>
                                                             <td>25</td>
                                                         </tr>
@@ -76,7 +92,7 @@
                                                         <tr>
                                                             <td>Bronze</td>
                                                             <td>34</td>
-                                                        </tr>
+                                                        </tr>-->
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -91,7 +107,12 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        <tr ng-if="vm.profile.length < 1">
+                                                            <td>
+                                                                <img ng-src="content/images/spinner2.gif" style="margin-right: 45%"></img>
+                                                            </td>
+                                                        </tr>
+                                                        <!--<tr>
                                                             <td>Best Game - Elims</td>
                                                             <td>25</td>
                                                         </tr>
@@ -122,12 +143,12 @@
                                                         <tr>
                                                             <td>Objective Kills</td>
                                                             <td>34</td>
-                                                        </tr>
+                                                        </tr>-->
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
-                                        
+
 
                                     </div>
                                 </div>
@@ -145,6 +166,8 @@
                                 <div class="dropdown js-career-select" style="width:261px"><span class="dropdown_styled">Time Played</span><select data-group-id="comparisons" class="js-career-select dropdown_original"><option value="overwatch.guid.0x0860000000000021">Time Played</option><option value="overwatch.guid.0x0860000000000039">Games Won</option><option value="overwatch.guid.0x08600000000003D1">Win Percentage</option><option value="overwatch.guid.0x086000000000002F">Weapon Accuracy</option><option value="overwatch.guid.0x08600000000003D2">Eliminations per Life</option><option value="overwatch.guid.0x0860000000000223">Kill Streak - Best</option><option value="overwatch.guid.0x0860000000000346">Multikill - Best</option><option value="overwatch.guid.0x086000000000039C">Objective Kills - Average</option></select></div>
                                 <hr>
                                 <div data-group-id="comparisons" data-category-id="overwatch.guid.0x0860000000000021" class="progress-category is-partial toggle-display is-active">
+                                   
+                                    <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-if="vm.profile.length < 1"></img>
 
                                     <div ng-repeat="hero in vm.topHeroes | limitTo: vm.limitTo">
                                         {{hero.name}}
@@ -166,7 +189,7 @@
 
                                 </div>
 
-                                <button ng-click="vm.seeAllHeroes()" data-label="Collapse List" data-show-more="true" class=" m-white m-sm u-center-block margin-sm margin-no-sides js-show-more-heroes">
+                                <button  ng-if="vm.profile.length > 1" ng-click="vm.seeAllHeroes()" data-label="Collapse List" data-show-more="true" class=" m-white m-sm u-center-block margin-sm margin-no-sides js-show-more-heroes">
                                     <span ng-show="vm.limitTo === 5">+ See All Heroes</span>
                                     <span ng-show="vm.limitTo === 30">Collapse List</span>
                                 </button>
@@ -174,13 +197,17 @@
 
 
                         </section>
-                                                <section id="achievements-section" class="content-box page-wrapper">
+                        <section id="achievements-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Achievements</h1>
                                 <div class="dropdown js-career-select" style="width:120px"><span class="dropdown_styled">General</span><select data-group-id="achievements" class="js-career-select dropdown_original"><option value="overwatch.achievementCategory.0">General</option><option value="overwatch.achievementCategory.1">Offense</option><option value="overwatch.achievementCategory.2">Defense</option><option value="overwatch.achievementCategory.3">Tank</option><option value="overwatch.achievementCategory.4">Support</option><option value="overwatch.achievementCategory.5">Maps</option></select></div>
                                 <hr>
                                 <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.0" class="toggle-display is-active">
-                                    <ul class="row">
+
+                                    <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-if="vm.profile.length < 1"></img>
+                                    
+                                    
+                                    <!--<ul class="row">
                                         <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
                                             <div class="media-card m-hoverable u-margin-bottom-md">
                                                 <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000156.png"
@@ -189,491 +216,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000157.png"
-                                                        class="media">
-                                                    <div class="content">Level 10</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000158.png"
-                                                        class="media">
-                                                    <div class="content">Level 25</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000015D.png"
-                                                        class="media">
-                                                    <div class="content">Undying</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000160.png"
-                                                        class="media">
-                                                    <div class="content">Decorated</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000161.png"
-                                                        class="media">
-                                                    <div class="content">Blackjack</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000192.png"
-                                                        class="media">
-                                                    <div class="content">The Friend Zone</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000159.png"
-                                                        class="media">
-                                                    <div class="content">Level 50</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000015E.png"
-                                                        class="media">
-                                                    <div class="content">The Path Is Closed</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000015F.png"
-                                                        class="media">
-                                                    <div class="content">Survival Expert</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2 end">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000162.png"
-                                                        class="media">
-                                                    <div class="content">Decked Out</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.1" class="toggle-display">
-                                    <ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000002.png"
-                                                        class="media">
-                                                    <div class="content">Die Die Die... Die</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000165.png"
-                                                        class="media">
-                                                    <div class="content">Whoa There!</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000169.png"
-                                                        class="media">
-                                                    <div class="content">Rocket Man</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000016A.png"
-                                                        class="media">
-                                                    <div class="content">Target Rich Environment</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000015B.png"
-                                                        class="media">
-                                                    <div class="content">Slice and Dice</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000163.png"
-                                                        class="media">
-                                                    <div class="content">Their Own Worst Enemy</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000164.png"
-                                                        class="media">
-                                                    <div class="content">Waste Not, Want Not</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000166.png"
-                                                        class="media">
-                                                    <div class="content">It's High Noon</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000167.png"
-                                                        class="media">
-                                                    <div class="content">Death From Above</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000168.png"
-                                                        class="media">
-                                                    <div class="content">Clearing the Area</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000016B.png"
-                                                        class="media">
-                                                    <div class="content">Total Recall</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2 end">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000016C.png"
-                                                        class="media">
-                                                    <div class="content">Special Delivery</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.2" class="toggle-display">
-                                    <ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000173.png"
-                                                        class="media">
-                                                    <div class="content">Ice Blocked</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000174.png"
-                                                        class="media">
-                                                    <div class="content">Cold Snap</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000175.png"
-                                                        class="media">
-                                                    <div class="content">Raid Wipe</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000016D.png"
-                                                        class="media">
-                                                    <div class="content">Triple Threat</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000016E.png"
-                                                        class="media">
-                                                    <div class="content">Charge!</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000016F.png"
-                                                        class="media">
-                                                    <div class="content">Simple Geometry</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000170.png"
-                                                        class="media">
-                                                    <div class="content">The Dragon Is Sated</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000171.png"
-                                                        class="media">
-                                                    <div class="content">Mine Like a Steel Trap</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000172.png"
-                                                        class="media">
-                                                    <div class="content">Roadkill</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000177.png"
-                                                        class="media">
-                                                    <div class="content">Armor Up!</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000178.png"
-                                                        class="media">
-                                                    <div class="content">Did That Sting?</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2 end">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000179.png"
-                                                        class="media">
-                                                    <div class="content">Smooth as Silk</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.3" class="toggle-display">
-                                    <ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000017C.png"
-                                                        class="media">
-                                                    <div class="content">I Am Your Shield</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000017E.png"
-                                                        class="media">
-                                                    <div class="content">Giving You the Hook</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000017A.png"
-                                                        class="media">
-                                                    <div class="content">Shot Down</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000017B.png"
-                                                        class="media">
-                                                    <div class="content">Game Over</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000017D.png"
-                                                        class="media">
-                                                    <div class="content">Storm, Earth and Fire</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000017F.png"
-                                                        class="media">
-                                                    <div class="content">Hog Wild</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000180.png"
-                                                        class="media">
-                                                    <div class="content">Mine Sweeper</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000181.png"
-                                                        class="media">
-                                                    <div class="content">Anger Management</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000182.png"
-                                                        class="media">
-                                                    <div class="content">Power Overwhelming</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2 end">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000183.png"
-                                                        class="media">
-                                                    <div class="content">The Power of Attraction</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.4" class="toggle-display">
-                                    <ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000186.png"
-                                                        class="media">
-                                                    <div class="content">Group Health Plan</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000184.png"
-                                                        class="media">
-                                                    <div class="content">The Floor Is Lava</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000185.png"
-                                                        class="media">
-                                                    <div class="content">Supersonic</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000187.png"
-                                                        class="media">
-                                                    <div class="content">Huge Rez</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000188.png"
-                                                        class="media">
-                                                    <div class="content">The Car Wash</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000189.png"
-                                                        class="media">
-                                                    <div class="content">Huge Success</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000018A.png"
-                                                        class="media">
-                                                    <div class="content">Rapid Discord</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2 end">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000018B.png"
-                                                        class="media">
-                                                    <div class="content">The Iris Embraces You</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                                <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.5" class="toggle-display">
-                                    <ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000018D.png"
-                                                        class="media">
-                                                    <div class="content">Double Cap</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000018E.png"
-                                                        class="media">
-                                                    <div class="content">Escort Duty</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000018F.png"
-                                                        class="media">
-                                                    <div class="content">Can't Touch This</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000190.png"
-                                                        class="media">
-                                                    <div class="content">Shutout</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
-                                            <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000191.png"
-                                                        class="media">
-                                                    <div class="content">World Traveler</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2 end">
-                                            <div class="media-card m-disabled u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E6000000000018C.png"
-                                                        class="media">
-                                                    <div class="content">Lockdown</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
+                                    </ul>-->
+
+
                                 </div>
                             </div>
                         </section>

@@ -2,7 +2,7 @@
  * Created by bnguyen on 6/05/2016.
  */
 
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -24,10 +24,10 @@
         vm.profileAvatar = '';
 
         // For show or hide "Edit/Save" button
-        
+
 
         // For CM to see if they are able to edit contractQty
-        
+
 
         // Methods
         vm.seeAllHeroes = seeAllHeroes;
@@ -40,46 +40,60 @@
         function activate() {
             getProfile();
         }
-        
-        function seeAllHeroes(){
-            if(vm.limitTo === 5){
+
+        function seeAllHeroes() {
+            if (vm.limitTo === 5) {
                 vm.limitTo = 30;
             }
-            else{
+            else {
                 vm.limitTo = 5
             }
         }
-        
-        function stripAndToLower(name){
-            switch(name){
-               case 'L&#xFA;cio':
-                vm.profileAvatar = 'lucio'
-               break;
-               
-               case 'Torbj&#xF6;rn':
-                vm.profileAvatar = 'torbjorn'
-               break;
-               
-               case 'Soldier: 76':
-                vm.profileAvatar = 'soldier-76'
-               break;
-               
-               case 'D.Va':
-                vm.profileAvatar = 'dva'
-               break;
-               
-               default:
-                vm.profileAvatar = $filter('lowercase')(name);
-               break;
+
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                '#': '%23'
+            };
+
+            return text.replace(/[&<>"'#]/g, function (m) { return map[m]; });
+        }
+
+        function stripAndToLower(name) {
+            switch (name) {
+                case 'L&#xFA;cio':
+                    vm.profileAvatar = 'lucio'
+                    break;
+
+                case 'Torbj&#xF6;rn':
+                    vm.profileAvatar = 'torbjorn'
+                    break;
+
+                case 'Soldier: 76':
+                    vm.profileAvatar = 'soldier-76'
+                    break;
+
+                case 'D.Va':
+                    vm.profileAvatar = 'dva'
+                    break;
+
+                default:
+                    vm.profileAvatar = $filter('lowercase')(name);
+                    break;
             }
         }
 
 
         /* Calling Data Service */
         function getProfile() {
-            myStatsService.getProfile(vm.userId)
-                .then(function(data) {
-                    vm.patchnotes = data.patchnotes;                  
+            var userId = escapeHtml(vm.userId);
+            myStatsService.getProfile(userId)
+                .then(function (data) {
+                    vm.profile = data.profile;
                 });
         }
     }

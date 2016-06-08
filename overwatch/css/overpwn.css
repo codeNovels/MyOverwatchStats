@@ -26119,6 +26119,25 @@ body .ui-dialog .poll-form-container .form-actions {
     padding: 0
 }
 
+.b-search-a .primary-search-submit input[type='spinner'] {
+    background-image: url('content/images/spinner3.gif');
+    background-size: 40px 40px;
+    background-color: transparent;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    -ms-transform: skew(15deg);
+    -o-transform: skew(15deg);
+    transform: skew(15deg);
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    transition: none;
+    text-shadow: none;
+    height: 37px;
+    width: 44px;
+    padding: 0
+}
+
 .b-search-a .primary-search-submit input[type='submit']:hover {
     background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/search-on.svg")
 }

@@ -2,7 +2,7 @@
  * Created by bnguyen on 6/05/2016.
  */
 
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -16,15 +16,18 @@
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
+        vm.profile = [];
+        vm.spinner = false;
+        vm.cannotFindPlayer = false;
 
         // Initial Data Load
         //vm.patchnotes = initialData.patchnotes;
 
         // For show or hide "Edit/Save" button
-        
+
 
         // For CM to see if they are able to edit contractQty
-        
+
 
         // Methods
         vm.searchBattleTag = searchBattleTag;
@@ -35,20 +38,28 @@
         ////////////////
 
         function activate() {
-            //getList();
         }
-        
-        function searchBattleTag(name){
-            //var battleTag = name.replace('#','-');
-            $state.go('home.mystats', { userId: name });
+
+        function searchBattleTag(name) {
+            vm.spinner = true;
+            getList();
         }
 
 
         /* Calling Data Service */
-        function getList() {
-            patchNotesService.getList()
-                .then(function(data) {
-                    vm.patchnotes = data.patchnotes;                  
+        function getList(name) {
+            searchService.getList()
+                .then(function (data) {
+                    if (!data) {
+                        vm.cannotFindPlayer = true;
+                    }
+                    else {
+                        vm.profile = data.profile;
+                        vm.spinner = false;
+                        vm.cannotFindPlayer = false;
+                        $state.go('home.mystats', { userId: name });
+                    }
+
                 });
         }
 
