@@ -7,40 +7,41 @@
 
     angular
         .module('app.layout')
-        .factory('myStatsService', myStatsService);
+        .factory('searchService', searchService);
 
-    myStatsService.$inject = ['common', 'SHOW_TOAST'];
+    searchService.$inject = ['common', 'SHOW_TOAST'];
 
     /* @ngInject */
-    function myStatsService(common, SHOW_TOAST) {
+    function searchService(common, SHOW_TOAST) {
         var $http = common.$http;
         var logger = common.logger;
 
         var service = {
-            getProfile: getProfile
+            getList: getList
         };
 
         return service;
 
         ////////////////
 
-        function getProfile(userId) {
-            var url = 'https://api.watcher.gg/players/pc/us/' + userId;
+        function getList(ticketId) {
+            var url = 'https://api.lootbox.eu/patch_notes';
             return $http.get(url)
-                .then(getProfileComplete)
-                .catch(getProfileFailed);
+                .then(getListComplete)
+                .catch(getListFailed);
 
-            function getProfileComplete(response) {
+            function getListComplete(response) {
                 return {
-                    profile : response.data.data
+                    patchnotes : response.data
                 };
             }
 
-            function getProfileFailed(error) {
+            function getListFailed(error) {
                 logger.logError('Could not get Catalogs Initial Setting.' + common.jsonMessage(error), SHOW_TOAST);
                 return false;
             }
         }
+
     }
 
 })();

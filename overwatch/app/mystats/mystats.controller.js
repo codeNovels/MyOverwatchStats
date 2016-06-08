@@ -9,16 +9,16 @@
         .module('app.layout')
         .controller('MyStatsController', MyStatsController);
 
-    MyStatsController.$inject = ['$scope', '$state', 'common', 'myStatsService', 'initialData', '$filter'];
+    MyStatsController.$inject = ['$scope', '$state', 'common', 'myStatsService', '$filter'];
 
     /* @ngInject */
-    function MyStatsController($scope, $state, common, myStatsService, initialData, $filter) {
+    function MyStatsController($scope, $state, common, myStatsService, $filter) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
 
         // Initial Data Load
-        vm.profile = initialData.profile;
+        vm.profile = [];
         vm.userId = $state.params.userId
         vm.limitTo = 5;
         vm.profileAvatar = '';
@@ -38,8 +38,7 @@
         ////////////////
 
         function activate() {
-            getFeaturedStats();
-            getTopHeroes();
+            getProfile();
         }
         
         function seeAllHeroes(){
@@ -78,27 +77,11 @@
 
         /* Calling Data Service */
         function getProfile() {
-            myStatsService.getList(vm.userId)
+            myStatsService.getProfile(vm.userId)
                 .then(function(data) {
                     vm.patchnotes = data.patchnotes;                  
                 });
         }
-        
-        function getFeaturedStats() {
-            myStatsService.getFeaturedStats(vm.userId)
-                .then(function(data) {
-                    vm.featuredStats = data.featuredStats;                
-                });
-        }
-        
-        function getTopHeroes() {
-            myStatsService.getTopHeroes(vm.userId)
-                .then(function(data) {
-                    vm.topHeroes = data.topHeroes;  
-                    stripAndToLower(vm.topHeroes[0].name);      
-                });
-        }
-
     }
 })();
 

@@ -44,8 +44,7 @@
         }
         
         function searchBattleTag(name){
-            var battleTag = name.replace('#','-');
-            $state.go('home.mystats', { userId: battleTag });
+            $state.go('home.mystats', { userId: name });
         }
 
         $rootScope.$on('spinner.toggle', function (event, args) {

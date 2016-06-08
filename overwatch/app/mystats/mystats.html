@@ -28,113 +28,117 @@
                         </div>
                     </section>
                     <div class="bg-crystal-dark profile-background">
-                        <section id="highlights-section" class="content-box page-wrapper">
+
+<section id="stats-section" class="content-box page-wrapper">
                             <div class="row column">
-                                <h1 class="h3 header colorIsWhite">Featured Stats</h1>
+                                <h1 class="h3 header">Career Stats</h1>
+                                <div class="dropdown js-career-select" style="width:163px"><span class="dropdown_styled">ALL HEROES</span><select data-group-id="stats" class="js-career-select dropdown_original"><option value="0x02E00000FFFFFFFF">ALL HEROES</option><option value="0x02E0000000000002">Reaper</option><option value="0x02E0000000000004">Mercy</option><option value="0x02E0000000000005">Hanzo</option><option value="0x02E0000000000006">Torbjörn</option><option value="0x02E0000000000007">Reinhardt</option><option value="0x02E0000000000008">Pharah</option><option value="0x02E0000000000009">Winston</option><option value="0x02E000000000000A">Widowmaker</option><option value="0x02E0000000000015">Bastion</option><option value="0x02E0000000000029">Genji</option><option value="0x02E0000000000040">Roadhog</option><option value="0x02E0000000000042">McCree</option><option value="0x02E0000000000065">Junkrat</option><option value="0x02E000000000006E">Soldier: 76</option><option value="0x02E0000000000079">Lúcio</option><option value="0x02E000000000007A">D.Va</option><option value="0x02E00000000000DD">Mei</option></select></div>
                                 <hr>
-                                <ul class="row">
-                                    <li class="column xs-12 sm-12 lg-12 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading">{{vm.profile.games.win_percentage}}%</h3>
-                                                <p class="card-copy">Win Percent</p>
+                                <div class="row">
+                                    <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
+                                        <div class="column xs-12 md-6 xl-6">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">General</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Win Rate</td>
+                                                            <td>25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Score</td>
+                                                            <td>871</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>KDA</td>
+                                                            <td>1,566</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Time Played</td>
+                                                            <td>2,604</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Total Medals</td>
+                                                            <td>1,507,645</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gold</td>
+                                                            <td>4,280</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Silver</td>
+                                                            <td>3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bronze</td>
+                                                            <td>34</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="column xs-12 sm-12 lg-12 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading">{{vm.profile.games.wins}}</h3>
-                                                <p class="card-copy">Wins</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-12 lg-12 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading">{{vm.profile.games.lost}}</h3>
-                                                <p class="card-copy">Losses</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-12 lg-12 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading">{{vm.profile.games.played}}</h3>
-                                                <p class="card-copy">Total Games Won</p>
-                                            </div>
-                                        </div>
-                                    </li>
 
+                                        <div class="column xs-12 md-6 xl-6">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">Combat</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Best Game - Elims</td>
+                                                            <td>25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Best Game - Damage</td>
+                                                            <td>871</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Best Game - Healing</td>
+                                                            <td>1,566</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Damage Dealt</td>
+                                                            <td>2,604 /sec</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Healing Done</td>
+                                                            <td>1,507,645</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Eliminations</td>
+                                                            <td>4,280</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Multi-Kills</td>
+                                                            <td>3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Objective Kills</td>
+                                                            <td>34</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
 
-
-                                    <li class="column xs-12 sm-12 lg-12 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading">{{vm.featuredStats[32]["Eliminations-Average"]}}</h3>
-                                                <p class="card-copy">Eliminations - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[31]["DamageDone-Average"]}}</h3>
-                                                <p class="card-copy">Damage Done - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[30]["Deaths-Average"]}}</h3>
-                                                <p class="card-copy">Deaths - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[29]["FinalBlows-Average"]}}</h3>
-                                                <p class="card-copy">Final Blows - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[28]["HealingDone-Average"]}}</h3>
-                                                <p class="card-copy">Healing Done - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[27]["ObjectiveKills-Average"]}}</h3>
-                                                <p class="card-copy">Objective Kills - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[26]["ObjectiveTime-Average"]}}</h3>
-                                                <p class="card-copy">Objective Time - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="column xs-12 sm-6 lg-4 xl-3 end">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <h3 class="card-heading colorIsWhite">{{vm.featuredStats[25]["SoloKills-Average"]}}</h3>
-                                                <p class="card-copy">Solo Kills - Average</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                    </div>
+                                </div>
                         </section>
+
+
+
+
+
+
+
                         <section id="top-heroes-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Top Heroes</h1>
@@ -170,325 +174,7 @@
 
 
                         </section>
-                        <section id="stats-section" class="content-box page-wrapper">
-                            <div class="row column">
-                                <h1 class="h3 header">Career Stats</h1>
-                                <div class="dropdown js-career-select" style="width:163px"><span class="dropdown_styled">ALL HEROES</span><select data-group-id="stats" class="js-career-select dropdown_original"><option value="0x02E00000FFFFFFFF">ALL HEROES</option><option value="0x02E0000000000002">Reaper</option><option value="0x02E0000000000004">Mercy</option><option value="0x02E0000000000005">Hanzo</option><option value="0x02E0000000000006">Torbjörn</option><option value="0x02E0000000000007">Reinhardt</option><option value="0x02E0000000000008">Pharah</option><option value="0x02E0000000000009">Winston</option><option value="0x02E000000000000A">Widowmaker</option><option value="0x02E0000000000015">Bastion</option><option value="0x02E0000000000029">Genji</option><option value="0x02E0000000000040">Roadhog</option><option value="0x02E0000000000042">McCree</option><option value="0x02E0000000000065">Junkrat</option><option value="0x02E000000000006E">Soldier: 76</option><option value="0x02E0000000000079">Lúcio</option><option value="0x02E000000000007A">D.Va</option><option value="0x02E00000000000DD">Mei</option></select></div>
-                                <hr>
-                                <div class="row">
-                                    <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Combat</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Melee Final Blows</td>
-                                                            <td>25</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Solo Kills</td>
-                                                            <td>871</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Objective Kills</td>
-                                                            <td>1,566</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Final Blows</td>
-                                                            <td>2,604</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Damage Done</td>
-                                                            <td>1,507,645</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Eliminations</td>
-                                                            <td>4,280</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Environmental Kills</td>
-                                                            <td>3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Multikills</td>
-                                                            <td>34</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Assists</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Healing Done</td>
-                                                            <td>324,990</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Recon Assists</td>
-                                                            <td>9</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Teleporter Pads Destroyed</td>
-                                                            <td>4</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Best Per Game</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Eliminations</td>
-                                                            <td>40</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Final Blows</td>
-                                                            <td>27</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Damage Done</td>
-                                                            <td>16,317</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Healing Done</td>
-                                                            <td>10,186</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Defensive Assts</td>
-                                                            <td>23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Offensive Assts</td>
-                                                            <td>11</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Objective Kills</td>
-                                                            <td>25</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Objective Time</td>
-                                                            <td>03:35</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Multikill - Best</td>
-                                                            <td>4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Solo Kills</td>
-                                                            <td>27</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Time Spent on Fire</td>
-                                                            <td>09:24</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Average</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Melee Final Blows</td>
-                                                            <td>0.08</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Final Blows</td>
-                                                            <td>0.08</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Time Spent on Fire</td>
-                                                            <td>01:12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Solo Kills</td>
-                                                            <td>2.89</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Objective Time</td>
-                                                            <td>00:40</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Objective Kills</td>
-                                                            <td>5.2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Healing Done</td>
-                                                            <td>1,080</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Final Blows</td>
-                                                            <td>8.65</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Deaths</td>
-                                                            <td>7.57</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Damage Done</td>
-                                                            <td>5,009</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Eliminations</td>
-                                                            <td>14.21</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Deaths</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Deaths</td>
-                                                            <td>2,280</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Environmental Deaths</td>
-                                                            <td>21</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Match Awards</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Cards</td>
-                                                            <td>122</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Medals</td>
-                                                            <td>874</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Medals - Gold</td>
-                                                            <td>274</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Medals - Silver</td>
-                                                            <td>332</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Medals - Bronze</td>
-                                                            <td>268</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Game</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Games Won</td>
-                                                            <td>158</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Games Played</td>
-                                                            <td>301</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Time Spent on Fire</td>
-                                                            <td>06:03:11</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Objective Time</td>
-                                                            <td>03:23:50</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Score</td>
-                                                            <td>402,447</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Time Played</td>
-                                                            <td>39 hours</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="column xs-12 md-6 xl-3">
-                                            <div class="card-stat-block">
-                                                <table class="data-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">Miscellaneous</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Melee Final Blows</td>
-                                                            <td>2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Defensive Assts</td>
-                                                            <td>265</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Defensive Assts - Avg</td>
-                                                            <td>1</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Offensive Assts</td>
-                                                            <td>101</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Offensive Assts - Avg</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </section>
-                        <section id="achievements-section" class="content-box page-wrapper">
+                                                <section id="achievements-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Achievements</h1>
                                 <div class="dropdown js-career-select" style="width:120px"><span class="dropdown_styled">General</span><select data-group-id="achievements" class="js-career-select dropdown_original"><option value="overwatch.achievementCategory.0">General</option><option value="overwatch.achievementCategory.1">Offense</option><option value="overwatch.achievementCategory.2">Defense</option><option value="overwatch.achievementCategory.3">Tank</option><option value="overwatch.achievementCategory.4">Support</option><option value="overwatch.achievementCategory.5">Maps</option></select></div>

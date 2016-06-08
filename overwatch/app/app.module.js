@@ -41,7 +41,7 @@
     app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', 'LOCAL_CDN',
         function($stateProvider, $urlRouterProvider, $httpProvider, LOCAL_CDN) {
 
-        $urlRouterProvider.otherwise("/home/patch-notes");
+        $urlRouterProvider.otherwise("/home/search");
 
         $stateProvider
             .state('login',         {url: '/login', templateUrl: 'app/login/login.html', controller: 'LoginController', controllerAs: "vm", data: { pageTitle: 'Login', specialClass: 'gray-bg' } })
@@ -64,17 +64,11 @@
                                                                        }]}
                                                                     }) 
             .state('home.mystats',  {url: "/mystats/:userId",   templateUrl: "app/mystats/mystats.html" , controller: 'MyStatsController', controllerAs: "vm",data: { pageTitle: 'My Stats' }
-                                                                        ,resolve: {
-                                                                           initialData: ['$stateParams','myStatsService', function($stateParams, myStatsService) {
-                                                                               return myStatsService.getProfile($stateParams.userId);
-                                                                       }]}
                                                                     }) 
             .state('home.heroes',  {url: "/heroes",   templateUrl: "app/heroes/heroes.html" , controller: 'HeroesController', controllerAs: "vm",data: { pageTitle: 'Heroes' }
-                                                                    //     ,resolve: {
-                                                                    //        initialData: ['editPvmListService', function(editPvmListService) {
-                                                                    //            return editPvmListService.getSetting();
-                                                                    //    }]}
-                                                                    })                                                        
+                                                                    })  
+            .state('home.search',  {url: "/search",   templateUrl: "app/search/search.html" , controller: 'SearchController', controllerAs: "vm",data: { pageTitle: 'Search' }
+                                                                    })                                                                                                                  
                                                                                                                                    
         }
     ]);
@@ -143,7 +137,7 @@
                     break;
                 default:
                     // Redirect to home page
-                    $state.transitionTo('home.patchnotes');
+                    $state.transitionTo('home.search');
             }
         });
 

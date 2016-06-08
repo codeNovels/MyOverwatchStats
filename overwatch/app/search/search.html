@@ -9,28 +9,25 @@
 
 
 
-                            <!--<li>
+                            <li>
                                 <article class="p-article p-article-a post post-new post-published post-list-item" itemscope="" itemtype="http://schema.org/Article">
                                     <meta itemprop="url" content="http://www.overpwn.com/news/184-more-than-7-million-overwatch-players-worldwide">
                                     <header class="p-article-header">
                                         <h2 class="p-article-title">
                                             <a href="http://us.battle.net/forums/en/overwatch/21446648/">
-                                                <span>Undergoing Maintenance</span>
+                                                <span></span>
                                             </a>
                                         </h2>
                                     </header>
-                                    <section class="p-article-content u-typography-format" itemprop="articleBody">
-                                        <blockquote class="blizzard">
-                                            <div class="quote-content">
-                                                <div class="quote-body">                                                   
-                                                    <p>
-                                                        <img ng-src="content/images/overwatchoops.png"></img>
-                                                    </p>
+                                    <section class="p-article-content u-typography-format" itemprop="articleBody" style="background: url(content/images/searchbackground.png); background-size: cover; height: 38em">
 
-                                                </div>
-                                            </div>
-                                        </blockquote>
-                                        <p></p>
+                                        <p style="margin-bottom: 18%">
+                                            <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 30%">
+                                                <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="SEARCH BATTLETAG" data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" class="b-search-input ac_input" autocomplete="off"></span>
+                                                <span class="primary-search-submit"><input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)"></span>
+                                            </form>
+                                        </p>
+
                                     </section>
                                     <footer class="p-article-footer">
                                         <section class="p-article-meta">
@@ -45,11 +42,11 @@
                                         </section>
                                     </footer>
                                 </article>
-                            </li>-->
+                            </li>
 
 
 
-                            <li ng-repeat="note in vm.patchnotes">
+                            <!--<li ng-repeat="note in vm.patchnotes">
                                 <article class="p-article p-article-a post post-new post-published post-list-item" itemscope="" itemtype="http://schema.org/Article">
 
                                     <meta itemprop="url" content="http://www.overpwn.com/news/184-more-than-7-million-overwatch-players-worldwide">
@@ -91,7 +88,7 @@
                                         </section>
                                     </footer>
                                 </article>
-                            </li>
+                            </li>-->
 
 
                         </ul>
@@ -105,5 +102,5 @@
     </div>
 
     <!-- Above Footer -->
-    <div id="footer-push"></div>
+    <div id="footer-push" style="></div>
 </div>
