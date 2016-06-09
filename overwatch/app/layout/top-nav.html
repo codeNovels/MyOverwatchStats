@@ -16,7 +16,10 @@
     </div>
 
     <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate">
-        <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="search" data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" class="b-search-input ac_input" autocomplete="off"></span>
+        <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="search" 
+            data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" 
+            class="b-search-input ac_input" autocomplete="off" minlength="1" maxlength="25" required>
+        </span>
         <span class="primary-search-submit"><input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)"></span>
     </form>
 

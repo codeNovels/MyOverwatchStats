@@ -29,17 +29,20 @@
 
 
                                         <p style="margin-bottom: 13%">
-                                            <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 15%">
+                                            <form name="searchForm" class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 15%">
+                                                
+                                                
                                                 <span class="primary-search-field" style="padding: 3%;width: 85%;">                                                   
                                                     <input type="search" name="search" ng-model="battleTag" placeholder="LOOK UP PLAYER" data-autocomplete-search-url="/find" 
-                                                        style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off" autofocus>                                                   
+                                                        style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off" autofocus
+                                                        minlength="1" maxlength="25" required>                                                   
                                                     </input>                                                         
                                                 </span>
 
 
 
-                                                <span ng-show="!vm.spinner" class="primary-search-submit" style="padding: 3%;">
-                                                    <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)">
+                                                <span ng-show="!vm.spinner" class="primary-search-submit" style="padding: 3%;" >
+                                                    <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag, searchForm)">
                                                 </span>
 
 

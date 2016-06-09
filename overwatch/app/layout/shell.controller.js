@@ -44,7 +44,13 @@
         }
         
         function searchBattleTag(name){
-            $state.go('home.mystats', { userId: name });
+            if (!name) {
+                return
+            }
+            else {
+                $state.go('home.mystats', { userId: name });
+            }
+
         }
 
         $rootScope.$on('spinner.toggle', function (event, args) {
