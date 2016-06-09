@@ -40,10 +40,12 @@
                         <section id="stats-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Career Stats</h1>
+
+
                                 <div class="dropdown js-career-select" style="width:163px" >
-                                    <span class="dropdown_styled" >{{vm.selectedHero.name}}</span>
-                                    <select data-group-id="stats" class="js-career-select dropdown_original" ng-model="vm.selectedHero"
-                                    ng-options="item as item.name for item in vm.heroSelector track by item.id" ></select>
+                                    <span class="dropdown_styled" >{{vm.selectedHeroName}}</span>
+                                    <select data-group-id="stats" class="js-career-select dropdown_original" ng-model="vm.selectedHero" ng-change="vm.searchHero(vm.selectedHero)"
+                                    ng-options="item as item.name for item in vm.heroSelector track by item.name" ></select>
                                 </div>
                                 <hr>
 
@@ -66,39 +68,39 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Win Rate</td>
-                                                            <td >{{(vm.profile.heroStats[vm.selectedHero.id].gamesWon / vm.profile.heroStats[vm.selectedHero.id].gamesPlayed)
+                                                            <td >{{(vm.profile.heroStats[vm.selectedHeroId].gamesWon / vm.profile.heroStats[vm.selectedHeroId].gamesPlayed)
                                                                 * 100 | number : 2}}
-                                                                <span ng-if="vm.profile.heroStats[vm.selectedHero.id].gamesWon">%</span>
+                                                                <span ng-if="vm.profile.heroStats[vm.selectedHeroId].gamesWon">%</span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Score</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].score}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].score}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>KDA</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].kda}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].kda}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Time Played</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].timePlayed}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].timePlayed}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Total Medals</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsGold + vm.profile.heroStats[vm.selectedHero.id].medalsSilver
-                                                                + vm.profile.heroStats[vm.selectedHero.id].medalsBronze}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].medalsGold + vm.profile.heroStats[vm.selectedHeroId].medalsSilver
+                                                                + vm.profile.heroStats[vm.selectedHeroId].medalsBronze}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Gold</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsGold}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].medalsGold}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Silver</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsSilver}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].medalsSilver}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Bronze</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsBronze}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].medalsBronze}}</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -121,39 +123,39 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Best Game - Elims</td>
-                                                            <td>{{vm.profile.careerStats[vm.selectedHero.id].mostGameEliminations}}</td>
+                                                            <td>{{vm.profile.careerStats[vm.selectedHeroId].mostGameEliminations}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Best Game - Damage</td>
-                                                            <td>{{vm.profile.careerStats[vm.selectedHero.id].mostGameDamageDone}}</td>
+                                                            <td>{{vm.profile.careerStats[vm.selectedHeroId].mostGameDamageDone}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Best Game - Healing</td>
-                                                            <td>{{vm.profile.careerStats[vm.selectedHero.id].mostGameHealingDone}}</td>
+                                                            <td>{{vm.profile.careerStats[vm.selectedHeroId].mostGameHealingDone}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Damage Dealt</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].damageDone}} 
-                                                                <span ng-if="vm.profile.heroStats[vm.selectedHero.id]">/sec</span>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].damageDone}} 
+                                                                <span ng-if="vm.profile.heroStats[vm.selectedHeroId]">/sec</span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Healing Done</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].healingDone}} 
-                                                                <span ng-if="vm.profile.heroStats[vm.selectedHero.id].healingDone">/sec</span>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].healingDone}} 
+                                                                <span ng-if="vm.profile.heroStats[vm.selectedHeroId].healingDone">/sec</span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Eliminations</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].eliminations}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].eliminations}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Multi-Kills</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].multiKills}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].multiKills}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Objective Kills</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].objectiveKills}}</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].objectiveKills}}</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

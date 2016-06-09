@@ -22,28 +22,33 @@
         vm.userId = $state.params.userId
         vm.limitTo = 5;
         vm.profileAvatar = '';
+        vm.selectedHeroId = 0;
+        vm.selectedHeroName = 'ALL HEROES';
         vm.heroSelector = [
             { id: 0, name: 'ALL HEROES', value: "0x02E00000FFFFFFFF" },
             { id: 1, name: 'Reaper', value: "0x02E0000000000002" },
             { id: 2, name: 'Mercy', value: "x02E0000000000004" },
             { id: 3, name: 'Hanzo', value: "x02E0000000000005" },
-            { id: 4, name: 'Torbjorn', value: "x02E0000000000006" },
+            { id: 4, name: 'Torbjörn', value: "x02E0000000000006" },
             { id: 5, name: 'Reinhardt', value: "x02E0000000000007" },
             { id: 6, name: 'Pharah', value: "x02E0000000000008" },
             { id: 7, name: 'Winston', value: "x02E0000000000009" },
             { id: 8, name: 'Widowmaker', value: "x02E000000000000A" },
             { id: 9, name: 'Bastion', value: "x02E0000000000015" },
-            { id: 10, name: 'Zenyatta' },
+            { id: 10, name: 'Zenyatta', value: "x02E0000000000015" },
             { id: 11, name: 'Genji', value: "x02E0000000000029" },
             { id: 12, name: 'Roadhog', value: "x02E0000000000040" },
             { id: 13, name: 'McCree', value: "x02E0000000000042" },
             { id: 14, name: 'Junkrat', value: "x02E0000000000065" },
             { id: 15, name: 'Soldier: 76', value: "x02E000000000006E" },
-            { id: 16, name: 'Lucio', value: "x02E0000000000079" },
+            { id: 16, name: 'Lúcio', value: "x02E0000000000079" },
             { id: 17, name: 'D.Va', value: "x02E000000000007A" },
             { id: 18, name: 'Mei', value: "x02E00000000000DD" },
+            { id: 19, name: 'Tracer', value: "x02E00000000000DD" },
+            { id: 20, name: 'Symmetra', value: "x02E00000000000DD" },
+            { id: 21, name: 'Zarya', value: "x02E00000000000DD" },
         ];
-        vm.selectedHero = vm.heroSelector[0];
+        
 
 
         // For show or hide "Edit/Save" button
@@ -54,6 +59,7 @@
 
         // Methods
         vm.seeAllHeroes = seeAllHeroes;
+        vm.searchHero = searchHero;
 
 
         activate();
@@ -71,6 +77,21 @@
             else {
                 vm.limitTo = 5
             }
+        }
+
+        function searchHero(heroName){
+            angular.forEach(heroName, function(name){
+                angular.forEach(vm.profile.heroStats, function(profile, index){
+                    if(name === profile.name){
+                        vm.selectedHeroId = index;
+                        vm.selectedHeroName = profile.name;
+                    }
+                    else {
+
+                    }
+                })
+                
+            })
         }
 
         function getMostPlayedHero(){
