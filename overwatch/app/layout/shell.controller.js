@@ -5,16 +5,18 @@
         .module('app.layout')
         .controller('ShellController', ShellController);
 
-    ShellController.$inject = ['common', '$rootScope', '$state'];
+    ShellController.$inject = ['common', '$rootScope', '$state', 'searchService'];
 
     /* @ngInject */
-    function ShellController(common, $rootScope, $state) {
+    function ShellController(common, $rootScope, $state, searchService) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
 
         vm.activate = activate;
         vm.title = 'ShellController';
+        vm.showMessage = false;
+        vm.profile = [];
 
         vm.showSpinner = false;
         vm.spinnerMessage = 'Retrieving data...';
@@ -48,9 +50,23 @@
                 return
             }
             else {
-                $state.go('home.mystats', { userId: name });
+                var userId = escapeHtml(name)
+                getList(userId);
             }
 
+        }
+
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                '#': '%23'
+            };
+
+            return text.replace(/[&<>"'#]/g, function (m) { return map[m]; });
         }
 
         $rootScope.$on('spinner.toggle', function (event, args) {
@@ -59,6 +75,24 @@
                 vm.spinnerMessage = args.message;
             }
         });
+
+
+
+        /* Calling Data Service */
+        function getList(userId) {
+            searchService.getList(userId)
+                .then(function (data) {
+                    if (!data) {
+                        vm.showMessage = true;
+                    }
+                    else {
+                        vm.profile = data.profile;
+                        vm.showMessage = false;
+                        $state.go('home.mystats', { userId: userId });
+                    }
+
+                });
+        }
 
     }
 })();

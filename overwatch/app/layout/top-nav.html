@@ -1,7 +1,10 @@
 <!-- Header, ex: Logo, search, etc. -->
 <header class="main" role="banner">
-    <h1><a class="logo" href="https://www.facebook.com/Myoverwatchstats">hdafsdfi</a></h1>
 
+    <h1><a class="logo" href="https://www.facebook.com/Myoverwatchstats">hdafsdfi</a></h1>
+    <div class="fb-like" data-href="https://www.facebook.com/Myoverwatchstats" data-layout="button_count" data-action="like"
+        data-show-faces="true" data-share="true">
+    </div>
 
     <div class="social-links">
         <a href="https://www.facebook.com/Myoverwatchstats" class="fb">
@@ -21,10 +24,18 @@
             class="b-search-input ac_input" autocomplete="off" minlength="1" maxlength="25" required>
         </span>
         <span class="primary-search-submit"><input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)"></span>
+
+        <div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;width: 84%;border-radius: 5px;">
+            <b>
+                <p class="masthead-detail" style="color: white;">
+                &nbsp; Info: cannot find player by that ID, try again &nbsp;
+                 </p>
+                <b>
+        </div>
+
     </form>
 
-    <div class="fb-like" data-href="https://www.facebook.com/Myoverwatchstats" data-layout="button_count" data-action="like"
-        data-show-faces="true" data-share="true"></div>
+    
 
 
     <i class="menu-button"></i><i class="search-button"></i>
