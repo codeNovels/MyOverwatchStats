@@ -5,7 +5,7 @@
                 <div class="bg-color-blue-dark u-invert">
                     <section id="overview-section" class="bg-gibraltar u-nav-offset">
                         <div class="u-relative">
-                            <div class="masthead-hero-image" ng-style="{'background-image':'url(https://d1u1mce87gyfbn.cloudfront.net/hero/'+vm.profileAvatar+'/overlay-portrait.png)'}"></div>
+                            <div ng-if="vm.profileAvatar.length > 0" class="masthead-hero-image" ng-style="{'background-image':'url(https://d1u1mce87gyfbn.cloudfront.net/hero/'+vm.profileAvatar+'/overlay-portrait.png)'}"></div>
                             <div class="page-wrapper row content-box">
 
 
@@ -14,22 +14,22 @@
                                 </p>
 
 
-                                <div class="column lg-8">
-                                    <!--<div class="masthead">
+                                <div class="column lg-8" ng-show="vm.profile.player">
+                                    <div class="masthead">
                                         <div style="background-image:url(https://d1u1mce87gyfbn.cloudfront.net/game/playerlevelrewards/0x025000000000091C_Border.png)"
                                             class="player-level">
-                                            <div class="u-vertical-center colorIsWhite">{{vm.profile.level}}</div>
+                                            <div class="u-vertical-center colorIsWhite">{{vm.profile.player.level}}</div>
                                         </div>
                                         <div class="masthead-player">
-                                            <h1 class="header-masthead colorIsWhite">{{vm.profile.username}}</h1>
-                                            <p class="masthead-detail h4"><span>{{vm.profile.playtime}} Hours Played</span></p>
+                                            <h1 class="header-masthead colorIsWhite">{{vm.playerName}}</h1>
+                                            <p class="masthead-detail h4"><span>{{vm.hoursPlayed}} Hours Played</span></p>
                                             <div id="profile-platforms" class="masthead-buttons button-group js-button-group">
                                                 <button class="m-white m-sm  is-active">
-                                                pc us
+                                                {{vm.profile.player.platform}} {{vm.profile.player.region}}
                                                 </button>
                                             </div>
                                         </div>
-                                    </div>-->
+                                    </div>
 
 
                                 </div>
@@ -37,11 +37,14 @@
                         </div>
                     </section>
                     <div class="bg-crystal-dark profile-background">
-
                         <section id="stats-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Career Stats</h1>
-                                <div class="dropdown js-career-select" style="width:163px"><span class="dropdown_styled">ALL HEROES</span><select data-group-id="stats" class="js-career-select dropdown_original"><option value="0x02E00000FFFFFFFF">ALL HEROES</option><option value="0x02E0000000000002">Reaper</option><option value="0x02E0000000000004">Mercy</option><option value="0x02E0000000000005">Hanzo</option><option value="0x02E0000000000006">Torbjörn</option><option value="0x02E0000000000007">Reinhardt</option><option value="0x02E0000000000008">Pharah</option><option value="0x02E0000000000009">Winston</option><option value="0x02E000000000000A">Widowmaker</option><option value="0x02E0000000000015">Bastion</option><option value="0x02E0000000000029">Genji</option><option value="0x02E0000000000040">Roadhog</option><option value="0x02E0000000000042">McCree</option><option value="0x02E0000000000065">Junkrat</option><option value="0x02E000000000006E">Soldier: 76</option><option value="0x02E0000000000079">Lúcio</option><option value="0x02E000000000007A">D.Va</option><option value="0x02E00000000000DD">Mei</option></select></div>
+                                <div class="dropdown js-career-select" style="width:163px" >
+                                    <span class="dropdown_styled" >{{vm.selectedHero.name}}</span>
+                                    <select data-group-id="stats" class="js-career-select dropdown_original" ng-model="vm.selectedHero"
+                                    ng-options="item as item.name for item in vm.heroSelector track by item.id" ></select>
+                                </div>
                                 <hr>
 
 
@@ -61,38 +64,42 @@
                                                                 <img ng-src="content/images/spinner2.gif" style="margin-right: 45%"></img>
                                                             </td>
                                                         </tr>
-                                                        <!--<tr>
+                                                        <tr>
                                                             <td>Win Rate</td>
-                                                            <td>25</td>
+                                                            <td >{{(vm.profile.heroStats[vm.selectedHero.id].gamesWon / vm.profile.heroStats[vm.selectedHero.id].gamesPlayed)
+                                                                * 100 | number : 2}}
+                                                                <span ng-if="vm.profile.heroStats[vm.selectedHero.id].gamesWon">%</span>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Score</td>
-                                                            <td>871</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].score}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>KDA</td>
-                                                            <td>1,566</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].kda}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Time Played</td>
-                                                            <td>2,604</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].timePlayed}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Total Medals</td>
-                                                            <td>1,507,645</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsGold + vm.profile.heroStats[vm.selectedHero.id].medalsSilver
+                                                                + vm.profile.heroStats[vm.selectedHero.id].medalsBronze}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Gold</td>
-                                                            <td>4,280</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsGold}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Silver</td>
-                                                            <td>3</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsSilver}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Bronze</td>
-                                                            <td>34</td>
-                                                        </tr>-->
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].medalsBronze}}</td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -112,38 +119,42 @@
                                                                 <img ng-src="content/images/spinner2.gif" style="margin-right: 45%"></img>
                                                             </td>
                                                         </tr>
-                                                        <!--<tr>
+                                                        <tr>
                                                             <td>Best Game - Elims</td>
-                                                            <td>25</td>
+                                                            <td>{{vm.profile.careerStats[vm.selectedHero.id].mostGameEliminations}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Best Game - Damage</td>
-                                                            <td>871</td>
+                                                            <td>{{vm.profile.careerStats[vm.selectedHero.id].mostGameDamageDone}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Best Game - Healing</td>
-                                                            <td>1,566</td>
+                                                            <td>{{vm.profile.careerStats[vm.selectedHero.id].mostGameHealingDone}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Damage Dealt</td>
-                                                            <td>2,604 /sec</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].damageDone}} 
+                                                                <span ng-if="vm.profile.heroStats[vm.selectedHero.id]">/sec</span>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Healing Done</td>
-                                                            <td>1,507,645</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].healingDone}} 
+                                                                <span ng-if="vm.profile.heroStats[vm.selectedHero.id].healingDone">/sec</span>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Eliminations</td>
-                                                            <td>4,280</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].eliminations}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Multi-Kills</td>
-                                                            <td>3</td>
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].multiKills}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Objective Kills</td>
-                                                            <td>34</td>
-                                                        </tr>-->
+                                                            <td>{{vm.profile.heroStats[vm.selectedHero.id].objectiveKills}}</td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -166,7 +177,7 @@
                                 <div class="dropdown js-career-select" style="width:261px"><span class="dropdown_styled">Time Played</span><select data-group-id="comparisons" class="js-career-select dropdown_original"><option value="overwatch.guid.0x0860000000000021">Time Played</option><option value="overwatch.guid.0x0860000000000039">Games Won</option><option value="overwatch.guid.0x08600000000003D1">Win Percentage</option><option value="overwatch.guid.0x086000000000002F">Weapon Accuracy</option><option value="overwatch.guid.0x08600000000003D2">Eliminations per Life</option><option value="overwatch.guid.0x0860000000000223">Kill Streak - Best</option><option value="overwatch.guid.0x0860000000000346">Multikill - Best</option><option value="overwatch.guid.0x086000000000039C">Objective Kills - Average</option></select></div>
                                 <hr>
                                 <div data-group-id="comparisons" data-category-id="overwatch.guid.0x0860000000000021" class="progress-category is-partial toggle-display is-active">
-                                   
+
                                     <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-if="vm.profile.length < 1"></img>
 
                                     <div ng-repeat="hero in vm.topHeroes | limitTo: vm.limitTo">
@@ -189,7 +200,7 @@
 
                                 </div>
 
-                                <button  ng-if="vm.profile.length > 1" ng-click="vm.seeAllHeroes()" data-label="Collapse List" data-show-more="true" class=" m-white m-sm u-center-block margin-sm margin-no-sides js-show-more-heroes">
+                                <button ng-if="vm.profile.length > 1" ng-click="vm.seeAllHeroes()" data-label="Collapse List" data-show-more="true" class=" m-white m-sm u-center-block margin-sm margin-no-sides js-show-more-heroes">
                                     <span ng-show="vm.limitTo === 5">+ See All Heroes</span>
                                     <span ng-show="vm.limitTo === 30">Collapse List</span>
                                 </button>
@@ -205,18 +216,18 @@
                                 <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.0" class="toggle-display is-active">
 
                                     <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-if="vm.profile.length < 1"></img>
-                                    
-                                    
-                                    <!--<ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2">
+
+
+                                    <ul class="row">
+                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2" ng-repeat="achievement in vm.profile.achievements">
                                             <div class="media-card m-hoverable u-margin-bottom-md">
-                                                <div class="container"><img src="https://d1u1mce87gyfbn.cloudfront.net/game/achievements/0x0E60000000000156.png"
-                                                        class="media">
-                                                    <div class="content">Centenary</div>
+                                                <div class="container">
+                                                    <img ng-src="https://static.watcher.gg/achievements/{{achievement.id}}.png" class="media">
+                                                    <div class="content">{{achievement.name}}</div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </ul>-->
+                                    </ul>
 
 
                                 </div>
