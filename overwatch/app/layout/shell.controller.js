@@ -17,6 +17,7 @@
         vm.title = 'ShellController';
         vm.showMessage = false;
         vm.profile = [];
+        vm.mouseOver = false;
 
         vm.showSpinner = false;
         vm.spinnerMessage = 'Retrieving data...';
@@ -75,7 +76,6 @@
                 vm.spinnerMessage = args.message;
             }
         });
-
 
 
         /* Calling Data Service */
