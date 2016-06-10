@@ -135,13 +135,13 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Damage Dealt</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].damageDone}} 
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].damageDone / vm.profile.heroStats[vm.selectedHeroId].timePlayed | number: 2}} 
                                                                 <span ng-if="vm.profile.heroStats[vm.selectedHeroId]">/sec</span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Healing Done</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].healingDone}} 
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].healingDone / vm.profile.heroStats[vm.selectedHeroId].timePlayed | number: 2}} 
                                                                 <span ng-if="vm.profile.heroStats[vm.selectedHeroId].healingDone">/sec</span>
                                                             </td>
                                                         </tr>
@@ -221,7 +221,7 @@
 
 
                                     <ul class="row">
-                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-2" ng-repeat="achievement in vm.profile.achievements">
+                                        <div class="column xs-6 sm-6 md-4 lg-3 xl-3" ng-repeat="achievement in vm.profile.achievements">
                                             <div class="media-card m-hoverable u-margin-bottom-md">
                                                 <div class="container">
                                                     <img ng-src="https://static.watcher.gg/achievements/{{achievement.id}}.png" class="media">
