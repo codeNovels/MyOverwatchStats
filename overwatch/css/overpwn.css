@@ -14749,7 +14749,7 @@ footer#footer div.footer-links span.copyright {
 
     body.show-ads.responsive-enabled footer#footer {
         width: 100%;
-        padding-top: 292px;
+        padding-top: 1%;
         height: auto
     }
 
@@ -14917,9 +14917,9 @@ footer#footer div.footer-links span.copyright {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .privacy-policy-change {
-        max-width:1200px;
+        max-width:1000px;
         margin: 0 auto
     }
 
@@ -17090,7 +17090,7 @@ body.responsive-enabled #site #site-main {
 
 body.responsive-enabled #site #site-main .atf {
     width: auto;
-    max-width: 1200px
+    max-width: 1000px
 }
 
 body.responsive-enabled #site #site-main .container,body.responsive-enabled #site #site-main.fixed .container {
@@ -17100,8 +17100,7 @@ body.responsive-enabled #site #site-main .container,body.responsive-enabled #sit
 }
 
 body.responsive-enabled #site #site-main .container #content,body.responsive-enabled #site #site-main.fixed .container #content {
-    width: 120%;
-    margin-left: -10%;
+    width: 100%;
     box-shadow: none
 }
 
@@ -20402,9 +20401,9 @@ body#tinymce span[data-mce-style="font-size: 8pt;"] {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .cc_container {
-        max-width:1200px;
+        max-width:1000px;
         margin: 0 auto
     }
 
@@ -26080,7 +26079,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .b-search-a .primary-search-field input[type='search'] {
-    width: 25em;
+    width: 24em;
     height: 37px;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
@@ -26120,8 +26119,8 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .b-search-a .primary-search-submit input[type='spinner'] {
-    background-image: url('content/images/spinner3.gif');
-    background-size: 40px 31px;
+    /*background-image: url('content/images/spinner5.gif');*/
+    background-size: 20px 21px;
     background-color: transparent;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
@@ -30349,7 +30348,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 }
 
 div#site-main header.main {
-    width: 110%
+    width: 100%
 }
 
 @media screen and (max-width: 1023px) {
@@ -30375,7 +30374,7 @@ div#site-main header.main h1 a.logo {
     text-indent: -500px;
     white-space: nowrap;
     overflow: hidden;
-    margin-left: -720px;
+    margin-left: -514px;
     margin-top: 15px
 }
 

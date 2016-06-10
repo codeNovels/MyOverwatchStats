@@ -29,43 +29,50 @@
 
 
                                         <p style="margin-bottom: 13%">
-                                            <form name="searchForm" class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 15%">
-                                                
-                                                
-                                                <span class="primary-search-field" style="padding: 3%;width: 85%;">                                                   
-                                                    <input type="search" name="search" ng-model="battleTag" placeholder="LOOK UP PLAYER" data-autocomplete-search-url="/find" 
-                                                        style=" width: 100%;font-size: 30px;" class="b-search-input ac_input" autocomplete="off" autofocus
-                                                        minlength="1" maxlength="25" required>                                                   
-                                                    </input>                                                         
-                                                </span>
+                                            <form name="searchForm" class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 5%">
+
+                                                <div style="text-align: center">
+                                                    <!-- SEARCH FIELD -->
+                                                    <span class="primary-search-field" style="padding: 3%;width: 70%;">                                                   
+                                                        <input type="search" name="search" ng-model="battleTag" placeholder="LOOK UP PLAYER" data-autocomplete-search-url="/find" 
+                                                            style=" width: 100%;font-size: 100%;" class="b-search-input ac_input" autocomplete="off" autofocus
+                                                            minlength="1" maxlength="25" required>                                                   
+                                                        </input>  
+                                                   
+                                                    </span>
+                                                    <!-- SEARCH BUTTON -->
+                                                    <span ng-if="!vm.spinner" class="primary-search-submit" style="padding: 3%;">
+                                                        <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag, searchForm)">
+                                                    </span>
+
+                                                    <span ng-if="vm.spinner" class="primary-search-submit" style="padding: 3%">
+                                                        <input type="submit" value="Search" style="background-image: url('content/images/spinner3.gif')">
+                                                    </span>
 
 
-
-                                                <span ng-show="!vm.spinner" class="primary-search-submit" style="padding: 3%;" >
-                                                    <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag, searchForm)">
-                                                </span>
-
-
-                                                <span ng-show="vm.spinner" class="primary-search-submit" style=" padding: 2%;
-                                                                                            padding: bottom;
-                                                                                            padding-bottom: 24px;
-                                                                                            position: absolute;
-                                                                                            margin-left: 5px">
-                                                    <input type="spinner">
-                                                </span>
-
-
-                                                <div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;width: 52%;border-radius: 5px;">
+                                                <!-- TIP MESSAGE -->
+                                                <div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;margin-left:10%;width: 50%;border-radius: 5px;">
                                                     <b><p class="masthead-detail" style="color: white;">
                                                         &nbsp; Info: cannot find player by that ID, try again &nbsp;
                                                     </p><b>
                                                 </div>
 
-                                                <div ng-show="!vm.showMessage" style="background-color: #ffc70e;opacity: 0.8;width: 52%;border-radius: 5px;">
-                                                    <b><p class="masthead-detail" style="color: black;">
+                                                <div ng-show="!vm.showMessage" style="background-color: #ffc70e;opacity: 0.8;margin-left:10%;width: 50%;border-radius: 5px;">
+                                                    <b><p class="masthead-detail" style="color: #212121;">
                                                         &nbsp; Tip: seach by typing the battletag e.g. "overwatch#1234" &nbsp;
                                                     </p><b>
                                                 </div>
+
+                                                </div>
+
+
+
+
+
+
+
+
+                                                
 
 
                                             </form>

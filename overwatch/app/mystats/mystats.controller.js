@@ -86,6 +86,10 @@
                         vm.selectedHeroId = index;
                         vm.selectedHeroName = profile.name;
                     }
+                    else if(name === 'ALL HEROES'){
+                        vm.selectedHeroId = 0;
+                        vm.selectedHeroName = 'ALL HEROES';
+                    }
                     else {
 
                     }
