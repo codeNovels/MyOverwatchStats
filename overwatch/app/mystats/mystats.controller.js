@@ -52,7 +52,6 @@
         vm.topHeroes = [];
 
 
-
         // For show or hide "Edit/Save" button
 
 
@@ -153,6 +152,19 @@
             }
         }
 
+        function decodeUri(topHeroes) {
+            angular.forEach(topHeroes, function (hero, index) {
+                if (hero.name === 'Torbj&#xF6;rn') {
+                    vm.topHeroes[index].name = 'Torbjorn'
+                }
+                else if (hero.name === 'L&#xFA;cio') {
+                    vm.topHeroes[index].name = 'Lucio'
+                }
+            })
+
+
+        }
+
 
         /* Calling Data Service */
         function getProfile() {
@@ -178,7 +190,7 @@
 
         function getTopHeroes() {
             var oldstr = vm.userId;
-            var userId = oldstr.replace("%23","-");
+            var userId = oldstr.replace("%23", "-");
             myStatsService.getTopHeroes(userId)
                 .then(function (data) {
                     if (!data) {
@@ -186,6 +198,7 @@
                     }
                     else {
                         vm.topHeroes = data.topHeroes;
+                        decodeUri(vm.topHeroes);
                     }
                 });
         }

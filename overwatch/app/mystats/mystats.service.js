@@ -33,7 +33,7 @@
 
             function getProfileComplete(response) {
                 return {
-                    profile : response.data.data
+                    profile: response.data.data
                 };
             }
 
@@ -44,14 +44,18 @@
         }
 
         function getTopHeroes(userId) {
-            var url = 'https://api.lootbox.eu/pc/us/' + userId +'/heroes';
-            return $http.get(url)
+            var apiUrl = 'https://api.lootbox.eu/pc/us/' + userId + '/heroes';
+            return $http({
+                method: 'GET',
+                url: apiUrl,
+                headers: {'Content-Type' : 'application/json; charset=UTF-8'},
+            })
                 .then(getTopHeroesComplete)
                 .catch(getTopHeroesFailed);
 
             function getTopHeroesComplete(response) {
                 return {
-                    topHeroes : response.data
+                    topHeroes: response.data
                 };
             }
 

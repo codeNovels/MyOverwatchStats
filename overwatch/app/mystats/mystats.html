@@ -172,9 +172,6 @@
 
 
 
-
-
-
                         <section id="top-heroes-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Top Heroes</h1>
@@ -184,22 +181,41 @@
 
                                 <div data-group-id="comparisons" data-category-id="overwatch.guid.0x0860000000000021" class="progress-category is-partial toggle-display is-active">
 
-                                    <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-if="vm.profile.length < 1"></img>
-
+                                    <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-show="vm.topHeroes.length === 0"></img>
+                                    
                                     <div ng-repeat="hero in vm.topHeroes | limitTo: vm.limitTo">
                                         <div data-ng-overwatch-progress-percent="{{hero.percentage}}" class="progress-2 m-animated progress-category-item"><img ng-src="{{hero.image}}">
-                                            <div class="bar-container">
+                                            <div class="bar-container" >
+                                                <div style="right: {{(hero.percentage - 1) * -100}}%;" 
+                                                class="bar 
+                                                    {{hero.name === 'Soldier: 76'? 'Soldier76':hero.name}} 
+                                                    {{hero.name === 'D.Va'? 'Dva':''}}">
+                                                </div>
+
+                                                <div class="bar-text">
+                                                    <div class="title" ng-bind-html="hero.name"></div>
+                                                    <div class="description">{{hero.playtime}}</div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <!--<div class="bar-container">
                                                 <div style="right: {{(hero.percentage - 1) * -100}}%;" class="bar 
                                                     {{hero.name === 'Soldier: 76'? 'Soldier76':hero.name}} 
                                                     {{hero.name === 'D.Va'? 'Dva':''}}
-                                                    {{hero.name == vm.topHeroes[8].name? 'Lucio':''}}
+                                                    {{hero.name === vm.topHeroes[8].name? 'Lucio':''}}
                                                     {{hero.name === vm.topHeroes[12].name? 'Torbjorn':''}}">
                                                 </div>
                                                 <div class="bar-text">
                                                     <div class="title" ng-bind-html="hero.name"></div>
                                                     <div class="description">{{hero.playtime}}</div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
 

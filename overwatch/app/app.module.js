@@ -59,23 +59,23 @@
     ]);
 
     // Intercept all http request
-    // app.config(['$httpProvider', function ($httpProvider) {
-    //     //Enable cross domain calls (Chrome doesn't allow localhost..
-    //     //Solution:  Edit host file to map 127.0.0.1 to acsys.com:8888
-    //     //           Running the webApi from acsys.com:8888/universal-apis/api
-    //     //           Running web client from acsys.com:888/universal
-    //     $httpProvider.defaults.useXDomain = true;
-    //     $httpProvider.defaults.withCredentials = true;
-    //     //Remove the header used to identify ajax call  that would prevent CORS from working
-    //     delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    //     $httpProvider.defaults.headers.common["Accept"] = "application/json, text/plain, */*";
-    //     //$httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-    //     // Disable IE ajax request caching
-    //     $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
-    //     $httpProvider.defaults.headers.common['Pragma'] = 'no-cache';
-    //     $httpProvider.defaults.cache = false;
+    app.config(['$httpProvider', function ($httpProvider) {
+        //Enable cross domain calls (Chrome doesn't allow localhost..
+        //Solution:  Edit host file to map 127.0.0.1 to acsys.com:8888
+        //           Running the webApi from acsys.com:8888/universal-apis/api
+        //           Running web client from acsys.com:888/universal
+        // $httpProvider.defaults.useXDomain = true;
+        // $httpProvider.defaults.withCredentials = true;
+        // //Remove the header used to identify ajax call  that would prevent CORS from working
+         delete $httpProvider.defaults.headers.common['X-Requested-With'];
+         $httpProvider.defaults.headers.common["Accept"] = "application/json, text/plain, */*";
+         $httpProvider.defaults.headers.common["Content-Type"] = "application/json, charset=utf-8";
+        // // Disable IE ajax request caching
+        // $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
+        // $httpProvider.defaults.headers.common['Pragma'] = 'no-cache';
+        // $httpProvider.defaults.cache = false;
 
-    // }]);
+    }]);
 
     // Remove hash tags in the url
     /*
