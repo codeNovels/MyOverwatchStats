@@ -48,7 +48,9 @@
             { id: 20, name: 'Symmetra', value: "x02E00000000000DD" },
             { id: 21, name: 'Zarya', value: "x02E00000000000DD" },
         ];
-        
+
+        vm.topHeroes = [];
+
 
 
         // For show or hide "Edit/Save" button
@@ -68,6 +70,7 @@
 
         function activate() {
             getProfile();
+            getTopHeroes();
         }
 
         function seeAllHeroes() {
@@ -79,14 +82,14 @@
             }
         }
 
-        function searchHero(heroName){
-            angular.forEach(heroName, function(name){
-                angular.forEach(vm.profile.heroStats, function(profile, index){
-                    if(name === profile.name){
+        function searchHero(heroName) {
+            angular.forEach(heroName, function (name) {
+                angular.forEach(vm.profile.heroStats, function (profile, index) {
+                    if (name === profile.name) {
                         vm.selectedHeroId = index;
                         vm.selectedHeroName = profile.name;
                     }
-                    else if(name === 'ALL HEROES'){
+                    else if (name === 'ALL HEROES') {
                         vm.selectedHeroId = 0;
                         vm.selectedHeroName = 'ALL HEROES';
                     }
@@ -94,20 +97,20 @@
 
                     }
                 })
-                
+
             })
         }
 
-        function getMostPlayedHero(){
+        function getMostPlayedHero() {
             var highestSecondsPlayed = 0;
             var avatar = '';
 
-            angular.forEach(vm.profile.heroStats, function(hero){
-                if(hero.timePlayed > highestSecondsPlayed){
-                    if(hero.name !== 'All'){
+            angular.forEach(vm.profile.heroStats, function (hero) {
+                if (hero.timePlayed > highestSecondsPlayed) {
+                    if (hero.name !== 'All') {
                         highestSecondsPlayed = hero.timePlayed;
                         avatar = hero.name;
-                    }       
+                    }
                 }
             })
             stripAndToLower(avatar)
@@ -170,6 +173,20 @@
                     }
 
 
+                });
+        }
+
+        function getTopHeroes() {
+            var oldstr = vm.userId;
+            var userId = oldstr.replace("%23","-");
+            myStatsService.getTopHeroes(userId)
+                .then(function (data) {
+                    if (!data) {
+                        console.log('no data retrieved for topHeroes')
+                    }
+                    else {
+                        vm.topHeroes = data.topHeroes;
+                    }
                 });
         }
     }

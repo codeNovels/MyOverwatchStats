@@ -17,7 +17,8 @@
         var logger = common.logger;
 
         var service = {
-            getProfile: getProfile
+            getProfile: getProfile,
+            getTopHeroes: getTopHeroes
         };
 
         return service;
@@ -37,6 +38,24 @@
             }
 
             function getProfileFailed(error) {
+                logger.logError('Could not get Profile Information' + common.jsonMessage(error), SHOW_TOAST);
+                return false;
+            }
+        }
+
+        function getTopHeroes(userId) {
+            var url = 'https://api.lootbox.eu/pc/us/' + userId +'/heroes';
+            return $http.get(url)
+                .then(getTopHeroesComplete)
+                .catch(getTopHeroesFailed);
+
+            function getTopHeroesComplete(response) {
+                return {
+                    topHeroes : response.data
+                };
+            }
+
+            function getTopHeroesFailed(error) {
                 logger.logError('Could not get Profile Information' + common.jsonMessage(error), SHOW_TOAST);
                 return false;
             }

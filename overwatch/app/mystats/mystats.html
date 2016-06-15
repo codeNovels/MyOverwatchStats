@@ -42,10 +42,10 @@
                                 <h1 class="h3 header">Career Stats</h1>
 
 
-                                <div class="dropdown js-career-select" style="width:163px" >
-                                    <span class="dropdown_styled" >{{vm.selectedHeroName}}</span>
+                                <div class="dropdown js-career-select" style="width:163px">
+                                    <span class="dropdown_styled">{{vm.selectedHeroName}}</span>
                                     <select data-group-id="stats" class="js-career-select dropdown_original" ng-model="vm.selectedHero" ng-change="vm.searchHero(vm.selectedHero)"
-                                    ng-options="item as item.name for item in vm.heroSelector track by item.name" ></select>
+                                        ng-options="item as item.name for item in vm.heroSelector track by item.name"></select>
                                 </div>
                                 <hr>
 
@@ -68,7 +68,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Win Rate</td>
-                                                            <td >{{(vm.profile.heroStats[vm.selectedHeroId].gamesWon / vm.profile.heroStats[vm.selectedHeroId].gamesPlayed)
+                                                            <td>{{(vm.profile.heroStats[vm.selectedHeroId].gamesWon / vm.profile.heroStats[vm.selectedHeroId].gamesPlayed)
                                                                 * 100 | number : 2}}
                                                                 <span ng-if="vm.profile.heroStats[vm.selectedHeroId].gamesWon">%</span>
                                                             </td>
@@ -135,13 +135,15 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Damage Dealt</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].damageDone / vm.profile.heroStats[vm.selectedHeroId].timePlayed | number: 2}} 
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].damageDone / vm.profile.heroStats[vm.selectedHeroId].timePlayed
+                                                                | number: 2}}
                                                                 <span ng-if="vm.profile.heroStats[vm.selectedHeroId]">/sec</span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Healing Done</td>
-                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].healingDone / vm.profile.heroStats[vm.selectedHeroId].timePlayed | number: 2}} 
+                                                            <td>{{vm.profile.heroStats[vm.selectedHeroId].healingDone / vm.profile.heroStats[vm.selectedHeroId].timePlayed
+                                                                | number: 2}}
                                                                 <span ng-if="vm.profile.heroStats[vm.selectedHeroId].healingDone">/sec</span>
                                                             </td>
                                                         </tr>
@@ -178,12 +180,13 @@
                                 <h1 class="h3 header">Top Heroes</h1>
                                 <div class="dropdown js-career-select" style="width:261px"><span class="dropdown_styled">Time Played</span><select data-group-id="comparisons" class="js-career-select dropdown_original"><option value="overwatch.guid.0x0860000000000021">Time Played</option><option value="overwatch.guid.0x0860000000000039">Games Won</option><option value="overwatch.guid.0x08600000000003D1">Win Percentage</option><option value="overwatch.guid.0x086000000000002F">Weapon Accuracy</option><option value="overwatch.guid.0x08600000000003D2">Eliminations per Life</option><option value="overwatch.guid.0x0860000000000223">Kill Streak - Best</option><option value="overwatch.guid.0x0860000000000346">Multikill - Best</option><option value="overwatch.guid.0x086000000000039C">Objective Kills - Average</option></select></div>
                                 <hr>
+
+
                                 <div data-group-id="comparisons" data-category-id="overwatch.guid.0x0860000000000021" class="progress-category is-partial toggle-display is-active">
 
                                     <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-if="vm.profile.length < 1"></img>
 
                                     <div ng-repeat="hero in vm.topHeroes | limitTo: vm.limitTo">
-                                        {{hero.name}}
                                         <div data-ng-overwatch-progress-percent="{{hero.percentage}}" class="progress-2 m-animated progress-category-item"><img ng-src="{{hero.image}}">
                                             <div class="bar-container">
                                                 <div style="right: {{(hero.percentage - 1) * -100}}%;" class="bar 
@@ -202,7 +205,7 @@
 
                                 </div>
 
-                                <button ng-if="vm.profile.length > 1" ng-click="vm.seeAllHeroes()" data-label="Collapse List" data-show-more="true" class=" m-white m-sm u-center-block margin-sm margin-no-sides js-show-more-heroes">
+                                <button ng-if="<vm class="topHeroes"></vm>.length > 1" ng-click="vm.seeAllHeroes()" data-label="Collapse List" data-show-more="true" class=" m-white m-sm u-center-block margin-sm margin-no-sides js-show-more-heroes">
                                     <span ng-show="vm.limitTo === 5">+ See All Heroes</span>
                                     <span ng-show="vm.limitTo === 30">Collapse List</span>
                                 </button>
@@ -213,7 +216,7 @@
                         <section id="achievements-section" class="content-box page-wrapper">
                             <div class="row column">
                                 <h1 class="h3 header">Achievements</h1>
-                                <div class="dropdown js-career-select" style="width:120px"><span class="dropdown_styled">General</span><select data-group-id="achievements" class="js-career-select dropdown_original"><option value="overwatch.achievementCategory.0">General</option><option value="overwatch.achievementCategory.1">Offense</option><option value="overwatch.achievementCategory.2">Defense</option><option value="overwatch.achievementCategory.3">Tank</option><option value="overwatch.achievementCategory.4">Support</option><option value="overwatch.achievementCategory.5">Maps</option></select></div>
+                                <!--<div class="dropdown js-career-select" style="width:120px"><span class="dropdown_styled">General</span><select data-group-id="achievements" class="js-career-select dropdown_original"><option value="overwatch.achievementCategory.0">General</option><option value="overwatch.achievementCategory.1">Offense</option><option value="overwatch.achievementCategory.2">Defense</option><option value="overwatch.achievementCategory.3">Tank</option><option value="overwatch.achievementCategory.4">Support</option><option value="overwatch.achievementCategory.5">Maps</option></select></div>-->
                                 <hr>
                                 <div data-group-id="achievements" data-category-id="overwatch.achievementCategory.0" class="toggle-display is-active">
 
