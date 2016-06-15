@@ -56,7 +56,7 @@
             }
 
             function getTopHeroesFailed(error) {
-                logger.logError('Could not get Profile Information' + common.jsonMessage(error), SHOW_TOAST);
+                logger.logError('Could not get Top Hero Information' + common.jsonMessage(error), SHOW_TOAST);
                 return false;
             }
         }
