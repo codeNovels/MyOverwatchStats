@@ -30,7 +30,7 @@
     app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', 'LOCAL_CDN',
         function($stateProvider, $urlRouterProvider, $httpProvider, LOCAL_CDN) {
 
-        $urlRouterProvider.otherwise("/home/search");
+        $urlRouterProvider.otherwise("/home/patch-notes");
 
         $stateProvider
             .state('login',         {url: '/login', templateUrl: 'app/login/login.html', controller: 'LoginController', controllerAs: "vm", data: { pageTitle: 'Login', specialClass: 'gray-bg' } })
@@ -122,7 +122,7 @@
                     break;
                 default:
                     // Redirect to home page
-                    $state.transitionTo('home.search');
+                    $state.transitionTo('home.patchnotes');
             }
         });
 
