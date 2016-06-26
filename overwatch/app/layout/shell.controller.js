@@ -88,7 +88,7 @@
                     else {
                         vm.profile = data.profile;
                         vm.showMessage = false;
-                        $state.go('home.mystats', { userId: userId });
+                        $state.go('home.mystats', { platform: data.profile.platform, region: data.profile.region, userId: userId });
                     }
 
                 });
