@@ -76,7 +76,7 @@
                         vm.profile = data.profile;
                         vm.spinner = false;
                         vm.showMessage = false;
-                        $state.go('home.mystats', { platform: data.profile.platform, region: data.profile.region, userId: userId });
+                        $state.go('home.mystats', { platform: data.profile.platform, region: data.profile.region, userId: data.profile.name });
                     }
 
                 });

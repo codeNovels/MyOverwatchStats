@@ -205,7 +205,7 @@
 
         function getTopHeroes() {
             var oldstr = vm.userId;
-            var userId = oldstr.replace("%23", "-");
+            var userId = oldstr.replace("#", "-");
             myStatsService.getTopHeroes(userId, vm.platform, vm.region)
                 .then(function (data) {
                     if (!data) {
