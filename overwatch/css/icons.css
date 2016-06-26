@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* watcher */
+@font-face {
+  font-family: "watcher";
+  src:url("https://cdn.myfontastic.com/xSTZn2c2NdcqgsBiJpEenj/fonts/1464555871.eot");
+  src:url("https://cdn.myfontastic.com/xSTZn2c2NdcqgsBiJpEenj/fonts/1464555871.eot?#iefix") format("embedded-opentype"),
+    url("https://cdn.myfontastic.com/xSTZn2c2NdcqgsBiJpEenj/fonts/1464555871.woff") format("woff"),
+    url("https://cdn.myfontastic.com/xSTZn2c2NdcqgsBiJpEenj/fonts/1464555871.ttf") format("truetype"),
+    url("https://cdn.myfontastic.com/xSTZn2c2NdcqgsBiJpEenj/fonts/1464555871.svg#1464555871") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "watcher" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="watcher-"]:before,
+[class*=" watcher-"]:before {
+  font-family: "watcher" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.watcher-bnet:before {
+  content: "\61";
+}
+.watcher-bronze:before {
+  content: "\62";
+}
+.watcher-gold:before {
+  content: "\63";
+}
+.watcher-overwatch:before {
+  content: "\64";
+}
+.watcher-psn:before {
+  content: "\65";
+}
+.watcher-silver:before {
+  content: "\67";
+}
+.watcher-windows:before {
+  content: "\66";
+}
+.watcher-xbox:before {
+  content: "\68";
+}
+.watcher-defense:before {
+  content: "\69";
+}
+.watcher-support:before {
+  content: "\6a";
+}
+.watcher-tank:before {
+  content: "\6b";
+}
+.watcher-offense:before {
+  content: "\6c";
+}

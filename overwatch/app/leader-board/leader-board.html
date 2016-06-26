@@ -1,0 +1,306 @@
+<div class="container">
+    <div id="content" class="main content-container">
+        <section class="primary-content" role="main">
+            <div class="page-block newest-heroes-container">
+                <div class="bg-color-blue-dark u-invert">
+                    <br>
+                    <section id="overview-section" class="" style="background: url(content/images/searchbackground.png); background-size: cover; height: 24em">
+                        <div class="u-relative">
+                            <div class="page-wrapper row content-box">
+                                <form name="searchForm" class="primary-search b-search b-search-a" method="get" novalidate="novalidate" style="margin: 5%">
+
+                                    <div style="text-align: center">
+                                        <!-- SEARCH FIELD -->
+                                        <span class="primary-search-field" style="padding: 3%;width: 70%;">                                                   
+                                                        <input type="search" name="search" ng-model="battleTag" placeholder="LOOK UP PLAYER" data-autocomplete-search-url="/find" 
+                                                            style=" width: 100%;font-size: 110%;" class="b-search-input ac_input" autocomplete="off" autofocus
+                                                            minlength="1" maxlength="25" required>                                                   
+                                                        </input>  
+                                                   
+                                                    </span>
+                                        <!-- SEARCH BUTTON -->
+                                        <span ng-if="!vm.spinner" class="primary-search-submit" style="padding: 3%;">
+                                                        <input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag, searchForm)">
+                                                    </span>
+
+                                        <span ng-if="vm.spinner" class="primary-search-submit" style="padding: 3%">
+                                                        <input type="submit" value="Search" style="background-image: url('content/images/spinner3.gif')">
+                                                    </span>
+
+
+                                        <!-- TIP MESSAGE -->
+                                        <div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;
+                                                                                        margin-left: 8%;
+                                                                                        width: 81.5%;
+                                                                                        border-radius: 5px;
+                                                                                        font-size: 80%;
+                                                                                        margin-top: 1px;">
+                                            <b><p class="masthead-detail" style="color: white;">
+                                                        &nbsp; Info: cannot find player by that ID, try again &nbsp;
+                                                    </p><b>
+                                                </div>
+
+                                                <div ng-show="!vm.showMessage" style="background-color: #ffc70e;opacity: 0.8;
+                                                                                        margin-left: 8%;
+                                                                                        width: 81.5%;
+                                                                                        border-radius: 5px;
+                                                                                        font-size: 80%;
+                                                                                        margin-top: 1px;">
+                                                    <b><p class="masthead-detail" style="color: #212121;">
+                                                        &nbsp; Tip: seach by typing the battletag e.g. "overwatch#1234" &nbsp;
+                                                    </p><b>
+                                                </div>
+
+                                                </div>
+                                            </form>                              
+                            </div>
+                        </div>
+                    </section>
+
+                    <br>
+                    <div class="bg-crystal-dark profile-background" style="font-size: 13px">
+                        <section id="stats-section" class="content-box page-wrapper">
+                            <div class="row column">
+                                <h1 class="h3 header">Score Leaders</h1>
+                                <hr>
+
+
+                                <div class="row">
+                                    <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
+                                        <div class="column xs-12 md-4 <xl-4></xl-4>">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #3C3C3C; color: white;" colspan="2" class="watcher watcher-windows"><span>PC</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcScoreLeader in vm.pcLeaderBoards[0].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcScoreLeader.name}}</td>
+                                                            <td>{{pcScoreLeader.value}}</td>
+                                                        </tr>                                               
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="column xs-12 md-4 xl-4">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #1657AB; color: white;" colspan="2" class="watcher watcher-psn">PSN</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcScoreLeader in vm.psnLeaderBoards[0].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcScoreLeader.name}}</td>
+                                                            <td>{{pcScoreLeader.value}}</td>
+                                                        </tr> 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="column xs-12 md-4 xl-4">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #2FA213; color: white;" colspan="2" class="watcher watcher-xbox">XBOX ONE</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcScoreLeader in vm.xboxLeaderBoards[0].players" class="tdHasCursor">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcScoreLeader.name}}</td>
+                                                            <td>{{pcScoreLeader.value}}</td>
+                                                        </tr> 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                        </section>
+
+
+                        <section id="stats-section" class="content-box page-wrapper">
+                            <div class="row column">
+                                <h1 class="h3 header">KDA Leaders</h1>
+                                <hr>
+
+
+                                <div class="row">
+                                    <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
+                                        <div class="column xs-12 md-4 <xl-4></xl-4>">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #3C3C3C; color: white;" colspan="2" class="watcher watcher-windows">PC</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcKdaLeader in vm.pcLeaderBoards[1].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcKdaLeader.name}}</td>
+                                                            <td>{{pcKdaLeader.kda}}</td>
+                                                        </tr>                                                 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="column xs-12 md-4 xl-4">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #1657AB; color: white;" colspan="2" class="watcher watcher-psn">PSN</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcKdaLeader in vm.psnLeaderBoards[1].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcKdaLeader.name}}</td>
+                                                            <td>{{pcKdaLeader.kda}}</td>
+                                                        </tr> 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="column xs-12 md-4 xl-4">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #2FA213; color: white;" colspan="2" class="watcher watcher-xbox">XBOX ONE</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcKdaLeader in vm.xboxLeaderBoards[1].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcKdaLeader.name}}</td>
+                                                            <td>{{pcKdaLeader.kda}}</td>
+                                                        </tr> 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                        </section>
+
+
+                        <section id="stats-section" class="content-box page-wrapper">
+                            <div class="row column">
+                                <h1 class="h3 header">Gold Medal Leaders </h1>
+                                <hr>
+
+
+                                <div class="row">
+                                    <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
+                                        <div class="column xs-12 md-4 <xl-4></xl-4>">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #3C3C3C; color: white;" colspan="2" class="watcher watcher-windows">PC</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcGoldMedalLeader in vm.pcLeaderBoards[2].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcGoldMedalLeader.name}}</td>
+                                                            <td><span class="watcher watcher-gold" style="color: #D8AB00"></span> {{pcGoldMedalLeader.medalsGold}}</td>
+                                                        </tr>                                                 
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="column xs-12 md-4 xl-4">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #1657AB; color: white;" colspan="2" class="watcher watcher-psn">PSN</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcGoldMedalLeader in vm.psnLeaderBoards[2].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcGoldMedalLeader.name}}</td>
+                                                            <td><span class="watcher watcher-gold" style="color: #D8AB00"></span> {{pcGoldMedalLeader.medalsGold}}</td>
+                                                        </tr>  
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="column xs-12 md-4 xl-4">
+                                            <div class="card-stat-block">
+                                                <table class="data-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #2FA213; color: white;" colspan="2" class="watcher watcher-xbox">XBOX ONE</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="pcGoldMedalLeader in vm.xboxLeaderBoards[2].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">#{{$index+1}} {{pcGoldMedalLeader.name}}</td>
+                                                            <td><span class="watcher watcher-gold" style="color: #D8AB00"></span> {{pcGoldMedalLeader.medalsGold}}</td>
+                                                        </tr>  
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                        </section>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <!--No community page on the japan site, go to homepage instead-->
+
+                    <script type="text/javascript">
+                        !function(root){
+    root.messages = {"wallpaper":{"urlWide":{"title":"Wide","dimensions":"(2560 x 1440)"},"urlStandard":{"title":"Standard","dimensions":"(2048 x 1536)"},"urlTablet":{"title":"Tablet","dimensions":"(2048 x 2048)"},"urlMobile":{"title":"Mobile","dimensions":"(1080 x 1920)"},"urlFacebook":{"title":"Facebook","dimensions":"(851 x 315)"},"urlTwitter":{"title":"Twitter","dimensions":"(1500 x 500)"}},"img":{"hanzo":"https://d281jof1t1i5a5.cloudfront.net/img/hanzo-sm-114f060a6cc9cc1597a8ef3707fa827be79e1d9bc96847d20fd01f810faad9d4b30f99a91505ad1512e7c7f5d1749595bed6ab8ed836441db9caee21352b760a.png"}}
+}(this)
+                    </script>
+
+                    <script type="text/javascript" src="https://d281jof1t1i5a5.cloudfront.net/vendor-4cee9aa89e0e98d5ae0ddd7b57432fb8414c2d20427e3efbf9df26e28347a9cb3f20b39fd5202cc3347ca0be26a0a2b8ef44fe864f37c60a1a0ac52708f96e95.js"></script>
+                    <!--<script type="text/javascript" src="https://d281jof1t1i5a5.cloudfront.net/blizzard-bf31259f6cdb11961d35c2e8cb57ddb6912151dff4c072eff22c271e48a01b69b6d29d8377d622ca1108c47970f792f9db52aa5d9ff5ee20c5aa286cf454b8c2.js"></script>-->
+                    <script type="text/javascript" src="https://d281jof1t1i5a5.cloudfront.net/app-432855da0786c850a9cf45b47a622fcb16c3674d8a77a3df5df9e08506f1eb3251e8626970a091e34b0bbc3978671a7a1d3f37ed477d016ec04ae9933923db64.js"></script>
+
+                    <div class="blackout" blackout=""></div>
+                    <div class="lightbox" lightbox="main">
+                        <div class="lightbox-container">
+                            <div class="lightbox-header"></div>
+                            <div class="lightbox-body">
+                                <div class="lightbox-content"></div>
+                                <a href="#" class="lightbox-prev"></a>
+                                <a href="#" class="lightbox-next"></a>
+                            </div>
+                            <div class="lightbox-footer"></div>
+                        </div>
+                        <div class="lightbox-close"></div>
+                    </div>
+                    <script async="async" src="//www.youtube.com/iframe_api/" type="text/javascript"></script>
+
+
+
+
+
+                </div>
+        </section>
+        </div>
+        <!--<div id="footer-push" style="height: 292px !important"></div>-->
+    </div>

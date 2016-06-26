@@ -7,16 +7,21 @@
 
     angular
         .module('app.layout')
-        .controller('SearchController', SearchController);
+        .controller('LeaderBoardController', LeaderBoardController);
 
-    SearchController.$inject = ['$scope', '$state', 'common', 'searchService'];
+    LeaderBoardController.$inject = ['$scope', '$state', 'common', 'leaderBoardService', '$filter'];
 
     /* @ngInject */
-    function SearchController($scope, $state, common, searchService) {
+    function LeaderBoardController($scope, $state, common, leaderBoardService, $filter) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
+
+        // Initial Data Load
         vm.profile = [];
+        vm.pcLeaderBoards = [];
+        vm.psnLeaderBoards = [];
+        vm.xboxLeaderBoards = [];
         vm.spinner = false;
         vm.showMessage = false;
 
@@ -30,6 +35,7 @@
         ////////////////
 
         function activate() {
+            getList();
         }
 
         function searchBattleTag(name) {
@@ -39,7 +45,7 @@
             else {
                 vm.spinner = true;
                 var userId = escapeHtml(name)
-                getList(userId);
+                searchForProfile(userId);
             }
 
         }
@@ -59,8 +65,8 @@
 
 
         /* Calling Data Service */
-        function getList(userId) {
-            searchService.getList(userId)
+        function searchForProfile(userId) {
+            leaderBoardService.getSearchForProfile(userId)
                 .then(function (data) {
                     if (!data) {
                         vm.showMessage = true;
@@ -70,12 +76,27 @@
                         vm.profile = data.profile;
                         vm.spinner = false;
                         vm.showMessage = false;
-                        $state.go('home.mystats', { platform: platform, region: region, userId: userId });
+                        $state.go('home.mystats', { platform: data.profile.platform, region: data.profile.region, userId: userId });
                     }
 
                 });
         }
 
+        function getList() {
+            leaderBoardService.getList()
+                .then(function (data) {
+                    if (!data) {
+                        vm.showMessage = true;
+                        vm.spinner = false;
+                    }
+                    else {
+                        vm.pcLeaderBoards = data.leaderBoards.pc;
+                        vm.psnLeaderBoards = data.leaderBoards.psn;
+                        vm.xboxLeaderBoards = data.leaderBoards.xbl;
+                    }
+
+                });
+        }
     }
 })();
 

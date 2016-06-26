@@ -8,13 +8,28 @@
 
     <!-- Page Title -->
     <title>MyOverwatchStats</title>
-    
+
     <!-- icon -->
     <link rel="icon" type="image/x-icon" href="https://d281jof1t1i5a5.cloudfront.net/img/favicon-bb6200267bbdea6fdc9eb498a88722007dad6eb3b3c6437440025c66cb055fefdd1fbedf3886bd069fc3547c79fa8afee4795a278a644f6cfe10a7b1144f48bb.ico">
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/overpwn.css" />
     <link rel="stylesheet" href="css/playoverwatch.css" />
+    <link rel="stylesheet" href="css/icons.css" />
     <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+
+    <style>
+        .data-table>tbody,
+        .h6,
+        .media-card>.container>.content,
+        .media-thumbnail>.caption,
+        h6 {
+            font-size: 14px;
+        }
+        
+        .tdHasCursor {
+            cursor: pointer
+        }
+    </style>
 </head>
 
 <body class="{{$state.current.data.specialClass}} career-detail en-us site section-home-folder site-overpwn site-overpwn body-home body-home-index show-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled"
@@ -58,6 +73,10 @@
     <!-- My Stats Tab -->
     <script src="app/mystats/mystats.controller.js"></script>
     <script src="app/mystats/mystats.service.js"></script>
+
+    <!--Leader Boards Tab -->
+    <script src="app/leader-board/leader-board.controller.js"></script>
+    <script src="app/leader-board/leader-board.service.js"></script>
 
     <!-- Heroes Tab -->
     <script src="app/heroes/heroes.controller.js"></script>

@@ -20,6 +20,8 @@
         // Initial Data Load
         vm.profile = [];
         vm.userId = $state.params.userId
+        vm.platform = $state.params.platform
+        vm.region = $state.params.region
         vm.limitTo = 5;
         vm.profileAvatar = '';
         vm.selectedHeroId = 0;
@@ -134,7 +136,19 @@
                     vm.profileAvatar = 'lucio'
                     break;
 
+                case 'l%C3%BAcio':
+                    vm.profileAvatar = 'lucio'
+                    break;
+
+                case 'Lúcio':
+                    vm.profileAvatar = 'lucio'
+                    break;
+
                 case 'Torbj&#xF6;rn':
+                    vm.profileAvatar = 'torbjorn'
+                    break;
+
+                case 'Torbjörn':
                     vm.profileAvatar = 'torbjorn'
                     break;
 
@@ -168,8 +182,8 @@
 
         /* Calling Data Service */
         function getProfile() {
-            var userId = escapeHtml(vm.userId);
-            myStatsService.getProfile(userId)
+            var userId = escapeHtml(vm.userId, vm.platform, vm.region);
+            myStatsService.getProfile(userId, vm.platform, vm.region)
                 .then(function (data) {
                     if (!data) {
                         console.log('no data retrieved for profile')
@@ -191,7 +205,7 @@
         function getTopHeroes() {
             var oldstr = vm.userId;
             var userId = oldstr.replace("%23", "-");
-            myStatsService.getTopHeroes(userId)
+            myStatsService.getTopHeroes(userId, vm.platform, vm.region)
                 .then(function (data) {
                     if (!data) {
                         console.log('no data retrieved for topHeroes')

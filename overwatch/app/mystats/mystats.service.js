@@ -25,8 +25,8 @@
 
         ////////////////
 
-        function getProfile(userId) {
-            var url = 'https://api.watcher.gg/players/pc/us/' + userId;
+        function getProfile(userId, platform, region) {
+            var url = 'https://api.watcher.gg/players/'+platform+ '/'+region+ '/' + userId;
             return $http.get(url)
                 .then(getProfileComplete)
                 .catch(getProfileFailed);
@@ -43,8 +43,8 @@
             }
         }
 
-        function getTopHeroes(userId) {
-            var apiUrl = 'https://api.lootbox.eu/pc/us/' + userId + '/heroes';
+        function getTopHeroes(userId, platform, region) {
+            var apiUrl = 'https://api.lootbox.eu/'+platform+'/'+region+'/' + userId + '/heroes';
             return $http({
                 method: 'GET',
                 url: apiUrl,
