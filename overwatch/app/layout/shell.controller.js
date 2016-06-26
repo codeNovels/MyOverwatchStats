@@ -5,10 +5,10 @@
         .module('app.layout')
         .controller('ShellController', ShellController);
 
-    ShellController.$inject = ['common', '$rootScope', '$state', 'searchService'];
+    ShellController.$inject = ['common', '$rootScope', '$state', 'leaderBoardService'];
 
     /* @ngInject */
-    function ShellController(common, $rootScope, $state, searchService) {
+    function ShellController(common, $rootScope, $state, leaderBoardService) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
@@ -80,7 +80,7 @@
 
         /* Calling Data Service */
         function getList(userId) {
-            searchService.getList(userId)
+            leaderBoardService.getSearchForProfile(userId)
                 .then(function (data) {
                     if (!data) {
                         vm.showMessage = true;

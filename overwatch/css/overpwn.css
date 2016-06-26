@@ -26075,7 +26075,7 @@ body .ui-dialog .poll-form-container .form-actions {
 
 .b-search-a .primary-search-field {
     background: #f0f0f0;
-    margin-right: 5px
+    /*margin-right: 5px*/
 }
 
 .b-search-a .primary-search-field input[type='search'] {

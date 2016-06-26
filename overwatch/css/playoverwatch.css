@@ -2732,7 +2732,7 @@ hr {
     border-top: 0;
     border-bottom: 1px solid #cacaca;
     border-left: 0;
-    margin: 2rem auto;
+    /*margin: 2rem auto;*/
     clear: both
 }
 
@@ -3390,7 +3390,7 @@ body.ko-kr .h3,body.ko-kr .progress-2>.bar-container>.bar-text>.title,body.ko-kr
 
 @media only screen and (min-width: 1300px) {
     .h3,.progress-2>.bar-container>.bar-text>.title,h3 {
-        font-size:6rem
+        font-size:4rem
     }
 }
 
