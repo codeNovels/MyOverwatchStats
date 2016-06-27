@@ -30448,7 +30448,7 @@ div#site-main header.main .b-search-a {
     }
 
     body.responsive-enabled #site div#site-main div#content {
-        padding: 8px;
+        padding: 0px;
         border-top: 0
     }
 
@@ -30466,7 +30466,7 @@ div#site-main header.main .b-search-a {
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 15px;
+        /*width: 15px;*/
         clear: none;
         display: block;
         z-index: 2
