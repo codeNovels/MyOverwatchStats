@@ -26204,7 +26204,8 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-article-a .p-article-header .p-article-title a {
-    color: #fff
+    color: #fff;
+    font-style: normal;
 }
 
 .p-article-a .p-article-header .p-article-byline {
