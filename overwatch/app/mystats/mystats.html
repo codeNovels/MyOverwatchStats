@@ -22,7 +22,7 @@
                                         </div>
                                         <div class="masthead-player">
                                             <h1 class="header-masthead colorIsWhite">{{vm.playerName}}</h1>
-                                            <p class="masthead-detail h4"><span>{{vm.hoursPlayed}} Hours Played</span></p>
+                                            <p class="masthead-detail h4"><span>{{vm.profile.heroStats[0].gamesWon}} Games Won</span></p>
                                             <div id="profile-platforms" class="masthead-buttons button-group js-button-group">
                                                 <button class="m-white m-sm  is-active">
                                                 {{vm.profile.player.platform}} {{vm.profile.player.region}}
@@ -45,7 +45,7 @@
                                 <div class="dropdown js-career-select" style="width:163px">
                                     <span class="dropdown_styled">{{vm.selectedHeroName}}</span>
                                     <select data-group-id="stats" class="js-career-select dropdown_original" ng-model="vm.selectedHero" ng-change="vm.searchHero(vm.selectedHero)"
-                                        ng-options="item as item.name for item in vm.heroSelector track by item.name"></select>
+                                        ng-options="item as item.name for item in vm.heroSelector | orderBy:'name' track by item.name"></select>
                                 </div>
                                 <hr>
 
