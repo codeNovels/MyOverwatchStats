@@ -182,7 +182,8 @@
 
         /* Calling Data Service */
         function getProfile() {
-            var userId = escapeHtml(vm.userId, vm.platform, vm.region);
+            var oldstr = vm.userId;
+            var userId = oldstr.replace("-", "%23");
             myStatsService.getProfile(userId, vm.platform, vm.region)
                 .then(function (data) {
                     if (!data) {
