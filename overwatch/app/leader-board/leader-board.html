@@ -51,13 +51,13 @@
                     <div class="bg-crystal-dark profile-background" style="font-size: 13px">
                         <section id="stats-section" class="content-box page-wrapper">
                             <div class="row column" style="padding-top: 2%">
-                                <h1 class="h3 header">Score Leaders</h1>
+                                <h1 class="h3 header">Competitive Rank</h1>
                                 <hr>
 
 
                                 <div class="row">
                                     <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
-                                        <div class="column xs-12 md-4 <xl-4></xl-4>">
+                                        <div class="column xs-12 md-4 xl-4>" style="padding-right: 1rem;">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -67,15 +67,15 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr ng-repeat="pcScoreLeader in vm.pcLeaderBoards[0].players">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
-                                                            <td>{{pcScoreLeader.value}}/sec</td>
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.region}} {{pcScoreLeader.name}}</td>
+                                                            <td>{{pcScoreLeader.value}}</td>
                                                         </tr>                                               
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
 
-                                        <div class="column xs-12 md-4 xl-4">
+                                        <div class="column xs-12 md-4 xl-4" style="padding-right: 0.5rem; padding-left: 0.5rem">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -84,16 +84,24 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr ng-repeat="pcScoreLeader in vm.psnLeaderBoards[0].players">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
-                                                            <td>{{pcScoreLeader.value}}/sec</td>
+                                                        <tr>
+                                                            <td>Competitive is not released, the leaderboard is coming soon!</td>
+                                                            <td></td>
                                                         </tr> 
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr> 
+                                                        <!--<tr ng-repeat="pcScoreLeader in vm.psnLeaderBoards[0].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
+                                                            <td>{{pcScoreLeader.value}}</td>
+                                                        </tr> -->
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
 
-                                        <div class="column xs-12 md-4 xl-4">
+                                        <div class="column xs-12 md-4 xl-4"  style="padding-left: 1rem;>
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -102,10 +110,18 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr ng-repeat="pcScoreLeader in vm.xboxLeaderBoards[0].players" class="tdHasCursor">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
-                                                            <td>{{pcScoreLeader.value}}/sec</td>
+                                                        <tr>
+                                                            <td>Competitive is not released, the leaderboard is coming soon!</td>
+                                                            <td></td>
                                                         </tr> 
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr> 
+                                                        <!--<tr ng-repeat="pcScoreLeader in vm.xboxLeaderBoards[0].players" class="tdHasCursor">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
+                                                            <td>{{pcScoreLeader.value}}</td>
+                                                        </tr> -->
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -125,7 +141,7 @@
 
                                 <div class="row">
                                     <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
-                                        <div class="column xs-12 md-4 <xl-4></xl-4>">
+                                        <div class="column xs-12 md-4 xl-4>" style="padding-right: 1rem;">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -135,7 +151,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr ng-repeat="pcKdaLeader in vm.pcLeaderBoards[1].players">
-                                                            <td ng-click="vm.searchBattleTag(pcKdaLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcKdaLeader.name}}</td>
+                                                            <td ng-click="vm.searchBattleTag(pcKdaLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcKdaLeader.region}} {{pcKdaLeader.name}}</td>
                                                             <td>{{pcKdaLeader.kda}}</td>
                                                         </tr>                                                 
                                                     </tbody>
@@ -143,7 +159,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="column xs-12 md-4 xl-4">
+                                        <div class="column xs-12 md-4 xl-4" style="padding-right: 0.5rem; padding-left: 0.5rem">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -161,7 +177,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="column xs-12 md-4 xl-4">
+                                        <div class="column xs-12 md-4 xl-4" style="padding-left: 1rem">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -193,7 +209,7 @@
 
                                 <div class="row">
                                     <div data-group-id="stats" data-category-id="0x02E00000FFFFFFFF" class="js-stats toggle-display is-active" style="position: relative; height: 100%;">
-                                        <div class="column xs-12 md-4 <xl-4></xl-4>">
+                                        <div class="column xs-12 md-4 xl-4>" style="padding-right: 1rem;">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -203,7 +219,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr ng-repeat="pcGoldMedalLeader in vm.pcLeaderBoards[2].players">
-                                                            <td ng-click="vm.searchBattleTag(pcGoldMedalLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcGoldMedalLeader.name}}</td>
+                                                            <td ng-click="vm.searchBattleTag(pcGoldMedalLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcGoldMedalLeader.region}} {{pcGoldMedalLeader.name}}</td>
                                                             <td><span class="watcher watcher-gold" style="color: #D8AB00"></span> {{pcGoldMedalLeader.medalsGold}}</td>
                                                         </tr>                                                 
                                                     </tbody>
@@ -211,7 +227,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="column xs-12 md-4 xl-4">
+                                        <div class="column xs-12 md-4 xl-4" style="padding-right: 0.5rem; padding-left: 0.5rem">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
@@ -229,7 +245,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="column xs-12 md-4 xl-4">
+                                        <div class="column xs-12 md-4 xl-4" style="padding-left: 1rem">
                                             <div class="card-stat-block">
                                                 <table class="data-table">
                                                     <thead>
