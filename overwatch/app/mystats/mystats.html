@@ -24,10 +24,10 @@
                                             <h1 class="header-masthead colorIsWhite">{{vm.playerName}}</h1>
                                             <p class="masthead-detail h4"><span>{{vm.profile.heroStats[0].gamesWon}} Games Won</span></p>
                                             <div id="profile-platforms" class="masthead-buttons button-group js-button-group">
-                                                <button class="m-white m-sm is-{{vm.active}}" ng-click="vm.chooseMode('competitive-play', '1');vm.applyClass()">
+                                                <button class="m-white m-sm {{vm.compActive}}" ng-click="vm.chooseMode('competitive-play', '1');vm.applyClass('competitive')">
                                                 Competitive Play
                                                 </button>
-                                                <button class="m-white m-sm is-{{!vm.active}}" ng-click="vm.chooseMode('quick-play', '0');vm.applyClass()">
+                                                <button class="m-white m-sm {{vm.quickActive}}" ng-click="vm.chooseMode('quick-play', '0');vm.applyClass('quick')">
                                                 Quick Play
                                                 </button>
                                                 

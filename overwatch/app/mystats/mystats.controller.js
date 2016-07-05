@@ -30,7 +30,7 @@
         vm.mode = 'competitive-play';
         vm.watcherMode = 1;
         vm.chooseMode = chooseMode;
-        vm.active = 'active'
+        vm.compActive = 'is-active'
         vm.applyClass = applyClass
 
 
@@ -54,8 +54,21 @@
             getTopHeroes();
         }
 
-        function applyClass(){
-            vm.active = !vm.active;
+        $scope.applyActive = function (mode){
+            if(mode === 'competitive'){
+                return 'is-active'
+            }
+        }
+
+        function applyClass(mode){
+            if (mode === 'competitive'){
+                vm.compActive = 'is-active'
+                vm.quickActive = ''
+            }
+            else if (mode === 'quick'){
+                vm.compActive = ''
+                vm.quickActive = 'is-active'
+            }
         }
 
         function seeAllHeroes() {
