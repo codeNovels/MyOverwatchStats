@@ -26,7 +26,13 @@
         ////////////////
 
         function getProfile(userId, platform, region, mode) {
-            var url = 'https://api.watcher.gg/players/'+platform+ '/'+region+ '/' + userId+"?mode="+mode;
+            if (mode === undefined){
+                var gameMode = 1
+            }
+            else{
+                gameMode = mode
+            }
+            var url = 'https://api.watcher.gg/players/'+platform+ '/'+region+ '/' + userId+"?mode="+gameMode;
             return $http.get(url)
                 .then(getProfileComplete)
                 .catch(getProfileFailed);

@@ -27,8 +27,11 @@
         vm.selectedHeroId = 0;
         vm.selectedHeroName = 'ALL HEROES';
         vm.topHeroes = [];
-        vm.mode = 'quick-play';
+        vm.mode = 'competitive-play';
+        vm.watcherMode = 1;
         vm.chooseMode = chooseMode;
+        vm.active = 'active'
+        vm.applyClass = applyClass
 
 
         // For show or hide "Edit/Save" button
@@ -49,6 +52,10 @@
         function activate() {
             getProfile();
             getTopHeroes();
+        }
+
+        function applyClass(){
+            vm.active = !vm.active;
         }
 
         function seeAllHeroes() {
@@ -143,9 +150,10 @@
             }
         }
 
-        function chooseMode(mode, watcherMode){
+        function chooseMode(mode, watcherMode) {
             vm.mode = mode;
-            getProfile(watcherMode);
+            vm.watcherMode = watcherMode;
+            getProfile(vm.watcherMode);
             getTopHeroes();
         }
 
