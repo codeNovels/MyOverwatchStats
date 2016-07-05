@@ -26,32 +26,9 @@
         vm.profileAvatar = '';
         vm.selectedHeroId = 0;
         vm.selectedHeroName = 'ALL HEROES';
-        // vm.heroSelector = [
-        //     { id: 0, name: 'ALL HEROES', value: "0x02E00000FFFFFFFF" },
-        //     { id: 1, name: 'Reaper', value: "0x02E0000000000002" },
-        //     { id: 2, name: 'Mercy', value: "x02E0000000000004" },
-        //     { id: 3, name: 'Hanzo', value: "x02E0000000000005" },
-        //     { id: 4, name: 'Torbjörn', value: "x02E0000000000006" },
-        //     { id: 5, name: 'Reinhardt', value: "x02E0000000000007" },
-        //     { id: 6, name: 'Pharah', value: "x02E0000000000008" },
-        //     { id: 7, name: 'Winston', value: "x02E0000000000009" },
-        //     { id: 8, name: 'Widowmaker', value: "x02E000000000000A" },
-        //     { id: 9, name: 'Bastion', value: "x02E0000000000015" },
-        //     { id: 10, name: 'Zenyatta', value: "x02E0000000000015" },
-        //     { id: 11, name: 'Genji', value: "x02E0000000000029" },
-        //     { id: 12, name: 'Roadhog', value: "x02E0000000000040" },
-        //     { id: 13, name: 'McCree', value: "x02E0000000000042" },
-        //     { id: 14, name: 'Junkrat', value: "x02E0000000000065" },
-        //     { id: 15, name: 'Soldier: 76', value: "x02E000000000006E" },
-        //     { id: 16, name: 'Lúcio', value: "x02E0000000000079" },
-        //     { id: 17, name: 'D.Va', value: "x02E000000000007A" },
-        //     { id: 18, name: 'Mei', value: "x02E00000000000DD" },
-        //     { id: 19, name: 'Tracer', value: "x02E00000000000DD" },
-        //     { id: 20, name: 'Symmetra', value: "x02E00000000000DD" },
-        //     { id: 21, name: 'Zarya', value: "x02E00000000000DD" },
-        // ];
-
         vm.topHeroes = [];
+        vm.mode = 'quick-play';
+        vm.chooseMode = chooseMode;
 
 
         // For show or hide "Edit/Save" button
@@ -166,6 +143,12 @@
             }
         }
 
+        function chooseMode(mode, watcherMode){
+            vm.mode = mode;
+            getProfile(watcherMode);
+            getTopHeroes();
+        }
+
         function decodeUri(topHeroes) {
             angular.forEach(topHeroes, function (hero, index) {
                 if (hero.name === 'Torbj&#xF6;rn') {
@@ -181,10 +164,11 @@
 
 
         /* Calling Data Service */
-        function getProfile() {
+        function getProfile(mode) {
+            var watcherMode = mode
             var oldstr = vm.userId;
             var userId = oldstr.replace("-", "%23");
-            myStatsService.getProfile(userId, vm.platform, vm.region)
+            myStatsService.getProfile(userId, vm.platform, vm.region, watcherMode)
                 .then(function (data) {
                     if (!data) {
                         console.log('no data retrieved for profile')
@@ -207,7 +191,9 @@
         function getTopHeroes() {
             var oldstr = vm.userId;
             var userId = oldstr.replace("#", "-");
-            myStatsService.getTopHeroes(userId, vm.platform, vm.region)
+            vm.showTopHeroes = false;
+            vm.showSpinner = true;
+            myStatsService.getTopHeroes(userId, vm.platform, vm.region, vm.mode)
                 .then(function (data) {
                     if (!data) {
                         console.log('no data retrieved for topHeroes')
@@ -215,6 +201,8 @@
                     else {
                         vm.topHeroes = data.topHeroes;
                         decodeUri(vm.topHeroes);
+                        vm.showSpinner = false;
+                        vm.showTopHeroes = true
                     }
                 });
         }

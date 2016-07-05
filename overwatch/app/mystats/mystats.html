@@ -24,8 +24,11 @@
                                             <h1 class="header-masthead colorIsWhite">{{vm.playerName}}</h1>
                                             <p class="masthead-detail h4"><span>{{vm.profile.heroStats[0].gamesWon}} Games Won</span></p>
                                             <div id="profile-platforms" class="masthead-buttons button-group js-button-group">
-                                                <button class="m-white m-sm  is-active">
-                                                {{vm.profile.player.platform}} {{vm.profile.player.region}}
+                                                <button class="m-white m-sm  is-active" ng-click="vm.chooseMode('quick-play', '0')">
+                                                Quick Play
+                                                </button>
+                                                <button class="m-white m-sm  is-active" ng-click="vm.chooseMode('competitive-play', '1')">
+                                                Competitive Play
                                                 </button>
                                             </div>
                                         </div>
@@ -181,9 +184,9 @@
 
                                 <div data-group-id="comparisons" data-category-id="overwatch.guid.0x0860000000000021" class="progress-category is-partial toggle-display is-active">
 
-                                    <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-show="vm.topHeroes.length === 0"></img>
+                                    <img ng-src="content/images/spinner2.gif" style="margin-right: 45%" ng-show="vm.topHeroes.length === 0 || vm.showSpinner === true"></img>
                                     
-                                    <div ng-repeat="hero in vm.topHeroes | limitTo: vm.limitTo">
+                                    <div ng-repeat="hero in vm.topHeroes | limitTo: vm.limitTo" ng-show=vm.showTopHeroes>
                                         <div data-ng-overwatch-progress-percent="{{hero.percentage}}" class="progress-2 m-animated progress-category-item"><img ng-src="{{hero.image}}">
                                             <div class="bar-container" >
                                                 <div style="right: {{(hero.percentage - 1) * -100}}%;" 
