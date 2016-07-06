@@ -32,7 +32,7 @@
 
             function getListComplete(response) {
                 return {
-                    patchnotes : response.data
+                    patchnotes : response.data.patchNotes
                 };
             }
 
