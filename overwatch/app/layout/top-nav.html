@@ -19,26 +19,23 @@
     </div>
 
     <form class="primary-search b-search b-search-a" method="get" novalidate="novalidate">
-        <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="search" 
+        <span class="primary-search-field"><input type="search" name="search" ng-model="battleTag" placeholder="SEARCH" 
             data-autocomplete-search-url="/find" data-autocomplete-width="337" data-min-chars="3" data-max-results="15" 
             class="b-search-input ac_input" autocomplete="off" minlength="1" maxlength="25" required>
         </span>
         <span class="primary-search-submit"><input type="submit" value="Search" ng-click="vm.searchBattleTag(battleTag)"></span>
 
-        <div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;width: 84%;border-radius: 5px;">
+        <!--<div ng-show="vm.showMessage" style="background-color:#E8534F;opacity: 0.8;width: 84%;border-radius: 5px;">
             <b>
                 <p class="masthead-detail" style="color: white;">
                 &nbsp; Info: cannot find player by that ID, try again &nbsp;
                  </p>
                 <b>
-        </div>
+        </div>-->
 
     </form>
 
-    
-
-
-    <i class="menu-button"></i><i class="search-button"></i>
+    <i class="menu-button pull-right"></i>
 </header>
 
 <!-- Above Content, Ex: Breadcrumbs -->

@@ -26079,7 +26079,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .b-search-a .primary-search-field input[type='search'] {
-    width: 24em;
+    width: 180px;
     height: 37px;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
@@ -30391,7 +30391,7 @@ div#site-main header.main h1 a.logo {
 
 div#site-main header.main .social-links {
     position: relative;
-    right: 58%;
+    right: 50%;
     margin-right: -247px;
     float: right
 }
