@@ -85,7 +85,7 @@
                                                     </thead>
                                                     <tbody>
                                                             <tr ng-repeat="pcScoreLeader in vm.psnLeaderBoards[0].players">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.region}} {{pcScoreLeader.name}}</td>
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
                                                             <td>{{pcScoreLeader.value}}</td>
                                                         </tr>
                                                     </tbody>
@@ -103,7 +103,7 @@
                                                     </thead>
                                                     <tbody>
                                                             <tr ng-repeat="pcScoreLeader in vm.xboxLeaderBoards[0].players" class="tdHasCursor">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.region}} {{pcScoreLeader.name}}</td>
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
                                                             <td>{{pcScoreLeader.value}}</td>
                                                         </tr>
                                                     </tbody>
