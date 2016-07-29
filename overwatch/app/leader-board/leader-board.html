@@ -84,18 +84,10 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Competitive is not released, the leaderboard is coming soon!</td>
-                                                            <td></td>
-                                                        </tr> 
-                                                        <tr>
-                                                            <td></td>
-                                                            <td></td>
-                                                        </tr> 
-                                                        <!--<tr ng-repeat="pcScoreLeader in vm.psnLeaderBoards[0].players">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
+                                                            <tr ng-repeat="pcScoreLeader in vm.psnLeaderBoards[0].players">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.region}} {{pcScoreLeader.name}}</td>
                                                             <td>{{pcScoreLeader.value}}</td>
-                                                        </tr> -->
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -110,18 +102,10 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Competitive is not released, the leaderboard is coming soon!</td>
-                                                            <td></td>
-                                                        </tr> 
-                                                        <tr>
-                                                            <td></td>
-                                                            <td></td>
-                                                        </tr> 
-                                                        <!--<tr ng-repeat="pcScoreLeader in vm.xboxLeaderBoards[0].players" class="tdHasCursor">
-                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.name}}</td>
+                                                            <tr ng-repeat="pcScoreLeader in vm.xboxLeaderBoards[0].players" class="tdHasCursor">
+                                                            <td ng-click="vm.searchBattleTag(pcScoreLeader.name)" class="tdHasCursor">{{$index+1}}. {{pcScoreLeader.region}} {{pcScoreLeader.name}}</td>
                                                             <td>{{pcScoreLeader.value}}</td>
-                                                        </tr> -->
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
