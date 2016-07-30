@@ -18,7 +18,7 @@
 
         var service = {
             getProfile: getProfile,
-            getTopHeroes: getTopHeroes
+            getSearchForProfile: getSearchForProfile
         };
 
         return service;
@@ -49,25 +49,20 @@
             }
         }
 
-        function getTopHeroes(userId, platform, region, mode) {
-            var gameMode = mode           
-            var apiUrl = 'https://api.lootbox.eu/'+platform+'/'+region+'/' + userId + '/' + gameMode +'/heroes';
-            return $http({
-                method: 'GET',
-                url: apiUrl,
-                headers: {'Content-Type' : 'application/json; charset=UTF-8'},
-            })
-                .then(getTopHeroesComplete)
-                .catch(getTopHeroesFailed);
+        function getSearchForProfile(userId) {
+            var url = 'https://api.watcher.gg/players/search/' + userId;
+            return $http.get(url)
+                .then(getSearchForProfileComplete)
+                .catch(getSearchForProfileFailed);
 
-            function getTopHeroesComplete(response) {
+            function getSearchForProfileComplete(response) {
                 return {
-                    topHeroes: response.data
+                    profile : response.data.data[0]
                 };
             }
 
-            function getTopHeroesFailed(error) {
-                logger.logError('Could not get Top Hero Information' + common.jsonMessage(error), SHOW_TOAST);
+            function getSearchForProfileFailed(error) {
+                logger.logError('Could not Find Profile.' + common.jsonMessage(error), SHOW_TOAST);
                 return false;
             }
         }

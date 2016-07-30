@@ -1,0 +1,18 @@
+<form role="form" name="modalForm" novalidate>
+    <div class="modal-header">
+        <h3>{{modalOptions.headerText}}</h3>
+    </div>
+
+
+
+    <div class="modal-body">
+        <div>
+            <input type="text" class="col-lg-12" style="width: 100%" ng-model="battleTag.name" placeholder="Search for..." maxlength="500" ng-trim required>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-rounded" data-ng-click="modalOptions.close();rowform.$show()">{{modalOptions.closeButtonText}}</button>
+        <button class="btn btn-primary btn-rounded" ng-disabled="!modalForm.$dirty || modalForm.$invalid" data-ng-click="modalOptions.ok();">{{modalOptions.actionButtonText}}</button>
+    </div>
+</form>

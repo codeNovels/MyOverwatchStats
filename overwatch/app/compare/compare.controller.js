@@ -9,10 +9,10 @@
         .module('app.layout')
         .controller('CompareController', CompareController);
 
-    CompareController.$inject = ['$scope', '$state', 'common', 'compareService', '$filter'];
+    CompareController.$inject = ['$scope', '$state', 'common', 'compareService', '$filter', 'compareModalService'];
 
     /* @ngInject */
-    function CompareController($scope, $state, common, compareService, $filter) {
+    function CompareController($scope, $state, common, compareService, $filter, compareModalService) {
         /* jshint validthis: true */
         var vm = this;
         var logger = common.logger;
@@ -30,10 +30,13 @@
         vm.mode = 'competitive-play';
         vm.watcherMode = 1;
         vm.chooseMode = chooseMode;
-        vm.compActive = 'is-active'
-        vm.applyClass = applyClass
-        vm.comparePlayers = [{name: '1'},{name: '2'},{name: '2'},{name: '2'},{name: '2'}]
-
+        vm.compActive = 'is-active';
+        vm.applyClass = applyClass;
+        vm.openModal = openModal;
+        vm.players = []
+        vm.modeSelector = [{ id: 1, name: 'Competitive' }, { id: 0, name: 'Quick Play' }]
+        vm.selectedMode = vm.modeSelector[0];
+        vm.selectedHero;
 
         // For show or hide "Edit/Save" button
 
@@ -44,6 +47,7 @@
         // Methods
         vm.seeAllHeroes = seeAllHeroes;
         vm.searchHero = searchHero;
+        vm.removePlayer = removePlayer;
 
 
         activate();
@@ -51,22 +55,38 @@
         ////////////////
 
         function activate() {
-          //  getProfile();
-          //  getTopHeroes();
+
         }
 
-        $scope.applyActive = function (mode){
-            if(mode === 'competitive'){
+        function removePlayer(player) {
+            var index = $scope.vm.players.indexOf(player);
+            vm.players.splice(index, 1)
+        }
+
+        function openModal() {
+            var modalOptions = {
+                closeButtonText: 'Cancel',
+                actionButtonText: 'Add Player',
+                headerText: 'Enter BattleTag',
+            };
+            compareModalService.showModal({}, modalOptions)
+                .then(function (result) {
+                    searchForProfile(result)
+                });
+        }
+
+        $scope.applyActive = function (mode) {
+            if (mode === 'competitive') {
                 return 'is-active'
             }
         }
 
-        function applyClass(mode){
-            if (mode === 'competitive'){
+        function applyClass(mode) {
+            if (mode === 'competitive') {
                 vm.compActive = 'is-active'
                 vm.quickActive = ''
             }
-            else if (mode === 'quick'){
+            else if (mode === 'quick') {
                 vm.compActive = ''
                 vm.quickActive = 'is-active'
             }
@@ -186,46 +206,63 @@
 
 
         /* Calling Data Service */
-        function getProfile(mode) {
+        function getProfile(name, platform, region, mode) {
             var watcherMode = mode
-            var oldstr = vm.userId;
-            var userId = oldstr.replace("-", "%23");
-            compareService.getProfile(userId, vm.platform, vm.region, watcherMode)
+            var oldstr = name;
+            var userId = oldstr.replace("#", "%23");
+            var profile = [];
+            compareService.getProfile(userId, platform, region, watcherMode)
                 .then(function (data) {
                     if (!data) {
                         console.log('no data retrieved for profile')
                     }
                     else {
-                        vm.profile = data.profile;
+                        profile.push(data.profile)
+                        var s = data.profile.player.name
+                        if(data.profile.player.platform === 'pc'){
+                            profile.name = s.substring(0, s.indexOf('#'));
+                        }
+                        else{
+                            profile.name = data.profile.player.name
+                        }
+                        profile[0].heroSelector = data.profile.heroStats;
+                        profile[0].selectedHero = data.profile.heroStats[0];
+                        
 
-                        var playerName = vm.profile.player.name
-                        vm.playerName = playerName.split("#")[0];
-                        getMostPlayedHero()
-                        vm.hoursPlayed = (vm.profile.heroStats[0].timePlayed) / 3600;
-                        vm.heroSelector = data.profile.heroStats;
+                        compareService.getProfile(userId, platform, region, 1)
+                            .then(function (data) {
+                                if (!data) {
+                                    console.log('no data retrieved for profile')
+                                }
+                                else {
+                                    var profile2 = data.profile;
+                                    profile2.heroSelector = data.profile.heroStats;
+                                    profile2.selectedHero = data.profile.heroStats[0];
+                                    profile.push(profile2)
+                                    vm.players.push(profile);
+                                }
 
+
+                            });
                     }
 
 
                 });
         }
 
-        function getTopHeroes() {
-            var oldstr = vm.userId;
-            var userId = oldstr.replace("#", "-");
-            vm.showTopHeroes = false;
-            vm.showSpinner = true;
-            compareService.getTopHeroes(userId, vm.platform, vm.region, vm.mode)
+        function searchForProfile(userId) {
+            var user = userId.name;
+            user = user.replace(/\s/g, '');
+            user = user.replace('#', '%23');
+            compareService.getSearchForProfile(user)
                 .then(function (data) {
                     if (!data) {
-                        console.log('no data retrieved for topHeroes')
+
                     }
                     else {
-                        vm.topHeroes = data.topHeroes;
-                        decodeUri(vm.topHeroes);
-                        vm.showSpinner = false;
-                        vm.showTopHeroes = true
+                        getProfile(data.profile.name, data.profile.platform, data.profile.region, 0);
                     }
+
                 });
         }
     }
