@@ -50,7 +50,7 @@
                                                                     }) 
             .state('home.heroes',  {url: "/heroes",   templateUrl: "app/heroes/heroes.html" , controller: 'HeroesController', controllerAs: "vm",data: { pageTitle: 'Heroes' }
                                                                     })  
-            .state('home.search',  {url: "/search",   templateUrl: "app/search/search.html" , controller: 'SearchController', controllerAs: "vm",data: { pageTitle: 'Search' }
+            .state('home.compare',  {url: "/compare",   templateUrl: "app/compare/compare.html" , controller: 'CompareController', controllerAs: "vm",data: { pageTitle: 'Compare' }
                                                                     })
             .state('home.leaderBoards',  {url: "/leader-boards",   templateUrl: "app/leader-board/leader-board.html" , controller: 'LeaderBoardController', controllerAs: "vm",data: { pageTitle: 'Search' }
                                                                     })                                                                                                                                                                             

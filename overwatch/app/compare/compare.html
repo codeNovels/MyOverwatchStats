@@ -1,0 +1,340 @@
+<!--<div class="container">
+    <div id="content" class="main content-container">-->
+<section class="primary-content" role="main">
+    <div class="page-block newest-heroes-container">
+        <div class="bg-color-blue-dark u-invert">
+            <!--<section id="overview-section" class="bg-gibraltar u-nav-offset">
+                        <div class="u-relative">
+                            <div ng-if="vm.profileAvatar.length > 0" class="masthead-hero-image" ng-style="{'background-image':'url(https://d1u1mce87gyfbn.cloudfront.net/hero/'+vm.profileAvatar+'/overlay-portrait.png)'}"></div>
+                            <div class="page-wrapper row content-box">
+
+
+                                <p class="masthead-detail h4" style="text-align: center" ng-if="vm.profile.length < 1">
+                                    LOADING...
+                                </p>
+
+
+                                <div class="column lg-8" ng-show="vm.profile.player">
+                                    <div class="masthead">
+                                        <div style="background-image:url(https://d1u1mce87gyfbn.cloudfront.net/game/playerlevelrewards/0x025000000000091C_Border.png)"
+                                            class="player-level">
+                                            <div class="u-vertical-center colorIsWhite">{{vm.profile.player.level}}</div>
+                                        </div>
+                                        <div class="masthead-player">
+                                            <h1 class="header-masthead colorIsWhite">{{vm.playerName}}</h1>
+                                            <p class="masthead-detail h4"><span>{{vm.profile.heroStats[0].gamesWon}} Games Won</span></p>
+                                            <div id="profile-platforms" class="masthead-buttons button-group js-button-group">
+                                                <button class="m-white m-sm {{vm.compActive}}" ng-click="vm.chooseMode('competitive-play', '1');vm.applyClass('competitive')">
+                                                Competitive Play
+                                                </button>
+                                                <button class="m-white m-sm {{vm.quickActive}}" ng-click="vm.chooseMode('quick-play', '0');vm.applyClass('quick')">
+                                                Quick Play
+                                                </button>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>-->
+            <div class="bg-crystal-dark profile-background">
+                <section id="stats-section" class="content-box page-wrapper">
+                    <div class="row column">
+                        <!--<h1 class="h3 header">Career Stats</h1>-->
+
+                        </br>
+
+                        <div class="row row-centered">
+
+
+                            <div class="col-xs-2 col-lg-2 col-centered col-max" style="padding-left: 0rem; padding-right: 0rem; margin-bottom:2px; margin-right:-1px">
+                                <div class="card-stat-block">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2" style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem">COMPARISON</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select style="font-family: Futura,century gothic,arial,sans-serif;
+                                                                        text-transform: uppercase;
+                                                                        padding: 3px 120px 3px 6px;
+                                                                        color: #333;" ng-model="vm.selectedHero">
+                                                                    <option value="competitive">Competitive</option>
+                                                                    <option value="quickplay">Quick Play</option>
+                                                         </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Rank</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Record</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Win Rate</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">KDA</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Time Played</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Eliminations</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most FInal Blows</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Solo Kills</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Damage Done</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Healing Done</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Objective Kills</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Objective Time</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Most Time On Fire</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Best Kill Streak</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Best Multikill</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Eliminations</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Deaths</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Final Blows</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Solo Kills</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Objective Kills</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Objective Time</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Damage Done</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Average Healing Done</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-1 col-centered col-fixed" style="padding-left: 0rem; padding-right: 0rem; margin: 2px;margin-right: 7px;" ng-repeat="player in vm.comparePlayers">
+                                <div class="card-stat-block">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem" colspan="2">Tonkotsu 
+                                                    <a class="pull-right" style="color: red">x</a> </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select style="font-family: Futura,century gothic,arial,sans-serif;
+                                                                        text-transform: uppercase;
+                                                                        padding: 3px 120px 3px 6px;
+                                                                        color: #333;" ng-model="vm.selectedHero">
+                                                                    <option value="competitive">ALL</option>
+                                                                    <option value="quickplay">GENJI</option>
+                                                         </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">88</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">111/13</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">99%</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">16</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">30Hours</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">10</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">99</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">20</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">12000</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">22000</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">8</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">8minutes</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">1hour</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">22</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">12</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">4</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">99</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">10</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">12</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">22</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">3minutes</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">5000</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">2000</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-1 col-centered col-fixed" style="padding-left: 0rem; padding-right: 0rem;margin-left: 7px;height: 100%; text-align: center">
+                                
+                                    <button class="btn btn-info" style="margin-top: -360%;">+ Add</button>
+                                
+                            </div>
+
+
+
+
+
+                            <!--</div>-->
+                        </div>
+                </section>
+
+
+                </div>
+            </div>
+
+            <!--No community page on the japan site, go to homepage instead-->
+
+            <script type="text/javascript">
+                        !function(root){
+    root.messages = {"wallpaper":{"urlWide":{"title":"Wide","dimensions":"(2560 x 1440)"},"urlStandard":{"title":"Standard","dimensions":"(2048 x 1536)"},"urlTablet":{"title":"Tablet","dimensions":"(2048 x 2048)"},"urlMobile":{"title":"Mobile","dimensions":"(1080 x 1920)"},"urlFacebook":{"title":"Facebook","dimensions":"(851 x 315)"},"urlTwitter":{"title":"Twitter","dimensions":"(1500 x 500)"}},"img":{"hanzo":"https://d281jof1t1i5a5.cloudfront.net/img/hanzo-sm-114f060a6cc9cc1597a8ef3707fa827be79e1d9bc96847d20fd01f810faad9d4b30f99a91505ad1512e7c7f5d1749595bed6ab8ed836441db9caee21352b760a.png"}}
+}(this)
+                    </script>
+
+            <script type="text/javascript" src="https://d281jof1t1i5a5.cloudfront.net/vendor-4cee9aa89e0e98d5ae0ddd7b57432fb8414c2d20427e3efbf9df26e28347a9cb3f20b39fd5202cc3347ca0be26a0a2b8ef44fe864f37c60a1a0ac52708f96e95.js"></script>
+            <!--<script type="text/javascript" src="https://d281jof1t1i5a5.cloudfront.net/blizzard-bf31259f6cdb11961d35c2e8cb57ddb6912151dff4c072eff22c271e48a01b69b6d29d8377d622ca1108c47970f792f9db52aa5d9ff5ee20c5aa286cf454b8c2.js"></script>-->
+            <script type="text/javascript" src="https://d281jof1t1i5a5.cloudfront.net/app-432855da0786c850a9cf45b47a622fcb16c3674d8a77a3df5df9e08506f1eb3251e8626970a091e34b0bbc3978671a7a1d3f37ed477d016ec04ae9933923db64.js"></script>
+
+            <div class="blackout" blackout=""></div>
+            <div class="lightbox" lightbox="main">
+                <div class="lightbox-container">
+                    <div class="lightbox-header"></div>
+                    <div class="lightbox-body">
+                        <div class="lightbox-content"></div>
+                        <a href="#" class="lightbox-prev"></a>
+                        <a href="#" class="lightbox-next"></a>
+                    </div>
+                    <div class="lightbox-footer"></div>
+                </div>
+                <div class="lightbox-close"></div>
+            </div>
+            <script async="async" src="//www.youtube.com/iframe_api/" type="text/javascript"></script>
+
+
+
+
+
+        </div>
+</section>
+<!--</div>
+    </div>-->

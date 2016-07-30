@@ -126,6 +126,46 @@
     background-color: rgb(248, 145, 27);  
 }  
 
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-5px;
+}
+
+.col-fixed {
+    /* custom width */
+    width:200px;
+}
+.col-min {
+    /* custom min width */
+    min-width:250px;
+}
+.col-max {
+    /* custom max width */
+    max-width:245px;
+}
+
+.parent {
+    overflow: hidden;
+    position: relative;
+    height: 716px;
+}
+
+.outerDiv {
+    display: inline-flex;
+}
+
+.innerDiv {
+    margin: auto 5px;
+    background-color: green;   
+}
+
 
     
 

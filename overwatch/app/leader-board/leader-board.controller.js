@@ -66,7 +66,9 @@
 
         /* Calling Data Service */
         function searchForProfile(userId) {
-            leaderBoardService.getSearchForProfile(userId)
+            var user = userId;
+            user = user.replace(/\s/g, '');
+            leaderBoardService.getSearchForProfile(user)
                 .then(function (data) {
                     if (!data) {
                         vm.showMessage = true;

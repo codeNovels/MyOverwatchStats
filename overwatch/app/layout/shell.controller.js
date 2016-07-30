@@ -80,7 +80,9 @@
 
         /* Calling Data Service */
         function getList(userId) {
-            leaderBoardService.getSearchForProfile(userId)
+            var user = userId;
+            user = user.replace(/\s/g, '');
+            leaderBoardService.getSearchForProfile(user)
                 .then(function (data) {
                     if (!data) {
                         vm.showMessage = true;
