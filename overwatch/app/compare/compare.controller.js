@@ -48,6 +48,7 @@
         vm.seeAllHeroes = seeAllHeroes;
         vm.searchHero = searchHero;
         vm.removePlayer = removePlayer;
+        vm.searchForIndexOfSelectedHero = searchForIndexOfSelectedHero;
 
 
         activate();
@@ -56,6 +57,15 @@
 
         function activate() {
 
+        }
+
+        function searchForIndexOfSelectedHero(player, selectedHero) {
+            for (var i = 0; i < player.heroStats.length; i++) {
+                if (angular.equals(player.heroStats[i], selectedHero)) {
+                    player.selectedHeroIndex = i;              
+                }
+            };
+            return -1;
         }
 
         function removePlayer(player) {
@@ -219,15 +229,16 @@
                     else {
                         profile.push(data.profile)
                         var s = data.profile.player.name
-                        if(data.profile.player.platform === 'pc'){
+                        if (data.profile.player.platform === 'pc') {
                             profile.name = s.substring(0, s.indexOf('#'));
                         }
-                        else{
+                        else {
                             profile.name = data.profile.player.name
                         }
                         profile[0].heroSelector = data.profile.heroStats;
                         profile[0].selectedHero = data.profile.heroStats[0];
-                        
+                        profile[0].selectedHeroIndex = 0;
+
 
                         compareService.getProfile(userId, platform, region, 1)
                             .then(function (data) {
@@ -238,6 +249,7 @@
                                     var profile2 = data.profile;
                                     profile2.heroSelector = data.profile.heroStats;
                                     profile2.selectedHero = data.profile.heroStats[0];
+                                    profile2.selectedHeroIndex = 0;
                                     profile.push(profile2)
                                     vm.players.push(profile);
                                 }

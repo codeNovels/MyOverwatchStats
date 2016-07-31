@@ -46,8 +46,8 @@
                         </br>
 
                         <div class="row row-centered">
-                            <div class="col-lg-2 col-centered">
-                                    <button class="btn btn-info" ng-click="vm.openModal()">+ Add</button>
+                            <div class="col-lg-2 col-centered" >
+                                    <button class="btn btn-info" ng-click="vm.openModal()" ng-disabled="vm.players.length === 6">+ Add</button>
                             </div>
                         </br>
 
@@ -59,7 +59,7 @@
                                     <table class="data-table">
                                         <thead>
                                             <tr>
-                                                <th colspan="2" style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem">COMPARISON</th>
+                                                <th colspan="2" style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem;padding-top: 142px;">COMPARISON</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -70,14 +70,7 @@
                                                     </select>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td style="color: #727272;">World Rank #</td>
-
-                                            </tr>
-                                            <tr>
-                                                <td style="color: #727272;">Rank Rating</td>
-
-                                            </tr>
+                                            
                                             <tr>
                                                 <td style="color: #727272;">Record</td>
 
@@ -87,7 +80,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">KDA</td>
+                                                <td style="color: #727272;">Kills / Deaths / Assists</td>
 
                                             </tr>
                                             <tr>
@@ -146,27 +139,123 @@
                                                 <td style="color: #727272;">Average Healing Done</td>
 
                                             </tr>
+                                            <tr>
+                                                <td style="color: #727272;">World Rank #</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #727272;">Rank Rating</td>
+
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
 
-                            <div class="col-xs-1 col-centered col-fixed" style="padding-left: 0rem; padding-right: 0rem; margin: 2px" ng-repeat="player in vm.players">
+                            <div class="col-xs-2 col-centered col-fixed" style="padding-left: 0rem; padding-right: 0rem; margin: 2px" ng-repeat="player in vm.players">
                                 <div class="card-stat-block">
                                     <table class="data-table">
                                         <thead>
                                             <tr>
-                                                <th style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem" colspan="1">{{player.name}}
+                                                <th style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem" colspan="1"><img ng-src="http://static.watcher.gg/portraits/{{player[vm.selectedMode.id].player.portrait}}.png" style="margin-left: 10%;"></img>{{player.name}}
                                                     <a class="pull-right" style="color: red" ng-click="vm.removePlayer(player)">x</a> </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <select style="font-family: Futura,century gothic,arial,sans-serif;text-transform: uppercase;padding: 3px 100px 3px 6px;color: #333;max-width:180px" 
-                                                        ng-model="player[vm.selectedMode.id].selectedHero" ng-options="item as item.name for item in player[vm.selectedMode.id].heroSelector | orderBy:'name' track by item.name">
+                                                    <select style="font-family: Futura,century gothic,arial,sans-serif;text-transform: uppercase;padding: 3px 33% 3px 6px;color: #333;max-width:180px;min-width: 180px;" 
+                                                        ng-model="player[vm.selectedMode.id].selectedHero" ng-options="item as item.name for item in player[vm.selectedMode.id].heroSelector | orderBy:'name' track by item.name"
+                                                        ng-change="vm.searchForIndexOfSelectedHero(player[vm.selectedMode.id], player[vm.selectedMode.id].selectedHero)">
                                                     </select>
                                                 </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <!-- Record -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesWon}} / {{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed - player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesWon}} (W-L)
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <!-- Win Rate -->
+                                                <td style="text-align:left">{{(player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesWon/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed)* 100 | number: 2}}%</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- KDA -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].finalBlows}} / {{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].deaths}} / {{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].assists}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Time Played -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].timePlayed / 3600 | number: 2}} Hours</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Most Eliminations -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[player[vm.selectedMode.id].selectedHeroIndex].mostGameEliminations}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Most Damage Done -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[player[vm.selectedMode.id].selectedHeroIndex].mostGameDamageDone}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Most Healing Done -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[player[vm.selectedMode.id].selectedHeroIndex].mostGameHealingDone}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Total Final Blows -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].finalBlows}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Total Solo Kills -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].soloKills}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Total Objective Kills -->
+                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].objectiveKills}}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Eliminations -->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].eliminations/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0}}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Deaths -->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].deaths/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Final Blows -->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].finalBlows/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Solo Kills -->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].soloKills/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Objective Kills -->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].objectiveKills/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0}}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Damage Done-->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].damageDone/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0}}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- Average Healing Done -->
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].healingDone/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0}}</td>
+                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
                                             </tr>
                                             <tr>
                                                 <!-- World Rank # -->
@@ -176,91 +265,6 @@
                                             <tr>
                                                 <!-- Rank Rating -->
                                                 <td style="text-align:left">{{player[vm.selectedMode.id].competitiveRank.competitive_rank}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Record -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesWon}} / {{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesPlayed - player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesWon}} (W-L)</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Win Rate -->
-                                                <td style="text-align:left">{{(player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesWon/player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesPlayed)* 100 | number: 2}}%</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- KDA -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].finalBlows}} / {{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].deaths}} / {{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].assists}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Time Played -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].timePlayed / 3600}} Hours</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Most Eliminations -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[vm.selectedHeroId].mostGameEliminations}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Most Damage Done -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[vm.selectedHeroId].mostGameDamageDone}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Most Healing Done -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[vm.selectedHeroId].mostGameHealingDone}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Total Final Blows -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].finalBlows}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Total Solo Kills -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].soloKills}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Total Objective Kills -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].objectiveKills}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Eliminations -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].ranks[vm.selectedHeroId].ranks.averageEliminations}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Deaths -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].deaths/player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesPlayed | number: 0 }}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Final Blows -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].finalBlows/player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesPlayed | number: 0 }}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Solo Kills -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].soloKills/player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesPlayed | number: 0 }}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Objective Kills -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[vm.selectedHeroId].objectiveKills/player[vm.selectedMode.id].heroStats[vm.selectedHeroId].gamesPlayed | number: 0}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Damage Done-->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].ranks[vm.selectedHeroId].ranks.averageDamageDone}}</td>
-
-                                            </tr>
-                                            <tr>
-                                                <!-- Average Healing Done -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].ranks[vm.selectedHeroId].ranks.averageHealingDone}}</td>
 
                                             </tr>
                                         </tbody>
