@@ -17990,7 +17990,8 @@ body.body-privatemessage.responsive-enabled #site #site-main {
 
 body.body-privatemessage.responsive-enabled #site #site-main .atf {
     width: auto;
-    max-width: 1000px
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 body.body-privatemessage.responsive-enabled #site #site-main .container,body.body-privatemessage.responsive-enabled #site #site-main.fixed .container {

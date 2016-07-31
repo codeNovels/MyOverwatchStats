@@ -1,5 +1,5 @@
-<!--<div class="container">
-    <div id="content" class="main content-container">-->
+<div class="container" style="max-width: 1600px;">
+    <div id="content" class="main content-container">
 <section class="primary-content" role="main">
     <div class="page-block newest-heroes-container">
         <div class="bg-color-blue-dark u-invert">
@@ -47,7 +47,7 @@
 
                         <div class="row row-centered">
                             <div class="col-lg-2 col-centered" >
-                                    <button class="btn btn-info" ng-click="vm.openModal()" ng-disabled="vm.players.length === 6">+ Add</button>
+                                    <button class="btn btn-info" ng-click="vm.openModal()" ng-disabled="vm.players.length === 6">+ Add BattleTag</button>
                             </div>
                         </br>
 
@@ -59,7 +59,7 @@
                                     <table class="data-table">
                                         <thead>
                                             <tr>
-                                                <th colspan="2" style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem;padding-top: 142px;">COMPARISON</th>
+                                                <th colspan="2" style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem;padding-top: 149px;">COMPARISON</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -157,7 +157,7 @@
                                     <table class="data-table">
                                         <thead>
                                             <tr>
-                                                <th style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem" colspan="1"><img ng-src="http://static.watcher.gg/portraits/{{player[vm.selectedMode.id].player.portrait}}.png" style="margin-left: 10%;"></img>{{player.name}}
+                                                <th style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem" colspan="1"><img ng-src="http://static.watcher.gg/portraits/{{player[vm.selectedMode.id].player.portrait}}.png" style="margin-left: 10%;margin-bottom:5%"></img>{{player.name}}
                                                     <a class="pull-right" style="color: red" ng-click="vm.removePlayer(player)">x</a> </th>
                                             </tr>
                                         </thead>
@@ -316,5 +316,5 @@
 
         </div>
 </section>
-<!--</div>
-    </div>-->
+</div>
+    </div>
