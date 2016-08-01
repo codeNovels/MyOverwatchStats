@@ -60,9 +60,9 @@
         }
 
         function searchForIndexOfSelectedHero(player, selectedHero) {
-            for (var i = 0; i < player.heroStats.length; i++) {
-                if (angular.equals(player.heroStats[i], selectedHero)) {
-                    player.selectedHeroIndex = i;              
+            for (var i = 0; i < player[vm.selectedMode.id].heroStats.length; i++) {
+                if (angular.equals(player[vm.selectedMode.id].heroStats[i].name, selectedHero.name)) {
+                    player[vm.selectedMode.id].selectedHeroIndex = i;              
                 }
             };
             return -1;

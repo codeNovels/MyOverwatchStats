@@ -76,7 +76,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Win Rate</td>
+                                                <td style="color: #727272; background-color: #DEDEEA;">Win Rate</td>
 
                                             </tr>
                                             <tr>
@@ -84,7 +84,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Time Played</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Time Played</td>
 
                                             </tr>
                                             <tr>
@@ -92,7 +92,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Most Damage Done</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Most Damage Done</td>
 
                                             </tr>
                                             <tr>
@@ -100,7 +100,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Total Final Blows</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Total Final Blows</td>
 
                                             </tr>
                                             <tr>
@@ -108,7 +108,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Total Objective Kills</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Total Objective Kills</td>
 
                                             </tr>
                                             <tr>
@@ -116,7 +116,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Average Deaths</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Average Deaths</td>
 
                                             </tr>
                                             <tr>
@@ -124,7 +124,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Average Solo Kills</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Average Solo Kills</td>
 
                                             </tr>
                                             <tr>
@@ -132,7 +132,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">Average Damage Done</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">Average Damage Done</td>
 
                                             </tr>
                                             <tr>
@@ -140,7 +140,7 @@
 
                                             </tr>
                                             <tr>
-                                                <td style="color: #727272;">World Rank #</td>
+                                                <td style="color: #727272;background-color: #DEDEEA;">World Rank #</td>
 
                                             </tr>
                                             <tr>
@@ -157,7 +157,9 @@
                                     <table class="data-table">
                                         <thead>
                                             <tr>
-                                                <th style="font-size: 2rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem" colspan="1"><img ng-src="http://static.watcher.gg/portraits/{{player[vm.selectedMode.id].player.portrait}}.png" style="margin-left: 10%;margin-bottom:5%"></img>{{player.name}}
+                                                <th style="font-size: 2rem;padding-top: 149px; border-top-left-radius: 0rem; border-top-right-radius: 0rem; 
+                                                background-image: url('http://static.watcher.gg/portraits/{{player[vm.selectedMode.id].player.portrait}}.png');
+                                                background-size: cover;color: white" colspan="1">{{player.name}}
                                                     <a class="pull-right" style="color: red" ng-click="vm.removePlayer(player)">x</a> </th>
                                             </tr>
                                         </thead>
@@ -166,7 +168,7 @@
                                                 <td>
                                                     <select style="font-family: Futura,century gothic,arial,sans-serif;text-transform: uppercase;padding: 3px 33% 3px 6px;color: #333;max-width:180px;min-width: 180px;" 
                                                         ng-model="player[vm.selectedMode.id].selectedHero" ng-options="item as item.name for item in player[vm.selectedMode.id].heroSelector | orderBy:'name' track by item.name"
-                                                        ng-change="vm.searchForIndexOfSelectedHero(player[vm.selectedMode.id], player[vm.selectedMode.id].selectedHero)">
+                                                        ng-change="vm.searchForIndexOfSelectedHero(player, player[vm.selectedMode.id].selectedHero)">
                                                     </select>
                                                 </td>
                                             </tr>
@@ -179,7 +181,7 @@
                                             </tr>
                                             <tr>
                                                 <!-- Win Rate -->
-                                                <td style="text-align:left">{{(player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesWon/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed)* 100 | number: 2}}%</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;">{{(player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesWon/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed)* 100 | number: 2}}%</td>
 
                                             </tr>
                                             <tr>
@@ -189,7 +191,7 @@
                                             </tr>
                                             <tr>
                                                 <!-- Time Played -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].timePlayed / 3600 | number: 2}} Hours</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].timePlayed / 3600 | number: 2}} Hours</td>
 
                                             </tr>
                                             <tr>
@@ -199,7 +201,7 @@
                                             </tr>
                                             <tr>
                                                 <!-- Most Damage Done -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].careerStats[player[vm.selectedMode.id].selectedHeroIndex].mostGameDamageDone}}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;">{{player[vm.selectedMode.id].careerStats[player[vm.selectedMode.id].selectedHeroIndex].mostGameDamageDone}}</td>
 
                                             </tr>
                                             <tr>
@@ -209,7 +211,7 @@
                                             </tr>
                                             <tr>
                                                 <!-- Total Final Blows -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].finalBlows}}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].finalBlows}}</td>
 
                                             </tr>
                                             <tr>
@@ -219,7 +221,7 @@
                                             </tr>
                                             <tr>
                                                 <!-- Total Objective Kills -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].objectiveKills}}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].objectiveKills}}</td>
 
                                             </tr>
                                             <tr>
@@ -229,8 +231,8 @@
                                             </tr>
                                             <tr>
                                                 <!-- Average Deaths -->
-                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].deaths/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
-                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].deaths/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
                                             </tr>
                                             <tr>
                                                 <!-- Average Final Blows -->
@@ -239,8 +241,8 @@
                                             </tr>
                                             <tr>
                                                 <!-- Average Solo Kills -->
-                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].soloKills/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
-                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].soloKills/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0 }}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
                                             </tr>
                                             <tr>
                                                 <!-- Average Objective Kills -->
@@ -249,8 +251,8 @@
                                             </tr>
                                             <tr>
                                                 <!-- Average Damage Done-->
-                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].damageDone/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0}}</td>
-                                                <td style="text-align:left" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed > 0">{{player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].damageDone/player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed | number: 0}}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;" ng-if="player[vm.selectedMode.id].heroStats[player[vm.selectedMode.id].selectedHeroIndex].gamesPlayed === 0">0</td>
                                             </tr>
                                             <tr>
                                                 <!-- Average Healing Done -->
@@ -259,7 +261,7 @@
                                             </tr>
                                             <tr>
                                                 <!-- World Rank # -->
-                                                <td style="text-align:left">{{player[vm.selectedMode.id].competitiveRank.rank}}</td>
+                                                <td style="text-align:left;background-color: #DEDEEA;">{{player[vm.selectedMode.id].competitiveRank.rank}}</td>
 
                                             </tr>
                                             <tr>

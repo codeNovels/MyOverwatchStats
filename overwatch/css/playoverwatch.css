@@ -4274,8 +4274,11 @@ body.ko-kr .btn,body.ko-kr .button,body.ko-kr button {
 }
 
 .data-table>tbody td {
-    padding: 1rem;
-    padding-top: 0;
+    /*padding: 1rem;*/
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: #727272
 }
 
