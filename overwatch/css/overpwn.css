@@ -19615,7 +19615,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     right: -10px;
     width: 130px;
     height: 100px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("content/images/background.png");
     background: rgba(50,50,50,0.7);
     border: solid 1px transparent;
     padding: 10px;
@@ -26101,7 +26101,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .b-search-a .primary-search-submit input[type='submit'] {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/search-off.svg");
+    background-image: url("content/images/icons/search-off.svg");
     background-size: 20px 21px;
     background-color: transparent;
     -webkit-transform: skew(15deg);
@@ -26139,7 +26139,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .b-search-a .primary-search-submit input[type='submit']:hover {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/search-on.svg")
+    background-image: url("content/images/icons/search-on.svg")
 }
 
 .b-social-a .social-share.twitter {
@@ -28063,7 +28063,7 @@ button,input {
 
 div#site-main {
     width: auto;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/heroes-bg-left.png") left 75px no-repeat,url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/heroes-bg-right.png") right 75px no-repeat,url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/header-bg.jpg") center top no-repeat,url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/header-bg-tile.jpg") center top repeat-x,#ebe7e1
+    background: url("content/images/heroes-bg-left.png") left 75px no-repeat,url("content/images/heroes-bg-right.png") right 75px no-repeat,url("content/images/header-bg.jpg") center top no-repeat,url("content/images/header-bg-tile.jpg") center top repeat-x,#ebe7e1
 }
 
 div#site-main header.main {
