@@ -1,8 +1,8 @@
 /* D:\projects\Overpwn\Overpwn\Source\Curse.Overpwn.Web\Content\Skins\Overpwn\css\core.css */
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);@import url(http://fonts.cursecdn.com/BigNoodleTitling/big-noodle-titling-normal-normal.css);@import url(http://fonts.cursecdn.com/LeagueSpartan/LeagueSpartan-bold-normal.css);@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);@import url(//fonts.googleapis.com/css?family=Noto+Sans:400,700);@font-face {
     font-family: 'overpwn-icons';
-    src: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.eot");
-    src: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.eot?#iefix") format("embedded-opentype"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.woff") format("woff"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.ttf") format("truetype"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.svg#icomoon") format("svg");
+    src: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.eot");
+    src: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.eot?#iefix") format("embedded-opentype"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.woff") format("woff"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.ttf") format("truetype"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.svg#icomoon") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -349,7 +349,7 @@ td {
     width: 24px;
     height: 16px;
     display: inline-block;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/icon-flags-sprite-24x16.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/icon-flags-sprite-24x16.png")
 }
 
 .flag-andorra {
@@ -2323,14 +2323,14 @@ div.u-form-tabular label input[type=checkbox] {
 }
 
 .loading {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ajax-loader-dark.gif");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ajax-loader-dark.gif");
     background-position: right;
     background-repeat: no-repeat;
     padding-right: 19px
 }
 
 .loading-left {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ajax-loader-dark.gif") left no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ajax-loader-dark.gif") left no-repeat;
     padding-left: 19px
 }
 
@@ -2349,7 +2349,7 @@ div.u-form-tabular label input[type=checkbox] {
     background-color: #000;
     width: 100%;
     height: 100%;
-    zoom:1;background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ajax-loader.gif");
+    zoom:1;background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ajax-loader.gif");
     background-position: center center;
     background-repeat: no-repeat
 }
@@ -2377,7 +2377,7 @@ div.u-form-tabular label input[type=checkbox] {
 }
 
 input[type=text].ac_loading,input[type=search].ac_loading {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ac-loader.gif");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ac-loader.gif");
     background-repeat: no-repeat;
     background-position: 97% center
 }
@@ -3060,14 +3060,14 @@ input[type=text].ac_loading,input[type=search].ac_loading {
 .ui-datepicker-header .ui-datepicker-next .ui-icon {
     width: 16px;
     height: 16px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/go-next.png") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/go-next.png") no-repeat;
     text-indent: -9999px
 }
 
 .ui-datepicker-header .ui-datepicker-prev .ui-icon {
     width: 16px;
     height: 16px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/go-previous.png") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/go-previous.png") no-repeat;
     text-indent: -9999px
 }
 
@@ -3157,7 +3157,7 @@ input[type=text].ac_loading,input[type=search].ac_loading {
 }
 
 .ui-resizable-s {
-    background: #eee url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/ui/grippie.png") no-repeat center center;
+    background: #eee url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/ui/grippie.png") no-repeat center center;
     cursor: s-resize;
     height: 7px;
     width: 100%;
@@ -3344,7 +3344,7 @@ input[type=text].ac_loading,input[type=search].ac_loading {
     height: 16px;
     position: relative;
     display: inline-block;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/object-flip-vertical.png") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/object-flip-vertical.png") no-repeat;
     vertical-align: middle
 }
 
@@ -3983,7 +3983,7 @@ blockquote>blockquote,blockquote>blockquote:only-of-type,blockquote>blockquote:l
 span.user-role-curse-premium,span.user-role-premium {
     color: #d35114;
     padding-left: 14px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/vanity/icon-curse-dragon.png") no-repeat left center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/vanity/icon-curse-dragon.png") no-repeat left center
 }
 
 a.user-role-moderator {
@@ -4013,7 +4013,7 @@ a.user-role-curse {
 span.user-role-curse {
     color: #00C0FF;
     padding-left: 14px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/vanity/icon-curse-flame.png") no-repeat left center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/vanity/icon-curse-flame.png") no-repeat left center
 }
 
 a.user-role-author {
@@ -4040,7 +4040,7 @@ span.user-role-staff {
     padding-left: 20px;
     min-height: 16px;
     display: inline-block;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/16x16/vanity-icon-staff.png") no-repeat left center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/16x16/vanity-icon-staff.png") no-repeat left center
 }
 
 span.user-role-staff:hover {
@@ -4275,7 +4275,7 @@ header.main {
     width: 24px;
     height: 16px;
     display: inline-block;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/icon-flags-sprite-24x16.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/icon-flags-sprite-24x16.png");
     margin-right: 6px;
     position: relative;
     top: 4px
@@ -6327,8 +6327,8 @@ header.main {
 
 @font-face {
     font-family: 'cobalt-ui';
-    src: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/fonts/cobalt-ui.eot");
-    src: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/fonts/cobalt-ui.eot?#iefix") format("embedded-opentype"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/fonts/cobalt-ui.woff") format("woff"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/fonts/cobalt-ui.ttf") format("truetype"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/fonts/cobalt-ui.svg") format("svg");
+    src: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/fonts/cobalt-ui.eot");
+    src: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/fonts/cobalt-ui.eot?#iefix") format("embedded-opentype"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/fonts/cobalt-ui.woff") format("woff"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/fonts/cobalt-ui.ttf") format("truetype"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/fonts/cobalt-ui.svg") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -7284,7 +7284,7 @@ body:not(.ad-skin) #site>div.ad-placement {
 }
 
 .b-search-a input[type=submit],.b-search-a [type="submit"] {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/white/icon-search.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/white/icon-search.png");
     background-position: center center;
     background-repeat: no-repeat;
     padding: 4px 15px;
@@ -7293,7 +7293,7 @@ body:not(.ad-skin) #site>div.ad-placement {
 }
 
 .b-search-a input[type=submit]:hover,.b-search-a input[type=submit]:active,.b-search-a [type="submit"]:hover,.b-search-a [type="submit"]:active {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/white/icon-search.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/white/icon-search.png");
     background-position: center center
 }
 
@@ -7446,7 +7446,7 @@ body:not(.ad-skin) #site>div.ad-placement {
 }
 
 .b-shoutbox-a .b-shoutbox-emotes>a {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/emotes/face-embarrassed.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/emotes/face-embarrassed.png");
     width: 16px;
     height: 16px;
     display: block;
@@ -8760,7 +8760,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-comments .p-comment-post.mod-collection.comment-spam .p-comment-wrapper {
-    background: rgba(255,0,0,0.3) url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-spam-bg.png") no-repeat center center!important
+    background: rgba(255,0,0,0.3) url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-spam-bg.png") no-repeat center center!important
 }
 
 .p-comments .p-comment-post.mod-collection.comment-deleted,.p-comments .p-comment-post.mod-collection.comment-mute-banned,.p-comments .p-comment-post.mod-collection.comment-deleted-with-note {
@@ -8769,7 +8769,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-comments .p-comment-post.mod-collection.comment-deleted .p-comment-wrapper,.p-comments .p-comment-post.mod-collection.comment-mute-banned .p-comment-wrapper,.p-comments .p-comment-post.mod-collection.comment-deleted-with-note .p-comment-wrapper {
-    background: rgba(48,48,48,0.3) url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-deleted-bg.png") no-repeat center center!important
+    background: rgba(48,48,48,0.3) url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-deleted-bg.png") no-repeat center center!important
 }
 
 .p-comments .p-comment-post:not(.mod-collection) .p-comment-editor .markItUpEditor {
@@ -8815,7 +8815,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-comments .p-comment-post:not(.mod-collection).comment-spam .p-comment-wrapper {
-    background: #d30000 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-spam-bg.png") no-repeat center center!important;
+    background: #d30000 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-spam-bg.png") no-repeat center center!important;
     color: #fff
 }
 
@@ -8828,7 +8828,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-comments .p-comment-post:not(.mod-collection).comment-deleted .p-comment-wrapper,.p-comments .p-comment-post:not(.mod-collection).comment-mute-banned .p-comment-wrapper,.p-comments .p-comment-post:not(.mod-collection).comment-deleted-with-note .p-comment-wrapper {
-    background: #333 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-deleted-bg.png") no-repeat center center!important;
+    background: #333 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-deleted-bg.png") no-repeat center center!important;
     color: #fff
 }
 
@@ -8845,7 +8845,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-comments .p-comment-post:not(.mod-collection).comment-mute-banned .p-comment-wrapper {
-    background: #333 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/hellban-bg.png") no-repeat center center!important
+    background: #333 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/hellban-bg.png") no-repeat center center!important
 }
 
 .p-forum .p-comments .p-comment-post:not(.mod-collection) .p-comment-editor .markItUpEditor {
@@ -8870,13 +8870,13 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-forum .p-comments .p-comment-post:not(.mod-collection).comment-deleted .p-comment-header,.p-forum .p-comments .p-comment-post:not(.mod-collection).comment-deleted-with-note .p-comment-header,.p-forum .p-comments .p-comment-post:not(.mod-collection).comment-mute-banned .p-comment-header {
-    background: #333 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-deleted-bg.png")!important;
+    background: #333 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-deleted-bg.png")!important;
     background-position: 0 -10px!important;
     background-size: 132px 52px!important
 }
 
 .p-forum .p-comments .p-comment-post:not(.mod-collection).comment-mute-banned .p-comment-header {
-    background: #000 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/hellban-bg.png") center center!important
+    background: #000 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/hellban-bg.png") center center!important
 }
 
 .p-forum .p-comments .p-comment-post:not(.mod-collection).comment-spam {
@@ -8889,7 +8889,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
 }
 
 .p-forum .p-comments .p-comment-post:not(.mod-collection).comment-spam .p-comment-header {
-    background: #6d0505 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-spam-bg.png")!important;
+    background: #6d0505 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-spam-bg.png")!important;
     background-position: 0 -20px!important;
     background-size: 118px 81px!important
 }
@@ -9377,7 +9377,7 @@ body.body-accountmerge-mergeaccounts #site.single-column .p-account-merge-a .acc
     display: block;
     padding: 0;
     margin: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/24x24/darkgrey/user-action-comment-sprite.png") no-repeat 0 0;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/24x24/darkgrey/user-action-comment-sprite.png") no-repeat 0 0;
     opacity: .6;
     margin: auto
 }
@@ -9641,7 +9641,7 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
 }
 
 .p-comments-a .p-comment-wrapper .comment-revisions .u-icon-dropdown {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/grey/icon-down-grey.png") center center;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/grey/icon-down-grey.png") center center;
     width: 12px;
     height: 12px;
     display: block;
@@ -9802,7 +9802,7 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
     content: '';
     width: 8px;
     height: 8px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/8x8/darkgrey/icon-reply-to.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/8x8/darkgrey/icon-reply-to.png");
     position: absolute;
     left: -14px;
     top: 0
@@ -10433,7 +10433,7 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
 }
 
 .p-header-c .logo>a {
-    /* background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/responsive-menu-logo.svg) no-repeat; */
+    /* background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/responsive-menu-logo.svg) no-repeat; */
 	background: url(logo.png) no-repeat;
     display: block;
     float: left;
@@ -10509,7 +10509,7 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
     left: auto;
     top: auto;
     visibility: visible;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/black/icon-search.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/black/icon-search.png");
     background-position: center center;
     background-repeat: no-repeat;
     position: absolute;
@@ -11402,17 +11402,17 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
 }
 
 .p-poll-form-a #div-poll .j-poll-type-example.j-poll-type-example-1 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-single-choice.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-single-choice.png) no-repeat center center;
     width: 38px
 }
 
 .p-poll-form-a #div-poll .j-poll-type-example.j-poll-type-example-2 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-multi-select.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-multi-select.png) no-repeat center center;
     width: 90px
 }
 
 .p-poll-form-a #div-poll .j-poll-type-example.j-poll-type-example-3 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-rating.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-rating.png) no-repeat center center;
     width: 149px;
     margin-left: 10px
 }
@@ -11445,7 +11445,7 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
 .p-poll-form-a #div-poll .poll-actions .poll-action button[id^="field-poll-form"] i {
     width: 16px;
     height: 19px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/forum-icons.png") no-repeat no-repeat -346px -6px;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/forum-icons.png") no-repeat no-repeat -346px -6px;
     display: block;
     margin: 0 auto
 }
@@ -11486,7 +11486,7 @@ body.show-ads .p-comments-a:last-child .p-comment-footer .p-comment-actionsAdmin
 }
 
 .p-poll-form-a #div-poll .field-list .form-field .sort-gripper {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/darkgrey/icon-drag.png") no-repeat center center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/darkgrey/icon-drag.png") no-repeat center center
 }
 
 .p-poll-form-a #div-poll .field-list .form-field .remove-link {
@@ -11545,17 +11545,17 @@ body .ui-dialog .edit-poll.module .j-poll-type-example {
 }
 
 body .ui-dialog .edit-poll.module .j-poll-type-example.j-poll-type-example-1 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-single-choice.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-single-choice.png) no-repeat center center;
     width: 38px
 }
 
 body .ui-dialog .edit-poll.module .j-poll-type-example.j-poll-type-example-2 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-multi-select.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-multi-select.png) no-repeat center center;
     width: 90px
 }
 
 body .ui-dialog .edit-poll.module .j-poll-type-example.j-poll-type-example-3 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-rating.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-rating.png) no-repeat center center;
     width: 149px;
     margin-left: 10px
 }
@@ -11588,7 +11588,7 @@ body .ui-dialog .edit-poll.module .poll-actions .poll-action button[id^="field-p
 body .ui-dialog .edit-poll.module .poll-actions .poll-action button[id^="field-poll-form"] i {
     width: 16px;
     height: 19px;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/remove3.png) no-repeat 0 0;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/remove3.png) no-repeat 0 0;
     display: block;
     margin: 0 auto
 }
@@ -11623,7 +11623,7 @@ body .ui-dialog .edit-poll.module .field-list .form-field>input {
 }
 
 body .ui-dialog .edit-poll.module .field-list .form-field .sort-gripper {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/darkgrey/icon-drag.png") no-repeat center center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/darkgrey/icon-drag.png") no-repeat center center
 }
 
 body .ui-dialog .edit-poll.module .field-list .form-field .remove-link {
@@ -11869,7 +11869,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
 
 .p-user-a .p-user-interaction .p-user-content .listing-container-table .listing-warning-record .arrow,.p-user-a.s_myAccount .p-user-interaction .p-user-content .listing-container-table .listing-warning-record .arrow,.p-user-a.s_myProfile .p-user-interaction .p-user-content .listing-container-table .listing-warning-record .arrow,.p-user-a.s_myStreams .p-user-interaction .p-user-content .listing-container-table .listing-warning-record .arrow,.p-user-a.s_newContent .p-user-interaction .p-user-content .listing-container-table .listing-warning-record .arrow {
     width: 16px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/24x24/grey/icon-ban-angled-arrow.png") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/24x24/grey/icon-ban-angled-arrow.png") no-repeat;
     height: 16px;
     display: inline-block;
     background-size: 100%;
@@ -12405,7 +12405,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     content: '';
     width: 12px;
     height: 12px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/8x8/darkgrey/icon-quote-right.png") no-repeat 0 0;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/8x8/darkgrey/icon-quote-right.png") no-repeat 0 0;
     position: absolute;
     top: 10px;
     left: 20px
@@ -12682,7 +12682,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     position: relative;
     top: 3px;
     left: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/darkgrey/user-action-sprite.png") 1px -43px no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/darkgrey/user-action-sprite.png") 1px -43px no-repeat
 }
 
 #user-reputation .p-comment-wrapper .content-box-rating span.like.user-owned {
@@ -12708,7 +12708,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     content: '';
     width: 43px;
     height: 60px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/promotions/promotion-sweeps-ribbon.png") no-repeat -58px 0;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/promotions/promotion-sweeps-ribbon.png") no-repeat -58px 0;
     position: absolute;
     top: 0;
     left: 0
@@ -12718,7 +12718,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     content: '';
     width: 43px;
     height: 60px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/promotions/promotion-sweeps-ribbon.png") no-repeat 0 0;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/promotions/promotion-sweeps-ribbon.png") no-repeat 0 0;
     position: absolute;
     top: 0;
     left: 0
@@ -12728,7 +12728,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     content: '';
     width: 43px;
     height: 60px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/promotions/promotion-keys-ribbon.png") no-repeat -58px 0;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/promotions/promotion-keys-ribbon.png") no-repeat -58px 0;
     position: absolute;
     top: 0;
     left: 0
@@ -12738,7 +12738,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     content: '';
     width: 43px;
     height: 60px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/promotions/promotion-keys-ribbon.png") no-repeat 0 0;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/promotions/promotion-keys-ribbon.png") no-repeat 0 0;
     position: absolute;
     top: 0;
     left: 0
@@ -13030,7 +13030,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     display: block;
     text-indent: -99999px;
     margin: 0 auto;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/small-flame.png") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/small-flame.png") no-repeat
 }
 
 .ui-dialog.loginModal .p-login-form,.ui-dialog.register-modal .p-login-form {
@@ -13093,7 +13093,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     height: 35px;
     top: 2px;
     left: 2px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/email-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/email-icon.png") no-repeat center
 }
 
 .ui-dialog.loginModal .p-login-form [for="field-loginFormPassword"]:after,.ui-dialog.register-modal .p-login-form [for="field-loginFormPassword"]:after {
@@ -13104,7 +13104,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     height: 35px;
     top: 2px;
     left: 2px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/password-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/password-icon.png") no-repeat center
 }
 
 .ui-dialog.loginModal .p-login-register,.ui-dialog.register-modal .p-login-register {
@@ -13206,7 +13206,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     height: 41px;
     bottom: 7px;
     left: 10px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/premium-icon.png") no-repeat left center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/premium-icon.png") no-repeat left center
 }
 
 .ui-dialog.loginModal .p-login-helpers .premium-link>span,.ui-dialog.register-modal .p-login-helpers .premium-link>span {
@@ -13287,19 +13287,19 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
 }
 
 .p-register-form [for=field-username]:after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/user-icon.png") no-repeat center!important
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/user-icon.png") no-repeat center!important
 }
 
 .p-register-form [for=field-email]:after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/email-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/email-icon.png") no-repeat center
 }
 
 .p-register-form [for=field-registerFormPassword]:after,.p-register-form [for=field-registerFormPasswordConfirm]:after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/icons/password-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/icons/password-icon.png") no-repeat center
 }
 
 .p-register-form .registerFormPassword:after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/icons/password-icon.png") no-repeat center!important
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/icons/password-icon.png") no-repeat center!important
 }
 
 .p-register-form #recaptcha_widget_div {
@@ -13419,7 +13419,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     height: 35px;
     top: 2px;
     left: 2px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/email-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/email-icon.png") no-repeat center
 }
 
 .ui-dialog.register-modal .p-register-form fieldset>[for="field-username"]:after {
@@ -13430,7 +13430,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     height: 35px;
     top: 2px;
     left: 2px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/email-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/email-icon.png") no-repeat center
 }
 
 .ui-dialog.register-modal .p-register-form fieldset>[for="field-registerFormPasswordConfirm"]:after,.ui-dialog.register-modal .p-register-form fieldset>[for="field-registerFormPassword"]:after {
@@ -13441,7 +13441,7 @@ body .ui-dialog .edit-poll.module fieldset .expand-link {
     height: 35px;
     top: 2px;
     left: 2px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/login/password-icon.png") no-repeat center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/login/password-icon.png") no-repeat center
 }
 
 #recaptcha_area {
@@ -14064,8 +14064,8 @@ a#responsive-topnav-button {
 
 .netbar-logo {
     width: 103px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/netbar/logo-fallback.png");
-    background-image: linear-gradient(transparent,transparent),url('http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/netbar/logo.svg');
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/netbar/logo-fallback.png");
+    background-image: linear-gradient(transparent,transparent),url('http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/netbar/logo.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 72px 21px;
@@ -14422,8 +14422,8 @@ body.hide-ads footer#footer div.footer-links,body.disable-ads footer#footer div.
 body.hide-ads footer#footer div.footer-links div.top a.curse,body.disable-ads footer#footer div.footer-links div.top a.curse {
     width: 155px;
     height: 40px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/footer/premium-logo-light.png");
-    background-image: linear-gradient(transparent,transparent),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/footer/premium-logo-light.svg");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/footer/premium-logo-light.png");
+    background-image: linear-gradient(transparent,transparent),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/footer/premium-logo-light.svg");
     background-repeat: no-repeat;
     display: inline-block;
     margin-right: 20px
@@ -16818,7 +16818,7 @@ body.body-authentication div#site-main div.container div#content .p-login-a .p-r
     body.responsive-enabled header.main h1>a.logo {
         width: calc(100% - 113px);
         height: 46px;
-        background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/responsive-menu-logo.svg");
+        background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/responsive-menu-logo.svg");
         background-position: 8px center;
         background-repeat: no-repeat;
         background-size: auto 32px;
@@ -18663,7 +18663,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     width: 12px;
     height: 12px;
     font-size: 1px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") -42px 1px no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") -42px 1px no-repeat
 }
 
 .chosen-container-single .chosen-single abbr:hover {
@@ -18692,7 +18692,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 }
 
 .chosen-container-single .chosen-single div b {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 0 2px;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 0 2px;
     display: block;
     width: 100%;
     height: 100%
@@ -18716,12 +18716,12 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     height: auto;
     outline: 0;
     border: 1px solid #aaa;
-    background: #fff url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-webkit-gradient(linear,0 0,0 100%,color-stop(1%,#eee),color-stop(15%,#fff));
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-webkit-linear-gradient(top,#eee 1%,#fff 15%);
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-moz-linear-gradient(top,#eee 1%,#fff 15%);
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-o-linear-gradient(top,#eee 1%,#fff 15%);
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,linear-gradient(#eee 1%,#fff 15%);
+    background: #fff url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-webkit-gradient(linear,0 0,0 100%,color-stop(1%,#eee),color-stop(15%,#fff));
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-webkit-linear-gradient(top,#eee 1%,#fff 15%);
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-moz-linear-gradient(top,#eee 1%,#fff 15%);
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,-o-linear-gradient(top,#eee 1%,#fff 15%);
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat 100% -20px,linear-gradient(#eee 1%,#fff 15%);
     font-family: sans-serif;
     font-size: 1em;
     line-height: normal
@@ -18823,7 +18823,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     width: 12px;
     height: 12px;
     font-size: 1px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") -42px 1px no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") -42px 1px no-repeat
 }
 
 .chosen-container-multi .chosen-choices .search-choice .search-choice-close:hover {
@@ -18917,11 +18917,11 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 }
 
 .chosen-container .chosen-results-scroll-down span {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -4px -3px
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -4px -3px
 }
 
 .chosen-container .chosen-results-scroll-up span {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -22px -3px
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -22px -3px
 }
 
 .chosen-container-active .chosen-single {
@@ -19031,12 +19031,12 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 }
 
 .chosen-rtl .chosen-search input {
-    background: #fff url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-webkit-gradient(linear,0 0,0 100%,color-stop(1%,#eee),color-stop(15%,#fff));
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-webkit-linear-gradient(top,#eee 1%,#fff 15%);
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-moz-linear-gradient(top,#eee 1%,#fff 15%);
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-o-linear-gradient(top,#eee 1%,#fff 15%);
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,linear-gradient(#eee 1%,#fff 15%);
+    background: #fff url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-webkit-gradient(linear,0 0,0 100%,color-stop(1%,#eee),color-stop(15%,#fff));
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-webkit-linear-gradient(top,#eee 1%,#fff 15%);
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-moz-linear-gradient(top,#eee 1%,#fff 15%);
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,-o-linear-gradient(top,#eee 1%,#fff 15%);
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite.png") no-repeat -30px -20px,linear-gradient(#eee 1%,#fff 15%);
     padding: 4px 5px 4px 20px;
     direction: rtl
 }
@@ -19051,14 +19051,14 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution:144dpi) {
     .chosen-rtl .chosen-search input,.chosen-container-single .chosen-single abbr,.chosen-container-single .chosen-single div b,.chosen-container-single .chosen-search input,.chosen-container-multi .chosen-choices .search-choice .search-choice-close,.chosen-container .chosen-results-scroll-down span,.chosen-container .chosen-results-scroll-up span {
-        background-image:url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite@2x.png")!important;
+        background-image:url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite@2x.png")!important;
         background-repeat: no-repeat!important;
         background-size: 52px 37px!important
     }
 }
 
 .j-show-rich-editor {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/bbcode_depressed.png") no-repeat!important;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/bbcode_depressed.png") no-repeat!important;
     margin-top: -2px!important
 }
 
@@ -19152,11 +19152,11 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     width: 100px;
     height: 100px;
     margin: -50px 0 0 -50px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/bigplay.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/bigplay.svg") no-repeat
 }
 
 .no-svg .mejs-overlay-button {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/bigplay.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/bigplay.png")
 }
 
 .mejs-overlay:hover .mejs-overlay-button {
@@ -19171,7 +19171,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     height: 80px;
     margin: -40px 0 0 -40px;
     background: #333;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(0,0,0,0.9);
     background: -webkit-gradient(linear,0% 0,0% 100%,from(rgba(50,50,50,0.9)),to(rgba(0,0,0,0.9)));
     background: -webkit-linear-gradient(top,rgba(50,50,50,0.9),rgba(0,0,0,0.9));
@@ -19185,7 +19185,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     display: block;
     width: 80px;
     height: 80px;
-    background: transparent url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/loading.gif") 50% 50% no-repeat
+    background: transparent url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/loading.gif") 50% 50% no-repeat
 }
 
 .mejs-container .mejs-controls {
@@ -19196,7 +19196,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     padding: 0;
     bottom: 0;
     left: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(0,0,0,0.7);
     background: -webkit-gradient(linear,0% 0,0% 100%,from(rgba(50,50,50,0.7)),to(rgba(0,0,0,0.7)));
     background: -webkit-linear-gradient(top,rgba(50,50,50,0.7),rgba(0,0,0,0.7));
@@ -19236,11 +19236,11 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     height: 16px;
     width: 16px;
     border: 0;
-    background: transparent url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/controls.svg") no-repeat
+    background: transparent url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/controls.svg") no-repeat
 }
 
 .no-svg .mejs-controls .mejs-button button {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/controls.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/controls.png")
 }
 
 .mejs-controls .mejs-button button:focus {
@@ -19491,7 +19491,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     display: none;
     height: 115px;
     width: 25px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(50,50,50,0.7);
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -19765,7 +19765,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 
 .mejs-captions-text {
     padding: 3px 5px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(20,20,20,0.8)
 }
 
@@ -19850,7 +19850,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     right: -10px;
     width: 130px;
     height: 100px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(50,50,50,0.7);
     border: solid 1px transparent;
     padding: 10px;
@@ -19898,7 +19898,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(50,50,50,0.7);
     z-index: 1000;
     overflow: hidden
@@ -19913,7 +19913,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
     position: absolute;
     right: 0;
     top: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/background.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/background.png");
     background: rgba(50,50,50,0.7);
     color: #fff;
     padding: 4px;
@@ -19926,7 +19926,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 }
 
 .mceIcon.mce_hideeditor {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/bb_icon.gif") no-repeat!important
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/bb_icon.gif") no-repeat!important
 }
 
 .mceButton.mceButtonEnabled.mce_hideeditor:hover {
@@ -19949,7 +19949,7 @@ body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-it
 }
 
 .mce-toolbar .mce-btn i.mce-i-hideeditor {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/bb_icon.gif") no-repeat center center;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/bb_icon.gif") no-repeat center center;
     width: 20px
 }
 
@@ -20615,7 +20615,7 @@ body#tinymce span[data-mce-style="font-size: 8pt;"] {
 }
 
 .b-rating-a.five-star {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/star-rating.png") repeat-x;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/star-rating.png") repeat-x;
     display: block;
     float: none;
     position: relative;
@@ -20663,7 +20663,7 @@ body#tinymce span[data-mce-style="font-size: 8pt;"] {
 }
 
 .b-rating-a.five-star li.current-rating {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/star-rating.png")!important;
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/star-rating.png")!important;
     background-position: 0 -14px;
     float: none;
     left: 0;
@@ -20692,7 +20692,7 @@ body#tinymce span[data-mce-style="font-size: 8pt;"] {
 }
 
 .b-rating-a.five-star li>input:hover {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/star-rating.png") repeat-x
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/star-rating.png") repeat-x
 }
 
 .b-rating-a.five-star li>input:hover,.b-rating-a.five-star li>input:active,.b-rating-a.five-star li>input:focus {
@@ -21057,7 +21057,7 @@ body#tinymce span[data-mce-style="font-size: 8pt;"] {
     width: 15px;
     height: 15px;
     text-indent: -9999px;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/white/user-action-sprite.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/white/user-action-sprite.png");
     background-position: 44px 1px
 }
 
@@ -21680,7 +21680,7 @@ body.show-ads .p-comments-b:last-child .p-comment-footer .p-comment-actionsAdmin
 }
 
 .p-comments-b .p-comment-wrapper .comment-revisions .u-icon-dropdown,.body-forum .comment-preview li .p-comment-wrapper .comment-revisions .u-icon-dropdown,.body-forum-search .p-comments-a .p-comment-wrapper .comment-revisions .u-icon-dropdown {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/grey/icon-down-grey.png") center center;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/grey/icon-down-grey.png") center center;
     width: 12px;
     height: 12px;
     display: block;
@@ -22100,7 +22100,7 @@ body.body-forum-search .p-comments-b .p-comment-header .p-comment-postdate,body.
 }
 
 .p-comments-b .p-comment-sig.signature-spam,.body-forum .comment-preview li .p-comment-sig.signature-spam,.body-forum-search .p-comments-a .p-comment-sig.signature-spam {
-    background: #DE0000 url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ui-spam-bg.png") no-repeat center center;
+    background: #DE0000 url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ui-spam-bg.png") no-repeat center center;
     color: #fff
 }
 
@@ -22226,11 +22226,11 @@ body.body-forum-search .p-comments-b .p-comment-header .p-comment-postdate,body.
     position: absolute;
     top: 34px;
     left: 0;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/toggle-expand-dark.png) no-repeat transparent
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/toggle-expand-dark.png) no-repeat transparent
 }
 
 .p-forum-a .expand-link.expanded,.listing-forum-search .expand-link.expanded {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/toggle-collapse-dark.png) no-repeat transparent
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/toggle-collapse-dark.png) no-repeat transparent
 }
 
 .p-forum-a .forum-listing li.item,.listing-forum-search .forum-listing li.item {
@@ -22549,11 +22549,11 @@ body.body-forum-search .p-comments-b .p-comment-header .p-comment-postdate,body.
 
 .p-forum-a .b-table .forum-row .col-forum .moderators a,.p-forum-a .announcements .forum-row .col-forum .moderators a,.listing-forum-search .b-table .forum-row .col-forum .moderators a,.listing-forum-search .announcements .forum-row .col-forum .moderators a {
     padding-right: 20px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/grey/icon-moderator-arrow-right.png") no-repeat right
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/grey/icon-moderator-arrow-right.png") no-repeat right
 }
 
 .p-forum-a .b-table .forum-row .col-forum .moderators a.expanded,.p-forum-a .announcements .forum-row .col-forum .moderators a.expanded,.listing-forum-search .b-table .forum-row .col-forum .moderators a.expanded,.listing-forum-search .announcements .forum-row .col-forum .moderators a.expanded {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/grey/icon-moderator-arrow-down.png") no-repeat right
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/grey/icon-moderator-arrow-down.png") no-repeat right
 }
 
 .p-forum-a .b-table .forum-row .col-forum .expandable.ui-helper-hidden,.p-forum-a .announcements .forum-row .col-forum .expandable.ui-helper-hidden,.p-forum-a .b-table .forum-row .col-forum .expanded-by-default,.p-forum-a .announcements .forum-row .col-forum .expanded-by-default,.listing-forum-search .b-table .forum-row .col-forum .expandable.ui-helper-hidden,.listing-forum-search .announcements .forum-row .col-forum .expandable.ui-helper-hidden,.listing-forum-search .b-table .forum-row .col-forum .expanded-by-default,.listing-forum-search .announcements .forum-row .col-forum .expanded-by-default {
@@ -22645,7 +22645,7 @@ body.body-forum-search .p-comments-b .p-comment-header .p-comment-postdate,body.
     content: '';
     display: block;
     position: absolute;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/arrow.png") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/arrow.png") no-repeat;
     width: 8px;
     height: 5px;
     left: 1px;
@@ -23353,7 +23353,7 @@ body.body-forum-search .p-comments-b .p-comment-header .p-comment-postdate,body.
 .p-forum-a.s-search .j-forum-search-select,.listing-forum-search.s-search .j-forum-search-select {
     text-indent: -9999px;
     display: inline-block;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/chosen-sprite@2x.png") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/chosen-sprite@2x.png") no-repeat;
     width: 16px;
     height: 16px
 }
@@ -23681,17 +23681,17 @@ body .ui-dialog .poll-form-container .j-poll-type-example {
 }
 
 body .ui-dialog .poll-form-container .j-poll-type-example.j-poll-type-example-1 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-single-choice.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-single-choice.png) no-repeat center center;
     width: 38px
 }
 
 body .ui-dialog .poll-form-container .j-poll-type-example.j-poll-type-example-2 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-multi-select.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-multi-select.png) no-repeat center center;
     width: 90px
 }
 
 body .ui-dialog .poll-form-container .j-poll-type-example.j-poll-type-example-3 {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/poll-example-rating.png) no-repeat center center;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/poll-example-rating.png) no-repeat center center;
     width: 149px;
     margin-left: 10px
 }
@@ -23724,7 +23724,7 @@ body .ui-dialog .poll-form-container .poll-actions .poll-action button[id^="fiel
 body .ui-dialog .poll-form-container .poll-actions .poll-action button[id^="field-poll-form"] i {
     width: 16px;
     height: 19px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/forum-icons.png") no-repeat no-repeat -346px -6px;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/forum-icons.png") no-repeat no-repeat -346px -6px;
     display: block;
     margin: 0 auto
 }
@@ -23770,7 +23770,7 @@ body .ui-dialog .poll-form-container .field-list .form-field>input {
 }
 
 body .ui-dialog .poll-form-container .field-list .form-field .sort-gripper {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/darkgrey/icon-drag.png") no-repeat center center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/darkgrey/icon-drag.png") no-repeat center center
 }
 
 body .ui-dialog .poll-form-container .field-list .form-field .remove-link {
@@ -23849,7 +23849,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-header-a .title {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/logo.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/logo.svg) no-repeat;
     display: block;
     height: 100px;
     position: relative;
@@ -23944,7 +23944,7 @@ body .ui-dialog .poll-form-container .form-actions {
     left: auto;
     top: auto;
     visibility: visible;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/darkgrey/icon-search.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/darkgrey/icon-search.png");
     border-width: 0;
     box-shadow: null;
     height: 12px;
@@ -23982,7 +23982,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-header-b .logo>a {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/logo.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/logo.svg) no-repeat;
     display: block;
     float: left;
     height: 100px;
@@ -24000,7 +24000,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .body-home-index .p-header-b .logo>a {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/logo-home.png") no-repeat center center;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/logo-home.png") no-repeat center center;
     display: block;
     float: none;
     height: 145px;
@@ -24811,7 +24811,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-user-content-manager-a.ui-dialog div.form-saving {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/ac-loader.gif") no-repeat center center;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/ac-loader.gif") no-repeat center center;
     width: 16px;
     height: 16px;
     display: none;
@@ -25112,7 +25112,7 @@ body .ui-dialog .poll-form-container .form-actions {
     margin-top: 1px;
     line-height: 14px;
     vertical-align: text-top;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/glyphicons.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/glyphicons.png");
     background-position: 14px 14px;
     background-repeat: no-repeat
 }
@@ -25145,7 +25145,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-user-content-manager-a div.tag-cloud li.tag>a.tag-remove {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/tag-remove.png") no-repeat left;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/tag-remove.png") no-repeat left;
     display: block;
     float: left;
     padding-left: 12px;
@@ -25432,7 +25432,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-user-content-manager-a div.middle ul.listing>li a.icon {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/ui/user-content-icons.png") no-repeat -262px -480px;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/ui/user-content-icons.png") no-repeat -262px -480px;
     display: inline-block;
     width: 150px;
     height: 160px
@@ -25547,7 +25547,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-widget-a.audio-gallery .playlist-container .playlist tr td .u-icon-play {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/22x22/icon-22-play.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/22x22/icon-22-play.png");
     display: block;
     width: 22px;
     height: 22px;
@@ -25555,7 +25555,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-widget-a.audio-gallery .playlist-container .playlist tr td .u-icon-pause {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/22x22/icon-22-pause.png");
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/22x22/icon-22-pause.png");
     display: block;
     width: 22px;
     height: 22px;
@@ -25751,7 +25751,7 @@ body .ui-dialog .poll-form-container .form-actions {
     color: #0055ab;
     font-weight: bold;
     padding-left: 24px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/12x12/icon-dev.png") no-repeat left center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/12x12/icon-dev.png") no-repeat left center
 }
 
 .p-devTracker-a .p-devTracker-content a.type-admin-post:hover,.p-devTracker-a .p-devTracker-content .col-author-link a:hover,.p-devTracker-a .p-devTracker-content .p-comment-post.community-forum-post-admin-post .p-comment-author a:hover {
@@ -26304,7 +26304,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-article-a .p-article-header ul.b-userAction-a:not(.u-dropDownMenu) li.b-userAction-item>a:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 .p-article-a .p-article-header ul.b-userAction-a:not(.u-dropDownMenu) li.b-userAction-item>a span {
@@ -26324,7 +26324,7 @@ body .ui-dialog .poll-form-container .form-actions {
 
 .p-article-a .p-article-header ul.b-userAction-a:not(.u-dropDownMenu) li.b-userAction-item>a span::after {
     border: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-off.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-off.svg") no-repeat;
     width: 10px;
     height: 5px;
     margin-top: -2px
@@ -26342,7 +26342,7 @@ body .ui-dialog .poll-form-container .form-actions {
 }
 
 .p-article-a .p-article-content blockquote.blizzard {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/blizzwater.png") top right no-repeat,#2b2b2b;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/blizzwater.png") top right no-repeat,#2b2b2b;
     color: #0091ff
 }
 
@@ -26353,7 +26353,7 @@ body .ui-dialog .poll-form-container .form-actions {
 .p-article-a .p-article-content blockquote.blizzard .quote-source {
     padding: 0 0 10px 25px;
     border-bottom: 1px solid #4f4d4d;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/blizz.png") left 6px no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/blizz.png") left 6px no-repeat;
     margin-bottom: 10px
 }
 
@@ -26537,7 +26537,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-base-a.recent-blue-posts .p-base-header .title::before {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/recent-blue.svg")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/recent-blue.svg")
 }
 
 .p-base-a .p-base-header {
@@ -26563,7 +26563,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
     left: 8px;
     width: 44px;
     height: 44px;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/recent-disc.svg");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/recent-disc.svg");
     background-repeat: no-repeat;
     background-size: 44px 44px
 }
@@ -26806,7 +26806,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-comments-b .p-comment-container .p-comment-user span.user::after,.body-forum .comment-preview li .p-comment-container .p-comment-user span.user::after,.body-forum-search .p-comments-a .p-comment-container .p-comment-user span.user::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/user-header-dropdown.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/user-header-dropdown.svg") no-repeat;
     border: 0;
     width: 10px;
     height: 5px
@@ -26830,7 +26830,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-comments-b .p-comment-container .p-comment-content blockquote>div:first-of-type,.body-forum .comment-preview li .p-comment-container .p-comment-content blockquote>div:first-of-type,.body-forum-search .p-comments-a .p-comment-container .p-comment-content blockquote>div:first-of-type {
-    background: #ebebeb url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/forumQuote-20x19.svg") right 12px center no-repeat;
+    background: #ebebeb url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/forumQuote-20x19.svg") right 12px center no-repeat;
     background-size: 20px 19px;
     margin: -12px -12px 12px;
     padding: 0 12px;
@@ -26999,7 +26999,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .form-button-block .button:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 .p-forum-a .form-button-block .button span {
@@ -27097,11 +27097,11 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .form-tools .button:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 .p-forum-a .form-tools .button.u-button-attachments:hover span::before {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/image-upload-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/image-upload-on.svg") no-repeat
 }
 
 .p-forum-a .form-tools .button.u-button-attachments span {
@@ -27115,7 +27115,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
     height: 16px;
     top: 10px;
     left: 8px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/image-upload-off.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/image-upload-off.svg") no-repeat
 }
 
 .p-forum-a .form-tools .button.u-button-poll {
@@ -27123,7 +27123,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .form-tools .button.u-button-poll:hover span::before {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/white/icon-poll-create.png") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/white/icon-poll-create.png") no-repeat
 }
 
 .p-forum-a .form-tools .button.u-button-poll span {
@@ -27137,7 +27137,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
     height: 16px;
     top: 8px;
     left: 10px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/16x16/black/icon-poll-create.png") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/16x16/black/icon-poll-create.png") no-repeat
 }
 
 .p-forum-a .form-tools .button i {
@@ -27243,7 +27243,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .p-forum-content .admin-controls .filters .form-actions:hover button::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 .p-forum-a .p-forum-content .admin-controls .filters .form-actions button {
@@ -27458,7 +27458,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .p-forum-content .admin-controls .button:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 .p-forum-a .p-forum-content .admin-controls .button span {
@@ -27485,7 +27485,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .expand-link {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/user-header-dropdown.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/user-header-dropdown.svg") no-repeat;
     width: 21px;
     height: 11px;
     -webkit-transform: rotate(-90deg);
@@ -27500,7 +27500,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .expand-link.expanded {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/user-header-dropdown.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/user-header-dropdown.svg") no-repeat;
     width: 21px;
     height: 11px;
     -webkit-transform: rotate(0deg);
@@ -27591,7 +27591,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .b-userAction-a.user-actions-threads .b-userAction-item>a:hover span::after,.p-forum-a .b-userAction-a.user-actions-forums .b-userAction-item>a:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 .p-forum-a .b-userAction-a.user-actions-threads .b-userAction-item>a span,.p-forum-a .b-userAction-a.user-actions-forums .b-userAction-item>a span {
@@ -27610,7 +27610,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 
 .p-forum-a .b-userAction-a.user-actions-threads .b-userAction-item>a span::after,.p-forum-a .b-userAction-a.user-actions-forums .b-userAction-item>a span::after {
     border: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-off.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-off.svg") no-repeat;
     width: 10px;
     height: 5px;
     margin-top: -2px
@@ -27781,7 +27781,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 
 .p-forum-a .bread-heel .bread-buttons div:not(:first-child) a::after {
     top: 12px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/back-to-arrow-off.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/back-to-arrow-off.svg") no-repeat
 }
 
 .p-forum-a .bread-heel .bread-buttons div:not(:first-child) a:hover {
@@ -27795,7 +27795,7 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 }
 
 .p-forum-a .bread-heel .bread-buttons div:not(:first-child) a:hover::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/back-to-arrow-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/back-to-arrow-on.svg") no-repeat
 }
 
 .p-forum-a .bread-heel .bread-buttons div:not(:first-child) a:hover span {
@@ -28051,8 +28051,8 @@ body.hide-ads .p-base-a:not(.recent-blue-posts) {
 
 @font-face {
     font-family: 'overpwn-icons';
-    src: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.eot");
-    src: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.eot?#iefix") format("embedded-opentype"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.woff") format("woff"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.ttf") format("truetype"),url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/overpwn-icons.svg#icomoon") format("svg");
+    src: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.eot");
+    src: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.eot?#iefix") format("embedded-opentype"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.woff") format("woff"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.ttf") format("truetype"),url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/overpwn-icons.svg#icomoon") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -28274,19 +28274,19 @@ div#site-main div#content div.heroes-list-container h2.title:not(:first-child) {
 }
 
 div#site-main div#content div.heroes-list-container h2.title.offense::before {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/roles/offense.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/roles/offense.png")
 }
 
 div#site-main div#content div.heroes-list-container h2.title.defense::before {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/roles/defense.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/roles/defense.png")
 }
 
 div#site-main div#content div.heroes-list-container h2.title.tank::before {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/roles/tank.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/roles/tank.png")
 }
 
 div#site-main div#content div.heroes-list-container h2.title.support::before {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/roles/support.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/roles/support.png")
 }
 
 div#site-main div#content div.heroes-list-container ul.b-list-a {
@@ -28420,12 +28420,12 @@ div.ui-widget:not(.loginModal):not(.register-modal) .ui-widget-content input.ful
 }
 
 .ability-info .icon-circle-ult {
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/pulse-frame.png")
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/pulse-frame.png")
 }
 
 .ability-info a.preview-link {
     padding-right: 15px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/double-arrows-right.png") right center no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/double-arrows-right.png") right center no-repeat
 }
 
 .hero-bio {
@@ -28498,7 +28498,7 @@ section#reply button.button:hover,section#reply button.button:active {
 }
 
 section#reply button.button.u-button-attachments:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/image-upload-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/image-upload-on.svg") no-repeat
 }
 
 section#reply button.button.u-button-attachments span {
@@ -28511,7 +28511,7 @@ section#reply button.button.u-button-attachments span::after {
     position: absolute;
     width: 16px;
     height: 16px;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/image-upload-off.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/image-upload-off.svg") no-repeat;
     top: 10px;
     left: 8px
 }
@@ -28726,7 +28726,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 }
 
 body.body-user-details #site #site-main .container #content .primary-content .p-user-a .p-user-info .b-userAction-a li.b-userAction-item>a:hover span::after {
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-on.svg") no-repeat
 }
 
 body.body-user-details #site #site-main .container #content .primary-content .p-user-a .p-user-info .b-userAction-a li.b-userAction-item>a span {
@@ -28746,7 +28746,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 
 body.body-user-details #site #site-main .container #content .primary-content .p-user-a .p-user-info .b-userAction-a li.b-userAction-item>a span::after {
     border: 0;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/button-dropdown-off.svg") no-repeat;
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/button-dropdown-off.svg") no-repeat;
     width: 10px;
     height: 5px;
     margin-top: -2px
@@ -28770,7 +28770,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 
 .p-devTracker-a .p-devTracker-content a.type-admin-post,.p-devTracker-a .p-devTracker-content .col-author-link a,.p-devTracker-a .p-devTracker-content .p-comment-post.community-forum-post-moderator-post .p-comment-author a {
     color: #0055ab;
-    background: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/blizz.png") no-repeat left center
+    background: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/blizz.png") no-repeat left center
 }
 
 .p-devTracker-a .p-devTracker-content .activity-score-bar .activity-score-bar-value {
@@ -29173,7 +29173,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     position: absolute;
     top: 50%;
     left: 50%;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/slider-arrow-13x26.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/slider-arrow-13x26.svg) no-repeat;
     width: 13px;
     height: 26px;
     -webkit-transform: translate(-50%,-50%);
@@ -29255,7 +29255,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/rating-arrow.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/rating-arrow.svg) no-repeat;
     width: 16px;
     height: 8px
 }
@@ -29487,7 +29487,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     display: block;
     width: 27px;
     height: 27px;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/general-guide-icon.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/general-guide-icon.svg) no-repeat;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29553,7 +29553,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 }
 
 .body-guide-details .primary-content .general {
-    background-image: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/op-guides-general-bg-355x355.svg);
+    background-image: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/op-guides-general-bg-355x355.svg);
     background-size: 355px;
     background-position: 400px -25px
 }
@@ -29583,7 +29583,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     position: absolute;
     top: 50%;
     left: 50%;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/share-icon.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/share-icon.svg) no-repeat;
     width: 20px;
     height: 20px;
     -webkit-transform: translate(-50%,-50%);
@@ -29663,7 +29663,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     position: absolute;
     width: 18px;
     height: 19px;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/link-icon.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/link-icon.svg) no-repeat;
     top: 50%;
     left: 0;
     -webkit-transform: translateY(-50%);
@@ -29722,31 +29722,31 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
 }
 
 .body-guide-details .primary-content .hero-role.tank::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-tank-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-tank-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content .hero-role.support::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-support-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-support-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content .hero-role.offense::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-offense-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-offense-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content .hero-role.defense::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-defense-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-defense-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content .map-type.payload::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-payload-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-payload-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content .map-type.point-capture::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-pointCapture-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-pointCapture-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content .general-tips::before {
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/guideDetail-general-icon.svg) no-repeat
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/guideDetail-general-icon.svg) no-repeat
 }
 
 .body-guide-details .primary-content>section {
@@ -30206,7 +30206,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     display: block;
     width: 27px;
     height: 27px;
-    background: url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/icons/general-guide-icon.svg) no-repeat;
+    background: url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/icons/general-guide-icon.svg) no-repeat;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30317,7 +30317,7 @@ body.body-user-details #site #site-main .container #content .primary-content .p-
     text-indent: -500px;
     white-space: nowrap;
     overflow: hidden;
-    background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Blocks/images/icons/12x12/darkgrey/user-action-sprite.png");
+    background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Blocks/images/icons/12x12/darkgrey/user-action-sprite.png");
     background-repeat: no-repeat
 }
 
@@ -30364,7 +30364,7 @@ div#site-main header.main {
 }
 
 div#site-main header.main h1 a.logo {
-    /*background-image: url("http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/images/responsive-menu-logo.svg");*/
+    /*background-image: url("http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/images/responsive-menu-logo.svg");*/
     background-image: url(content/images/logo.png);
     background-repeat: no-repeat;
     width: 236px;
@@ -30705,21 +30705,21 @@ div#site-main header.main .b-search-a {
     font-family: 'Exo';
     font-style: normal;
     font-weight: 300;
-    src: local("Exo Light"),local("Exo-Light"),url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/ExoLight.woff) format("woff")
+    src: local("Exo Light"),local("Exo-Light"),url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/ExoLight.woff) format("woff")
 }
 
 @font-face {
     font-family: 'Exo';
     font-style: normal;
     font-weight: 400;
-    src: local("Exo Regular"),local("Exo-Regular"),url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/Exo.woff) format("woff")
+    src: local("Exo Regular"),local("Exo-Regular"),url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/Exo.woff) format("woff")
 }
 
 @font-face {
     font-family: 'Exo';
     font-style: normal;
     font-weight: 700;
-    src: local("Exo Bold"),local("Exo-Bold"),url(http://static-overpwn.cursecdn.com/1-0-5956-24697/Skins/Overpwn/fonts/ExoBold.woff) format("woff")
+    src: local("Exo Bold"),local("Exo-Bold"),url(http://static-overpwn.cursecdn.com/1-0-6058-16873/Skins/Overpwn/fonts/ExoBold.woff) format("woff")
 }
 
 .Overpwn-tooltip h3,.Overpwn-tooltip h4 {
